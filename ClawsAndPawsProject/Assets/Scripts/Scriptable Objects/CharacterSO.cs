@@ -8,4 +8,5 @@ public class CharacterSO : ScriptableObject {
 	public float healthPoints;
 	public float staminaPoints;
 	public float speedPoints;
+	public float attackPoints;
 }

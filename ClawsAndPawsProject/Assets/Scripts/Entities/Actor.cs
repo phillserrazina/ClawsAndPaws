@@ -6,60 +6,38 @@ public class Actor : MonoBehaviour {
 
 	// VARIABLES
 
-	public enum Actions {
-		Attack,
-		Defend,
-		Skip
-	}
-
 	public CharacterSO characterData;
-	private Actions currentChoice;
-	public void SetCurrentChoice(Actions choice) { currentChoice = choice; }
 
-	private float maxHealthPoints;
-	private float currentHealthPoints;
+	public Actor opponent;
 
-	private float maxStaminaPoints;
-	private float currentStaminaPoints;
-
-	public float speedPoints { get; private set; }
+	public Stats stats { get; private set; }
+	public Combat combat { get; private set; }
 
 	// EXECUTION METHODS
 
-	private void Start() {
-		Initialize();
+	private void Awake() {
+		Initialize();	// TODO: Put in a spawn manager of sorts?
 	}
 
 	// METHODS
 
 	protected void Initialize() {
-		maxHealthPoints = characterData.healthPoints;
-		maxStaminaPoints = characterData.staminaPoints;
-		speedPoints = characterData.speedPoints;
+		opponent = GetOpponent();
 
-		currentHealthPoints = maxHealthPoints;
-		currentStaminaPoints = maxStaminaPoints;
+		stats = GetComponent<Stats>();
+		combat = GetComponent<Combat>();
+
+		stats.Initialize();
+		combat.Initialize();
 	}
 
-	public void TakeDamage(float damage) {
-		currentHealthPoints -= damage;
-	}
-
-	public void ExecuteAction(Actions action) {
-		switch (action)
-		{
-			case Actions.Attack:
-				break;
-
-			case Actions.Defend:
-				break;
-			
-			case Actions.Skip:
-				break;
-
-			default:
-				Debug.LogError("Actor::ExecuteAction --- Invalid Action.");
-				return;
+	private Actor GetOpponent() {
+		foreach (Actor actor in FindObjectsOfType<Actor>()) {
+			if (actor.gameObject != gameObject) {
+				return actor;
+			}
 		}
+
+		return null;
 	}
 }

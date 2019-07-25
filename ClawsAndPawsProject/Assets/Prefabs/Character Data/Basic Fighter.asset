@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 100
   staminaPoints: 100
-  speedPoints: 0
+  speedPoints: 5
+  attackPoints: 10

@@ -17,16 +17,18 @@ public class TurnManager : MonoBehaviour {
 	private States currentState;
 
 	private Queue<Actor> fightQueue = new Queue<Actor>();
-	private Queue<string> choicesQueue = new Queue<string>();
 
-	private Actor[] fighters;
+	private Actor player;
+	private Actor cpu;
+
 	private Actor winner;
 
 	// EXECUTION METHODS
 
 	private void Start() {
 		currentState = States.Start;
-		fighters = FindObjectsOfType<Actor>();
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+		cpu = player.opponent;
 	}
 
 	private void Update() {
@@ -39,17 +41,22 @@ public class TurnManager : MonoBehaviour {
 		switch (currentState)
 		{
 			case States.Start:
-				fightQueue = GetFightQueue();
 				currentState = States.Choice;
 				break;
 			
 			case States.Choice:
+				FindObjectOfType<UIManager>().TriggerPlayerChoiceMenu();
+				cpu.combat.SetRandomChoice();
+				fightQueue = GetFightQueue();
 				break;
 			
 			case States.Execution:
+				ExecuteFightQueue();
 				break;
 			
 			case States.Aftermath:
+				CalculateAftermath();
+				FindObjectOfType<UIManager>().UpdateUI();
 				break;
 			
 			case States.End:
@@ -64,27 +71,44 @@ public class TurnManager : MonoBehaviour {
 	private Queue<Actor> GetFightQueue() {
 		Queue<Actor> queue = new Queue<Actor>();
 
-		if (fighters[0].speedPoints < fighters[1].speedPoints) {
-			queue.Enqueue(fighters[1]);
-			queue.Enqueue(fighters[0]);
+		if (player.stats.speedPoints < cpu.stats.speedPoints) {
+			queue.Enqueue(cpu);
+			queue.Enqueue(player);
 		}
 		else {
-			queue.Enqueue(fighters[0]);
-			queue.Enqueue(fighters[1]);
+			queue.Enqueue(player);
+			queue.Enqueue(cpu);
 		}
 
 		return queue;
 	}
 
-	private void GetChoices() {
-
-	}
-
-	private void ExecuteChoices() {
-		while (choicesQueue != null) {
-			choicesQueue.Dequeue();
+	private void ExecuteFightQueue() {
+		if (fightQueue.Count == 0) {
+			currentState = States.Aftermath;
+			return;
 		}
+
+		fightQueue.Dequeue().combat.ExecuteAction();
 	}
 
-	
+	private void CalculateAftermath() {
+		if (player.stats.currentHealthPoints <= 0) {
+			winner = cpu;
+			currentState = States.End;
+			return;
+		}
+
+		if (cpu.stats.currentHealthPoints <= 0) {
+			winner = player;
+			currentState = States.End;
+			return;
+		}
+
+		currentState = States.Start;
+	}
+
+	public void NextState() {
+		currentState = (States)(((int)currentState + 1) % 5);
+	}
 }
