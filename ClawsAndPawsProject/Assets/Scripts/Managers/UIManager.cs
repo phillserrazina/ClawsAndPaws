@@ -63,6 +63,10 @@ public class UIManager : MonoBehaviour {
 		playerChoiceMenu.SetActive(false);
 	}
 
+	public void SetPlayerAttack(AttackSO attackData) {
+		player.combat.SetAttack(attackData);
+	}
+
 	public void TriggerWinnerWidget() {
 		winnerText.text = string.Format("{0} Wins!", turnManager.winner.actorName);
 		winnerWidget.SetActive(true);

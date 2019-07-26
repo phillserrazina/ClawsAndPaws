@@ -8,8 +8,8 @@ public class Combat : MonoBehaviour {
 	// VARIABLES
 
 	public enum Actions {
-		Basic_Attack,
-		Special_Attack,
+		Attack,
+		Items,
 		Defend,
 		Rest
 	}
@@ -26,6 +26,18 @@ public class Combat : MonoBehaviour {
 	public void SetRandomChoice() {
 		SetChoice((Combat.Actions)Random.Range(0, 3));
 	}
+
+	public AttackSO currentAttack { get; private set; }
+
+	public void SetAttack(AttackSO attackData) {
+		currentAttack = attackData;
+	}
+
+	public void SetRandomAttack() {
+		SetAttack(attackList.attacks[Random.Range(0, attackList.attacks.Length-1)]);
+	}
+
+	public AttackListSO attackList;
 	
 	public bool isDefending;
 
@@ -41,19 +53,18 @@ public class Combat : MonoBehaviour {
 		print(gameObject.name + " used \"" + currentChoice.ToString() + "\"!");
 		switch (currentChoice)
 		{
-			case Combat.Actions.Basic_Attack:
-				actor.opponent.stats.TakeDamage(actor.stats.attackPoints);
+			case Actions.Attack:
+				ExecuteAttack();
 				break;
 			
-			case Combat.Actions.Special_Attack:
-				SpecialAttackChoice();
+			case Actions.Items:
 				break;
 
-			case Combat.Actions.Defend:
+			case Actions.Defend:
 				isDefending = true;
 				break;
 			
-			case Combat.Actions.Rest:
+			case Actions.Rest:
 				RestAction();
 				break;
 
@@ -61,6 +72,17 @@ public class Combat : MonoBehaviour {
 				Debug.LogError("Actor::ExecuteAction --- Invalid Action.");
 				return;
 		}
+	}
+
+	private void ExecuteAttack() {
+		if (actor.stats.currentStaminaPoints < currentAttack.staminaCost) {
+			RestAction();
+			return;
+		}
+
+		actor.stats.DepleteStamina(currentAttack.staminaCost);
+		float damage = currentAttack.damagePoints + actor.stats.attackPoints;
+		actor.opponent.stats.TakeDamage(damage);
 	}
 
 	private void SpecialAttackChoice() {
