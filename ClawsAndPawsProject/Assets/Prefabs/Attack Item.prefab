@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 114397071837429890}
   itemName: {fileID: 114099095213668936}
-  attackData: {fileID: 0}
+  attackData: {fileID: 11400000, guid: 85a5ec2ac874dc34f80a6727c5451fe0, type: 2}
 --- !u!114 &114397071837429890
 MonoBehaviour:
   m_ObjectHideFlags: 1
