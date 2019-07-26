@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour {
 
 	// EXECUTION METHODS
 
+	private void Start() {
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = 30;
+	}
+
 	// METHODS
 
 	public void LoadScene(string sceneName) {

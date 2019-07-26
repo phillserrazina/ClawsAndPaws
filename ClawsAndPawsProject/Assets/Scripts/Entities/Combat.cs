@@ -46,8 +46,7 @@ public class Combat : MonoBehaviour {
 				break;
 			
 			case Combat.Actions.Special_Attack:
-				actor.stats.DepleteStamina(30f);
-				actor.opponent.stats.TakeDamage(actor.stats.attackPoints*3);
+				SpecialAttackChoice();
 				break;
 
 			case Combat.Actions.Defend:
@@ -55,12 +54,28 @@ public class Combat : MonoBehaviour {
 				break;
 			
 			case Combat.Actions.Rest:
-				actor.stats.RestoreHealth(5);
+				RestAction();
 				break;
 
 			default:
 				Debug.LogError("Actor::ExecuteAction --- Invalid Action.");
 				return;
 		}
+	}
+
+	private void SpecialAttackChoice() {
+		float staminaValue = 30f;
+		if (actor.stats.currentStaminaPoints < staminaValue) {
+			RestAction();
+			return;
+		}
+
+		actor.stats.DepleteStamina(staminaValue);
+		actor.opponent.stats.TakeDamage(actor.stats.attackPoints*3);
+	}
+
+	private void RestAction() {
+		actor.stats.RestoreHealth(5);
+		actor.stats.RestoreStamina(10f);
 	}
 }

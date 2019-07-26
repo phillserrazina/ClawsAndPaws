@@ -41,12 +41,14 @@ public class Stats : MonoBehaviour {
 		}
 
 		currentHealthPoints -= damage;
+		if (currentHealthPoints <= 0) currentHealthPoints = 0;
 	}
 
 	public void DepleteStamina(float value) {
-		if (currentStaminaPoints <= 0) return;
+		if (currentStaminaPoints < value) return;
 
 		currentStaminaPoints -= value;
+		if (currentStaminaPoints <= 0) currentStaminaPoints = 0;
 	}
 
 	public void RestoreHealth(float value) {
