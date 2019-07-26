@@ -8,15 +8,19 @@ public class UIManager : MonoBehaviour {
 	// VARIABLES
 
 	[Header("UI Objects")]
-	public GameObject playerChoiceMenu;
+	[SerializeField] private GameObject playerChoiceMenu;
+	[SerializeField] private GameObject winnerWidget;
 
 	[Header("Player Stats")]
-	public Text leftCharacterHealthText;
-	public Text leftCharacterStaminaText;
+	[SerializeField] private Text leftCharacterHealthText;
+	[SerializeField] private Text leftCharacterStaminaText;
 
 	[Space(10)]
-	public Text rightCharacterHealthText;
-	public Text rightCharacterStaminaText;
+	[SerializeField] private Text rightCharacterHealthText;
+	[SerializeField] private Text rightCharacterStaminaText;
+
+	[Header("Text")]
+	[SerializeField] private Text winnerText;
 
 	private Actor player;
 	private Actor cpu;
@@ -57,5 +61,10 @@ public class UIManager : MonoBehaviour {
 		player.combat.SetChoice(choice);
 		turnManager.NextState();
 		playerChoiceMenu.SetActive(false);
+	}
+
+	public void TriggerWinnerWidget() {
+		winnerText.text = string.Format("{0} Wins!", turnManager.winner.actorName);
+		winnerWidget.SetActive(true);
 	}
 }

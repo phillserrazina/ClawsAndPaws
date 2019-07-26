@@ -21,7 +21,7 @@ public class TurnManager : MonoBehaviour {
 	private Actor player;
 	private Actor cpu;
 
-	private Actor winner;
+	public Actor winner { get; private set; }
 
 	// EXECUTION METHODS
 
@@ -40,26 +40,32 @@ public class TurnManager : MonoBehaviour {
 	private void StateMachine() {
 		switch (currentState)
 		{
+			// ==== START ====
 			case States.Start:
 				currentState = States.Choice;
 				break;
 			
+			// ==== PLAYER CHOICE ====
 			case States.Choice:
 				FindObjectOfType<UIManager>().TriggerPlayerChoiceMenu();
 				cpu.combat.SetRandomChoice();
 				fightQueue = GetFightQueue();
 				break;
 			
+			// ==== EXECUTION ====
 			case States.Execution:
 				ExecuteFightQueue();
 				break;
 			
+			// ==== AFTERMATH ====
 			case States.Aftermath:
 				CalculateAftermath();
 				FindObjectOfType<UIManager>().UpdateUI();
 				break;
 			
+			// ==== FIGHT END ====
 			case States.End:
+				FindObjectOfType<UIManager>().TriggerWinnerWidget();
 				break;
 
 			default:

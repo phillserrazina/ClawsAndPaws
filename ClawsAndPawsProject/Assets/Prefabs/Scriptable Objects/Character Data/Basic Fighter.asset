@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2a32d0de2947943bf59a12519a6e98, type: 3}
   m_Name: Basic Fighter
   m_EditorClassIdentifier: 
+  actorName: Catty Cat
   healthPoints: 100
   staminaPoints: 100
   speedPoints: 5

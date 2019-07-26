@@ -8,7 +8,8 @@ public class Combat : MonoBehaviour {
 	// VARIABLES
 
 	public enum Actions {
-		Attack,
+		Basic_Attack,
+		Special_Attack,
 		Defend,
 		Rest
 	}
@@ -40,8 +41,12 @@ public class Combat : MonoBehaviour {
 		print(gameObject.name + " used \"" + currentChoice.ToString() + "\"!");
 		switch (currentChoice)
 		{
-			case Combat.Actions.Attack:
+			case Combat.Actions.Basic_Attack:
 				actor.opponent.stats.TakeDamage(actor.stats.attackPoints);
+				break;
+			
+			case Combat.Actions.Special_Attack:
+				SpecialAttackChoice();
 				break;
 
 			case Combat.Actions.Defend:
@@ -49,12 +54,28 @@ public class Combat : MonoBehaviour {
 				break;
 			
 			case Combat.Actions.Rest:
-				actor.stats.RestoreHealth(5);
+				RestAction();
 				break;
 
 			default:
 				Debug.LogError("Actor::ExecuteAction --- Invalid Action.");
 				return;
 		}
+	}
+
+	private void SpecialAttackChoice() {
+		float staminaValue = 30f;
+		if (actor.stats.currentStaminaPoints < staminaValue) {
+			RestAction();
+			return;
+		}
+
+		actor.stats.DepleteStamina(staminaValue);
+		actor.opponent.stats.TakeDamage(actor.stats.attackPoints*3);
+	}
+
+	private void RestAction() {
+		actor.stats.RestoreHealth(5);
+		actor.stats.RestoreStamina(10f);
 	}
 }
