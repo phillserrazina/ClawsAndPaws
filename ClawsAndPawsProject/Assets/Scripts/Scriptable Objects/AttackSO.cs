@@ -6,5 +6,7 @@ using UnityEngine;
 public class AttackSO : ScriptableObject {
 
 	public float damagePoints;
+	public float staminaCost;
+	public float manaCost;
 	public ConditionSO[] conditions;
 }

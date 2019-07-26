@@ -49,6 +49,7 @@ public class TurnManager : MonoBehaviour {
 			case States.Choice:
 				FindObjectOfType<UIManager>().TriggerPlayerChoiceMenu();
 				cpu.combat.SetRandomChoice();
+				cpu.combat.SetRandomAttack();
 				fightQueue = GetFightQueue();
 				break;
 			
