@@ -8,7 +8,8 @@ public class Combat : MonoBehaviour {
 	// VARIABLES
 
 	public enum Actions {
-		Attack,
+		Basic_Attack,
+		Special_Attack,
 		Defend,
 		Rest
 	}
@@ -40,8 +41,13 @@ public class Combat : MonoBehaviour {
 		print(gameObject.name + " used \"" + currentChoice.ToString() + "\"!");
 		switch (currentChoice)
 		{
-			case Combat.Actions.Attack:
+			case Combat.Actions.Basic_Attack:
 				actor.opponent.stats.TakeDamage(actor.stats.attackPoints);
+				break;
+			
+			case Combat.Actions.Special_Attack:
+				actor.stats.DepleteStamina(30f);
+				actor.opponent.stats.TakeDamage(actor.stats.attackPoints*3);
 				break;
 
 			case Combat.Actions.Defend:

@@ -33,6 +33,8 @@ public class Stats : MonoBehaviour {
 	}
 
 	public void TakeDamage(float damage) {
+		if (currentHealthPoints <= 0) return;
+
 		if (actor.combat.isDefending) {
 			damage /= 2;
 			actor.combat.isDefending = false;
@@ -41,8 +43,19 @@ public class Stats : MonoBehaviour {
 		currentHealthPoints -= damage;
 	}
 
+	public void DepleteStamina(float value) {
+		if (currentStaminaPoints <= 0) return;
+
+		currentStaminaPoints -= value;
+	}
+
 	public void RestoreHealth(float value) {
 		if (currentHealthPoints >= maxHealthPoints) return;
 		currentHealthPoints += value;
+	}
+
+	public void RestoreStamina(float value) {
+		if (currentStaminaPoints >= maxStaminaPoints) return;
+		currentStaminaPoints += value;
 	}
 }

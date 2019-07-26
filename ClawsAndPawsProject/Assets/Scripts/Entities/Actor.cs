@@ -7,6 +7,7 @@ public class Actor : MonoBehaviour {
 	// VARIABLES
 
 	public CharacterSO characterData;
+	public string actorName { get; private set; }
 
 	public Actor opponent;
 
@@ -22,6 +23,7 @@ public class Actor : MonoBehaviour {
 	// METHODS
 
 	protected void Initialize() {
+		actorName = characterData.actorName;
 		opponent = GetOpponent();
 
 		stats = GetComponent<Stats>();
