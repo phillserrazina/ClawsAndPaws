@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	// VARIABLES
+
+	// EXECUTION METHODS
+
+	// METHODS
+
+	public void LoadScene(string sceneName) {
+		SceneManager.LoadScene(sceneName);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void ReloadCurrentScene() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }
