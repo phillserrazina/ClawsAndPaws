@@ -11,5 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7977beb62d5c08f47bc6c564d5d5413c, type: 3}
   m_Name: Basic Attack
   m_EditorClassIdentifier: 
+  attackIcon: {fileID: 21300000, guid: 9c30e707afbeddd4e8be0fffc529222d, type: 3}
+  name: Meow
   damagePoints: 0
+  staminaCost: 0
+  manaCost: 0
   conditions: []
