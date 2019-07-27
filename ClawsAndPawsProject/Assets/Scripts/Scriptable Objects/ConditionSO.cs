@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName="Condition", fileName="New Condition")]
+[CreateAssetMenu(menuName="Combat/Condition", fileName="New Condition")]
 public class ConditionSO : ScriptableObject {
 
 	public enum Conditions {
 		Poison,
 		Sleep,
 
+		Reduce_Health,
+		Increase_Health,
+		
 		Reduce_Speed,
 		Increase_Speed,
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName="Attack Asset", fileName="New Attack Asset")]
+[CreateAssetMenu(menuName="Combat/Attack", fileName="New Attack")]
 public class AttackSO : ScriptableObject {
 
 	public Sprite attackIcon;
