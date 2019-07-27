@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class ConditionSO {
+[CreateAssetMenu(menuName="Condition", fileName="New Condition")]
+public class ConditionSO : ScriptableObject {
 
 	public enum Conditions {
 		Poison,
-		Slow,
+		Sleep,
+
+		Reduce_Speed,
+		Increase_Speed,
+
 		Reduce_Defense,
 		Increase_Defense,
-		Sleep
+
+		Reduce_Attack,
+		Increase_Attack
 	}
 
-	public enum SelfConditions {
-
-	}
-
-	public Conditions conditions;
-	public SelfConditions selfConditions;
+	public Conditions condition;
+	public bool targetSelf;
 	public float duration;
 	public float strength;
 }
