@@ -12,7 +12,6 @@ public class AttackItem : MonoBehaviour {
 	private void OnEnable() {
 		itemIcon.sprite = attackData.attackIcon;
 		itemName.text = attackData.name;
-		GetComponent<Button>().onClick.AddListener(() => { FindObjectOfType<UIManager>().SetPlayerAction("Attack"); } );
 		GetComponent<Button>().onClick.AddListener(() => { FindObjectOfType<UIManager>().SetPlayerAttack(attackData); } );
 	}
 }

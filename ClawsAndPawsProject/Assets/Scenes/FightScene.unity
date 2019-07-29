@@ -3782,10 +3782,7 @@ MonoBehaviour:
   heldItems: []
   consumableItems:
   - {fileID: 11400000, guid: b1971819132c47c4aa323e4d424ba2b8, type: 2}
-  - {fileID: 11400000, guid: b1971819132c47c4aa323e4d424ba2b8, type: 2}
-  - {fileID: 11400000, guid: b1971819132c47c4aa323e4d424ba2b8, type: 2}
-  - {fileID: 11400000, guid: b1971819132c47c4aa323e4d424ba2b8, type: 2}
-  - {fileID: 11400000, guid: b1971819132c47c4aa323e4d424ba2b8, type: 2}
+  - {fileID: 11400000, guid: 1162e173d123ff8498d308b195f4eedc, type: 2}
 --- !u!4 &1828846337
 Transform:
   m_ObjectHideFlags: 0
@@ -3832,7 +3829,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -260}
+  m_SizeDelta: {x: 0, y: -310}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868043344
 MonoBehaviour:

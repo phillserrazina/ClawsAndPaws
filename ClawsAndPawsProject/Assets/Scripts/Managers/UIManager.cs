@@ -64,6 +64,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void SetPlayerAttack(AttackSO attackData) {
+		SetPlayerAction("Attack");
 		player.combat.SetAttack(attackData);
 	}
 
@@ -73,6 +74,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void UseItem(ItemSO itemData) {
+		SetPlayerAction("Items");
 		FindObjectOfType<Inventory>().UseItem(itemData);
 		turnManager.NextState();
 		playerChoiceMenu.SetActive(false);
