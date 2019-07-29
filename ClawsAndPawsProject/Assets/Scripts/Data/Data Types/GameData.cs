@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameData : MonoBehaviour {
+[System.Serializable]
+public class GameData {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public CharacterData characterData = new CharacterData();
+
+    public void Create(CharacterSO data) {
+        characterData.Create(data);
+    }
+
+    public void CreateDefault() {
+        characterData.CreateDefault();
+    }
 }
