@@ -43,6 +43,9 @@ public class TurnManager : MonoBehaviour {
 			// ==== START ====
 			case States.Start:
 				currentState = States.Choice;
+				player.stats.ApplyConditions();
+				cpu.stats.ApplyConditions();
+				FindObjectOfType<UIManager>().UpdateUI();
 				break;
 			
 			// ==== PLAYER CHOICE ====

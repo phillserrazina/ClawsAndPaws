@@ -9,15 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7977beb62d5c08f47bc6c564d5d5413c, type: 3}
-  m_Name: Slow Attack
+  m_Name: Poison Attack
   m_EditorClassIdentifier: 
+  attackIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  name: Poison Attack
   damagePoints: 5
+  staminaCost: 50
+  manaCost: 0
   conditions:
-  - conditions: 1
-    selfConditions: 0
-    duration: 1
-    strength: 1
-  - conditions: 1
-    selfConditions: 0
-    duration: 1
-    strength: 1
+  - {fileID: 11400000, guid: 8bd762ea107d73a4aba91a9b75ccb972, type: 2}

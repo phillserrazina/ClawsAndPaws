@@ -16,6 +16,8 @@ public class Stats : MonoBehaviour {
 	public float speedPoints;
 	public float attackPoints;
 
+	private Stack<ConditionSO> currentConditions = new Stack<ConditionSO>();
+
 	private Actor actor;
 
 	// METHODS
@@ -32,7 +34,7 @@ public class Stats : MonoBehaviour {
 		currentStaminaPoints = maxStaminaPoints;
 	}
 
-	public void TakeDamage(float damage) {
+	public void TakeDamage(float damage, bool trueDamage=false) {
 		if (currentHealthPoints <= 0) return;
 
 		if (actor.combat.isDefending) {
@@ -42,6 +44,61 @@ public class Stats : MonoBehaviour {
 
 		currentHealthPoints -= damage;
 		if (currentHealthPoints <= 0) currentHealthPoints = 0;
+	}
+
+	public void AddCondition(ConditionSO condition) {
+		condition = ScriptableObject.Instantiate(condition);
+		currentConditions.Push(condition);
+	}
+
+	public void ApplyConditions() {
+		if (currentConditions.Count <= 0) return;
+
+		var newStack = new Stack<ConditionSO>(currentConditions);
+		currentConditions.Clear();
+
+		print ("Hi");
+
+		while (newStack.Count > 0) {
+			ConditionSO c = newStack.Pop();
+			print("Applying " + c.condition.ToString());
+			ExecuteConditions(c);
+		}
+	}
+
+	private void ExecuteConditions(ConditionSO cond) {
+		switch (cond.condition)
+		{
+			case ConditionSO.Conditions.Poison:
+				TakeDamage(cond.strength, true);
+				break;
+			
+			case ConditionSO.Conditions.Sleep:
+				// TODO
+				break;
+			
+			case ConditionSO.Conditions.Increase_Defense:
+				// TODO
+				break;
+			
+			case ConditionSO.Conditions.Reduce_Defense:
+				// TODO
+				break;
+			
+			case ConditionSO.Conditions.Increase_Speed:
+				speedPoints += cond.strength;
+				break;
+			
+			case ConditionSO.Conditions.Reduce_Speed:
+				speedPoints -= cond.strength;
+				break;
+			
+			default:
+				break;
+		}
+
+		cond.duration--;
+		if (cond.duration > 0) currentConditions.Push(cond);
 	}
 
 	public void DepleteStamina(float value) {

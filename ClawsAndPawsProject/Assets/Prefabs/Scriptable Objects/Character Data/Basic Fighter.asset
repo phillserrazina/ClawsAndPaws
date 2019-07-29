@@ -15,4 +15,4 @@ MonoBehaviour:
   healthPoints: 100
   staminaPoints: 100
   speedPoints: 5
-  attackPoints: 10
+  attackPoints: 0

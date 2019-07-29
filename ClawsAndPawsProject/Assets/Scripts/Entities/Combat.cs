@@ -50,7 +50,6 @@ public class Combat : MonoBehaviour {
 	}
 
 	public void ExecuteAction() {
-		print(gameObject.name + " used \"" + currentChoice.ToString() + "\"!");
 		switch (currentChoice)
 		{
 			case Actions.Attack:
@@ -83,6 +82,13 @@ public class Combat : MonoBehaviour {
 		actor.stats.DepleteStamina(currentAttack.staminaCost);
 		float damage = currentAttack.damagePoints + actor.stats.attackPoints;
 		actor.opponent.stats.TakeDamage(damage);
+
+		if (currentAttack.conditions != null) {
+			foreach (ConditionSO condition in currentAttack.conditions) {
+				if (condition.targetSelf) actor.stats.AddCondition(condition);
+				else actor.opponent.stats.AddCondition(condition);
+			}
+		}
 	}
 
 	private void SpecialAttackChoice() {
