@@ -13,8 +13,8 @@ public class Stats : MonoBehaviour {
 	private float maxStaminaPoints;
 	public float currentStaminaPoints { get; private set; }
 
-	public float speedPoints;
-	public float attackPoints;
+	public float speedPoints { get { return GetComponent<Attributes>().agilityPoints; } set { speedPoints = value; } }
+	public float attackPoints { get { return GetComponent<Attributes>().strengthPoints; } set { attackPoints = value; } }
 
 	private Stack<ConditionSO> currentConditions = new Stack<ConditionSO>();
 
@@ -27,8 +27,6 @@ public class Stats : MonoBehaviour {
 
 		maxHealthPoints = actor.characterData.healthPoints;
 		maxStaminaPoints = actor.characterData.staminaPoints;
-		speedPoints = actor.characterData.speedPoints;
-		attackPoints = actor.characterData.attackPoints;
 
 		currentHealthPoints = maxHealthPoints;
 		currentStaminaPoints = maxStaminaPoints;

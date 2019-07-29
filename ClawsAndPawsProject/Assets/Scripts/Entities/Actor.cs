@@ -13,6 +13,7 @@ public class Actor : MonoBehaviour {
 
 	public Stats stats { get; private set; }
 	public Combat combat { get; private set; }
+	public Attributes attributes { get; private set; }
 
 	// EXECUTION METHODS
 
@@ -28,7 +29,9 @@ public class Actor : MonoBehaviour {
 
 		stats = GetComponent<Stats>();
 		combat = GetComponent<Combat>();
+		attributes = GetComponent<Attributes>();
 
+		attributes.Initialize();
 		stats.Initialize();
 		combat.Initialize();
 	}
