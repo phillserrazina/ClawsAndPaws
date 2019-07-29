@@ -71,4 +71,10 @@ public class UIManager : MonoBehaviour {
 		winnerText.text = string.Format("{0} Wins!", turnManager.winner.actorName);
 		winnerWidget.SetActive(true);
 	}
+
+	public void UseItem(ItemSO itemData) {
+		FindObjectOfType<Inventory>().UseItem(itemData);
+		turnManager.NextState();
+		playerChoiceMenu.SetActive(false);
+	}
 }

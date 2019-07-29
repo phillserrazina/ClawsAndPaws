@@ -34,7 +34,7 @@ public class Stats : MonoBehaviour {
 		currentStaminaPoints = maxStaminaPoints;
 	}
 
-	public void TakeDamage(float damage) {
+	public void TakeDamage(float damage, bool trueDamage=false) {
 		if (currentHealthPoints <= 0) return;
 
 		if (actor.combat.isDefending) {
@@ -70,7 +70,7 @@ public class Stats : MonoBehaviour {
 		switch (cond.condition)
 		{
 			case ConditionSO.Conditions.Poison:
-				currentHealthPoints -= cond.strength;
+				TakeDamage(cond.strength, true);
 				break;
 			
 			case ConditionSO.Conditions.Sleep:

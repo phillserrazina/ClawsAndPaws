@@ -10,7 +10,13 @@ public class Inventory : MonoBehaviour {
 	public List<HeldItemSO> heldItems = new List<HeldItemSO>();
 	public List<ConsumableSO> consumableItems = new List<ConsumableSO>();
 
+	private Actor player;
+
 	// EXECUTION METHODS
+
+	private void Start() {
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+	}
 
 	// METHODS
 
@@ -26,5 +32,28 @@ public class Inventory : MonoBehaviour {
 		}
 
 		keyItems.Add(item);
+	}
+
+	public void Remove(ItemSO item) {
+		if (item is HeldItemSO) {
+			heldItems.Remove((HeldItemSO)item);
+			return;
+		}
+		
+		if (item is ConsumableSO) {
+			consumableItems.Remove((ConsumableSO)item);
+			return;
+		}
+
+		keyItems.Remove(item);
+	}
+
+	public void UseItem(ItemSO item) {
+		Remove(item);
+
+		if (player == null)
+			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+
+		item.Use(player);
 	}
 }

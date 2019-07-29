@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Potion
   m_EditorClassIdentifier: 
   name: Potion
-  icon: {fileID: 0}
-  description: 
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  description: Gives the player 10hp.
   effects:
   - effect:
       effect: 0
-      strength: 0
+      strength: 10
     duration: 0
-    infinite: 0
+    infinite: 1
