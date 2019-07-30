@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class SaveManager : MonoBehaviour {
+public class SaveManager {
 
 	private static string folderPath = Application.persistentDataPath + "/SaveFiles";
 
+	public static void DirectoryCheck() {
+		if (!Directory.Exists(folderPath)) {
+			Directory.CreateDirectory(folderPath);
+		}
+	}
+
 	public static void CreateNewSaveFile(CharacterSO data) {
 		GameData gameData = new GameData();
-		gameData.CreateDefault();
+		gameData.Create(data);
 
-		string path = folderPath + "character_" + data.actorName + "_0.json";
+		string path = folderPath + "/character_" + data.actorName + "_0.json";
 		path = CheckForDuplicates(path, 0);
+		FileStream stream = File.Create(path);
+		stream.Close();
 		CustomJson.SaveData(path, gameData);
 	}
 
@@ -20,12 +28,14 @@ public class SaveManager : MonoBehaviour {
 		GameData gameData = new GameData();
 		gameData.CreateDefault();
 
-		string path = folderPath + "character_default_0.json";
+		string path = folderPath + "/character_default_0.json";
 		path = CheckForDuplicates(path, 0);
+		FileStream stream = File.Create(path);
+		stream.Close();
 		CustomJson.SaveData(path, gameData);
 	}
 
-	private List<string> GetSaveFilesInDirectory() {
+	public static List<string> GetSaveFilesInDirectory() {
 		var answer = new List<string>();
 
 		var directoryInfo = new DirectoryInfo(folderPath);
@@ -33,7 +43,7 @@ public class SaveManager : MonoBehaviour {
 
 		foreach (FileInfo info in fileInfo) {
 			if (info.Name.Contains("character")) {
-				answer.Add(info.Name);
+				answer.Add(folderPath + "/" + info.Name);
 			}
 		}
 
@@ -42,18 +52,13 @@ public class SaveManager : MonoBehaviour {
 
 	private static string CheckForDuplicates(string fileName, int index) {
 
-		var directoryInfo = new DirectoryInfo(folderPath);
-		FileInfo[] fileInfo = directoryInfo.GetFiles();
+		if (File.Exists(fileName)) {
+			index++;
+			
+			fileName = fileName.Remove(fileName.Length - 6);
+			fileName = fileName + index + ".json";
 
-		foreach (FileInfo info in fileInfo) {
-			if (info.Name.Equals(fileName)) {
-				index++;
-				
-				fileName = fileName.TrimEnd();
-				fileName = fileName + index;
-
-				fileName = CheckForDuplicates(fileName, index);
-			}
+			fileName = CheckForDuplicates(fileName, index);
 		}
 
 		return fileName;
