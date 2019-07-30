@@ -7,11 +7,25 @@ public class CharCreationUI : MonoBehaviour {
 
 	[SerializeField] private InputField nameInputField;
 
+	[Space(10)]
 	[SerializeField] private InputField strengthInputField;
 	[SerializeField] private InputField healthInputField;
 	[SerializeField] private InputField staminaInputField;
 	[SerializeField] private InputField agilityInputField;
 	[SerializeField] private InputField intimidationInputField;
+
+	[Space(10)]
+	[SerializeField] private GameObject createButton;
+
+	private void Update() {
+		createButton.SetActive(CheckIfAllFieldsAreFilled());
+	}
+
+	private bool CheckIfAllFieldsAreFilled() {
+		if (nameInputField.text.Length.Equals(0)) return false;
+
+		return true;
+	}
 
 	public void CreateNewCharacter() {
 		var newCharacter = ScriptableObject.CreateInstance<CharacterSO>();

@@ -19,7 +19,7 @@ public class SaveSlotUI : MonoBehaviour {
 
 	public void TriggerExistingCharacter(string name, string level) {
 		characterName.text = name;
-		characterLevel.text = level;
+		characterLevel.text = "Level " + level;
 
 		newCharacterSlotObject.SetActive(false);
 		existingCharacterSlotObject.SetActive(true);

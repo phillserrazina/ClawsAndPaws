@@ -17,7 +17,7 @@ public class LoadCharacterUI : MonoBehaviour {
 			return;
 		}
 
-		FoundSaveFiles();
+		FoundSaveFiles(existingSaveFiles);
 	}
 
 	private void NoSaveFilesFound() {
@@ -26,8 +26,17 @@ public class LoadCharacterUI : MonoBehaviour {
 		}
 	}
 
-	private void FoundSaveFiles() {
+	private void FoundSaveFiles(List<string> paths) {
+		for (int i = 0; i < paths.Count; i++) {
+			if (paths[i] == null) {
+				saveSlots[i].TriggerNewCharacter();
+				continue;
+			}
 
+			CharacterData retrieveCharacterdData = CustomJson.ReadData(paths[i]).characterData;
+
+			saveSlots[i].TriggerExistingCharacter(retrieveCharacterdData.characterName, "1");
+		}
 	}
 
 	public void CreateNewCharacter() {
@@ -35,6 +44,6 @@ public class LoadCharacterUI : MonoBehaviour {
 	}
 
 	public void LoadCharacter() {
-		// TODO: Inject Character data into Game Manager
+		// TODO: Inject Data to CurrentCharacterManager
 	}
 }

@@ -17,7 +17,7 @@ public class SaveManager {
 		GameData gameData = new GameData();
 		gameData.Create(data);
 
-		string path = folderPath + "/character_" + data.actorName + "_0.json";
+		string path = folderPath + "/Character_" + data.actorName + "_0.json";
 		path = CheckForDuplicates(path, 0);
 		FileStream stream = File.Create(path);
 		stream.Close();
@@ -28,7 +28,7 @@ public class SaveManager {
 		GameData gameData = new GameData();
 		gameData.CreateDefault();
 
-		string path = folderPath + "/character_default_0.json";
+		string path = folderPath + "/Character_Default_0.json";
 		path = CheckForDuplicates(path, 0);
 		FileStream stream = File.Create(path);
 		stream.Close();
@@ -42,11 +42,12 @@ public class SaveManager {
 		FileInfo[] fileInfo = directoryInfo.GetFiles();
 
 		foreach (FileInfo info in fileInfo) {
-			if (info.Name.Contains("character")) {
+			if (info.Name.Contains("Character")) {
 				answer.Add(folderPath + "/" + info.Name);
 			}
 		}
 
+		Debug.Log("Number of Files Found: " + answer.Count);
 		return answer;
 	}
 
