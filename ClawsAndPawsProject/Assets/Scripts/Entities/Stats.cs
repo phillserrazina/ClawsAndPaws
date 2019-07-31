@@ -9,9 +9,11 @@ public class Stats : MonoBehaviour {
 
 	private float maxHealthPoints;
 	public float currentHealthPoints { get; private set; }
+	public float healthDecimalPercentage { get { return currentHealthPoints / maxHealthPoints; } }
 
 	private float maxStaminaPoints;
 	public float currentStaminaPoints { get; private set; }
+	public float staminaDecimalPercentage { get { return currentStaminaPoints / maxStaminaPoints; } }
 
 	public float speedPoints { get { return GetComponent<Attributes>().agilityPoints; } set { speedPoints = value; } }
 	public float attackPoints { get { return GetComponent<Attributes>().strengthPoints; } set { attackPoints = value; } }
@@ -25,8 +27,8 @@ public class Stats : MonoBehaviour {
 	public void Initialize() {
 		actor = GetComponent<Actor>();
 
-		maxHealthPoints = actor.characterData.healthPoints;
-		maxStaminaPoints = actor.characterData.staminaPoints;
+		maxHealthPoints = 90 + (actor.characterData.healthPoints * 10);
+		maxStaminaPoints = 90 + (actor.characterData.staminaPoints * 10);
 
 		currentHealthPoints = maxHealthPoints;
 		currentStaminaPoints = maxStaminaPoints;
