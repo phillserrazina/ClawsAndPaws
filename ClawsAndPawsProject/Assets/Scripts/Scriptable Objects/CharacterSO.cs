@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO: Have this be read from a save file instead of an SO
 [CreateAssetMenu(menuName="Character Data", fileName="New Character Data")]
 public class CharacterSO : ScriptableObject {
 
-	public string actorName;	// Have this be read from a save file
+	public string actorName;
+	public float experiencePoints;
+	
+	public float strengthPoints;
+	public float agilityPoints;
 	public float healthPoints;
 	public float staminaPoints;
-	public float speedPoints;
-	public float attackPoints;
+	public float intimidationPoints;
 }

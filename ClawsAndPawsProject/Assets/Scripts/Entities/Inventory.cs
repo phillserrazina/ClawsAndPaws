@@ -12,13 +12,11 @@ public class Inventory : MonoBehaviour {
 
 	private Actor player;
 
-	// EXECUTION METHODS
+	// METHODS
 
-	private void Start() {
+	public void Initialize() {
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 	}
-
-	// METHODS
 
 	public void Add(ItemSO item) {
 		if (item is HeldItemSO) {

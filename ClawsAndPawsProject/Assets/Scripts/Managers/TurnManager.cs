@@ -23,13 +23,9 @@ public class TurnManager : MonoBehaviour {
 
 	public Actor winner { get; private set; }
 
-	// EXECUTION METHODS
+	private bool runStateMachine = false;
 
-	private void Start() {
-		currentState = States.Start;
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
-		cpu = player.opponent;
-	}
+	// EXECUTION METHODS
 
 	private void Update() {
 		StateMachine();
@@ -37,7 +33,18 @@ public class TurnManager : MonoBehaviour {
 
 	// METHODS
 
+	public void Initialize() {
+		currentState = States.Start;
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+		cpu = player.opponent;
+
+		runStateMachine = true;
+	}
+
 	private void StateMachine() {
+
+		if (runStateMachine == false) return;
+
 		switch (currentState)
 		{
 			// ==== START ====
@@ -70,6 +77,7 @@ public class TurnManager : MonoBehaviour {
 			// ==== FIGHT END ====
 			case States.End:
 				FindObjectOfType<UIManager>().TriggerWinnerWidget();
+				runStateMachine = false;
 				break;
 
 			default:
