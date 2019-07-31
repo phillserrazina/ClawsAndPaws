@@ -32,7 +32,7 @@ public class ItemSO : ScriptableObject {
 		{
 			case Effect.Effects.Change_Health:
 				if (effect.strength > 0) target.stats.RestoreHealth(effect.strength);
-				else target.stats.TakeDamage(effect.strength, true);
+				else target.stats.TakeDamage(-effect.strength, true);
 				break;
 			
 			case Effect.Effects.Change_Defense:

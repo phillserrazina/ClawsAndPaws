@@ -9,26 +9,38 @@ public class Actor : MonoBehaviour {
 	public CharacterSO characterData;
 	public string actorName { get; private set; }
 
+	public float experiencePoints { get; private set; }
+
+	public int level {
+		get {
+			return Mathf.FloorToInt((experiencePoints + 1000) / 1000);
+		}
+	}
+
 	public Actor opponent;
 
 	public Stats stats { get; private set; }
 	public Combat combat { get; private set; }
-
-	// EXECUTION METHODS
-
-	private void Awake() {
-		Initialize();	// TODO: Put in a spawn manager of sorts?
-	}
+	public Attributes attributes { get; private set; }
 
 	// METHODS
 
-	protected void Initialize() {
+	public void Initialize() {
+
+		characterData = gameObject.tag.Equals("Player") ? 
+							FindObjectOfType<CurrentCharacterManager>().currentCharacter :
+							FindObjectOfType<CurrentCharacterManager>().currentOpponent;
+
 		actorName = characterData.actorName;
 		opponent = GetOpponent();
 
+		experiencePoints = characterData.experiencePoints;
+
 		stats = GetComponent<Stats>();
 		combat = GetComponent<Combat>();
+		attributes = GetComponent<Attributes>();
 
+		attributes.Initialize();
 		stats.Initialize();
 		combat.Initialize();
 	}

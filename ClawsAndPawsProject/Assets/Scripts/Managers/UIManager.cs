@@ -12,12 +12,12 @@ public class UIManager : MonoBehaviour {
 	[SerializeField] private GameObject winnerWidget;
 
 	[Header("Player Stats")]
-	[SerializeField] private Text leftCharacterHealthText;
-	[SerializeField] private Text leftCharacterStaminaText;
+	[SerializeField] private Image leftCharacterHealthGraphic;
+	[SerializeField] private Image leftCharacterStaminaGraphic;
 
 	[Space(10)]
-	[SerializeField] private Text rightCharacterHealthText;
-	[SerializeField] private Text rightCharacterStaminaText;
+	[SerializeField] private Image rightCharacterHealthGraphic;
+	[SerializeField] private Image rightCharacterStaminaGraphic;
 
 	[Header("Text")]
 	[SerializeField] private Text winnerText;
@@ -27,15 +27,9 @@ public class UIManager : MonoBehaviour {
 
 	private TurnManager turnManager;
 
-	// EXECUTION METHODS
-
-	private void Start() {
-		Initialize();
-	}
-
 	// METHODS
 
-	private void Initialize() {
+	public void Initialize() {
 		turnManager = FindObjectOfType<TurnManager>();
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 		cpu = player.opponent;
@@ -46,11 +40,11 @@ public class UIManager : MonoBehaviour {
 	}
 
 	private void UpdatePlayerStats() {
-		leftCharacterHealthText.text = player.stats.currentHealthPoints.ToString();
-		leftCharacterStaminaText.text = player.stats.currentStaminaPoints.ToString();
+		leftCharacterHealthGraphic.fillAmount = player.stats.healthDecimalPercentage;
+		leftCharacterStaminaGraphic.fillAmount = player.stats.staminaDecimalPercentage;
 
-		rightCharacterHealthText.text = cpu.stats.currentHealthPoints.ToString();
-		rightCharacterStaminaText.text = cpu.stats.currentStaminaPoints.ToString();
+		rightCharacterHealthGraphic.fillAmount = cpu.stats.healthDecimalPercentage;
+		rightCharacterStaminaGraphic.fillAmount = cpu.stats.staminaDecimalPercentage;
 	}
 
 	public void TriggerPlayerChoiceMenu() {
@@ -64,6 +58,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void SetPlayerAttack(AttackSO attackData) {
+		SetPlayerAction("Attack");
 		player.combat.SetAttack(attackData);
 	}
 
@@ -73,6 +68,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void UseItem(ItemSO itemData) {
+		SetPlayerAction("Items");
 		FindObjectOfType<Inventory>().UseItem(itemData);
 		turnManager.NextState();
 		playerChoiceMenu.SetActive(false);

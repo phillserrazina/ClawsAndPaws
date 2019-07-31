@@ -14,6 +14,12 @@ public class GameManager : MonoBehaviour {
 		Application.targetFrameRate = 30;
 	}
 
+	private void Update() {
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			LoadScene("MainMenu");
+		}
+	}
+
 	// METHODS
 
 	public void LoadScene(string sceneName) {
