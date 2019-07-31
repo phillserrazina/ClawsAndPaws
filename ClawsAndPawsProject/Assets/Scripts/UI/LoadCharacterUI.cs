@@ -35,7 +35,7 @@ public class LoadCharacterUI : MonoBehaviour {
 
 			CharacterData retrieveCharacterdData = CustomJson.ReadData(paths[i]).characterData;
 
-			saveSlots[i].TriggerExistingCharacter(retrieveCharacterdData.characterName, "1");
+			saveSlots[i].TriggerExistingCharacter(retrieveCharacterdData.GetSO());
 		}
 	}
 
@@ -43,7 +43,9 @@ public class LoadCharacterUI : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene(CHARACTER_CREATION_SCENE);
 	}
 
-	public void LoadCharacter() {
-		// TODO: Inject Data to CurrentCharacterManager
+	public void LoadCharacter(CharacterSO character) {
+		FindObjectOfType<CurrentCharacterManager>().SetCharacter(character);
+		// TODO: Teleport to current player location
+		UnityEngine.SceneManagement.SceneManager.LoadScene("FightScene");
 	}
 }

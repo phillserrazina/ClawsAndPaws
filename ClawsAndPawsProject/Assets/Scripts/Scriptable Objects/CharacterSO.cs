@@ -7,6 +7,7 @@ using UnityEngine;
 public class CharacterSO : ScriptableObject {
 
 	public string actorName;
+	public float experiencePoints;
 	
 	public float strengthPoints;
 	public float agilityPoints;

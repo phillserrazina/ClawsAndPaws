@@ -6,6 +6,7 @@ using UnityEngine;
 public class CharacterData {
 
 	public string characterName;
+	public float characterExperiencePoints;
 	
 	public float strengthPoints;
 	public float agilityPoints;
@@ -15,6 +16,7 @@ public class CharacterData {
 
 	public void Create(CharacterSO data) {
 		characterName = data.actorName;
+		characterExperiencePoints = data.experiencePoints;
 
 		strengthPoints = data.strengthPoints;
 		agilityPoints = data.agilityPoints;
@@ -25,11 +27,28 @@ public class CharacterData {
 
 	public void CreateDefault() {
 		characterName = "Default";
+		characterExperiencePoints = 0;
 
 		strengthPoints = 1;
 		agilityPoints = 1;
 		healthPoints = 1;
 		staminaPoints = 1;
 		intimidationPoints = 1;
+	}
+
+	public CharacterSO GetSO() {
+		CharacterSO character = ScriptableObject.CreateInstance<CharacterSO>();
+
+		character.name = "Default";
+		character.actorName = characterName;
+		character.experiencePoints = characterExperiencePoints;
+
+		character.strengthPoints = strengthPoints;
+		character.agilityPoints = agilityPoints;
+		character.healthPoints = healthPoints;
+		character.staminaPoints = staminaPoints;
+		character.intimidationPoints = intimidationPoints;
+
+		return character;
 	}
 }

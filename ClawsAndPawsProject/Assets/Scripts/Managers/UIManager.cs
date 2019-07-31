@@ -27,15 +27,9 @@ public class UIManager : MonoBehaviour {
 
 	private TurnManager turnManager;
 
-	// EXECUTION METHODS
-
-	private void Start() {
-		Initialize();
-	}
-
 	// METHODS
 
-	private void Initialize() {
+	public void Initialize() {
 		turnManager = FindObjectOfType<TurnManager>();
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 		cpu = player.opponent;
