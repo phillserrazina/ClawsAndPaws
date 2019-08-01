@@ -6,21 +6,23 @@ public class Attributes : MonoBehaviour {
 
 	// VARIABLES
 
-	public float strengthPoints { get; private set; }
-	public float agilityPoints { get; private set; }
-	public float healthPoints { get; private set; }
-	public float staminaPoints { get; private set; }
-	public float intimidationPoints { get; private set; }
+	public int availableAttributePoints;
+
+	public int strengthPoints { get; private set; }
+	public int agilityPoints { get; private set; }
+	public int healthPoints { get; private set; }
+	public int staminaPoints { get; private set; }
+	public int intimidationPoints { get; private set; }
 
 	private Actor character;
 
 	// METHODS
 
-	public void IncreaseStrength(float value) { strengthPoints += value; }
-	public void IncreaseAgility(float value) { agilityPoints += value; }
-	public void IncreaseHealth(float value) { healthPoints += value; }
-	public void IncreaseStamina(float value) { staminaPoints += value; }
-	public void IncreaseIntimidation(float value) { intimidationPoints += value; }
+	public void IncreaseStrength(int value) { strengthPoints += value; }
+	public void IncreaseAgility(int value) { agilityPoints += value; }
+	public void IncreaseHealth(int value) { healthPoints += value; }
+	public void IncreaseStamina(int value) { staminaPoints += value; }
+	public void IncreaseIntimidation(int value) { intimidationPoints += value; }
 
 	public void Initialize() {
 		character = GetComponent<Actor>();

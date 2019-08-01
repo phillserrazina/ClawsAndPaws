@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7977beb62d5c08f47bc6c564d5d5413c, type: 3}
   m_Name: Poison Attack
   m_EditorClassIdentifier: 
-  attackIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  attackIcon: {fileID: 21300000, guid: 942ccd95384882042886a38b3ad4dd73, type: 3}
   name: Poison Attack
   damagePoints: 5
   staminaCost: 50

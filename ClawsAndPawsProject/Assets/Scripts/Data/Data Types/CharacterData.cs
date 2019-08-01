@@ -6,13 +6,13 @@ using UnityEngine;
 public class CharacterData {
 
 	public string characterName;
-	public float characterExperiencePoints;
+	public int characterExperiencePoints;
 	
-	public float strengthPoints;
-	public float agilityPoints;
-	public float healthPoints;
-	public float staminaPoints;
-	public float intimidationPoints;
+	public int strengthPoints;
+	public int agilityPoints;
+	public int healthPoints;
+	public int staminaPoints;
+	public int intimidationPoints;
 
 	public void Create(CharacterSO data) {
 		characterName = data.actorName;
