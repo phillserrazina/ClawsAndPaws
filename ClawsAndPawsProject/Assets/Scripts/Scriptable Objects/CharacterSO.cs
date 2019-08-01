@@ -7,11 +7,11 @@ using UnityEngine;
 public class CharacterSO : ScriptableObject {
 
 	public string actorName;
-	public float experiencePoints;
+	public int experiencePoints;
 	
-	public float strengthPoints;
-	public float agilityPoints;
-	public float healthPoints;
-	public float staminaPoints;
-	public float intimidationPoints;
+	public int strengthPoints;
+	public int agilityPoints;
+	public int healthPoints;
+	public int staminaPoints;
+	public int intimidationPoints;
 }
