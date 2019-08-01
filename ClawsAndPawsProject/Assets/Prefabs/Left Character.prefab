@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222645732579895764}
   - component: {fileID: 114050618895449614}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Left Stamina Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 222314482108730378}
   - component: {fileID: 114123046220556162}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Left Health Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f2b5b4507df25eb459291a569993e67f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7322b6b7ad420244be6ffe4d5678bd8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -170,7 +170,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 19924ff6105ce444c95c00a939086294, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 600fd3b6e0281534290a5ecb182aca5b, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -197,7 +197,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f2b5b4507df25eb459291a569993e67f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fd3ed4e64549c4448f4d663224a7b2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -224,7 +224,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 19924ff6105ce444c95c00a939086294, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88801a8344374654e981390a219c4d81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
