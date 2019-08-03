@@ -1045,8 +1045,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerChoiceMenu: {fileID: 514540892}
   winnerWidget: {fileID: 1315827784}
+  leftCharacterName: {fileID: 1871033723}
+  leftCharacterLevel: {fileID: 1871033722}
   leftCharacterHealthGraphic: {fileID: 468495510}
   leftCharacterStaminaGraphic: {fileID: 1725210565}
+  rightCharacterName: {fileID: 2104770761}
+  rightCharacterLevel: {fileID: 2104770760}
   rightCharacterHealthGraphic: {fileID: 1922854557}
   rightCharacterStaminaGraphic: {fileID: 1280651805}
   winnerText: {fileID: 364683657}
@@ -2077,7 +2081,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1181728727}
-        m_MethodName: ReloadCurrentScene
+        m_MethodName: MakeNewFight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3072,6 +3076,18 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1871033722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114974617199559036, guid: 51bb06134f13e2447a7bbe7de136eb64,
+    type: 2}
+  m_PrefabInternal: {fileID: 1871033721}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1871033723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114121313992176454, guid: 51bb06134f13e2447a7bbe7de136eb64,
+    type: 2}
+  m_PrefabInternal: {fileID: 1871033721}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1881263728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,6 +3822,33 @@ Prefab:
       propertyPath: m_Name
       value: Right Health Image
       objectReference: {fileID: 0}
+    - target: {fileID: 224520876163018660, guid: 51bb06134f13e2447a7bbe7de136eb64,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -234
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974617199559036, guid: 51bb06134f13e2447a7bbe7de136eb64,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114121313992176454, guid: 51bb06134f13e2447a7bbe7de136eb64,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &2104770760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114974617199559036, guid: 51bb06134f13e2447a7bbe7de136eb64,
+    type: 2}
+  m_PrefabInternal: {fileID: 2104770759}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2104770761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114121313992176454, guid: 51bb06134f13e2447a7bbe7de136eb64,
+    type: 2}
+  m_PrefabInternal: {fileID: 2104770759}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}

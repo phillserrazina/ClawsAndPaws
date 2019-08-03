@@ -29,4 +29,9 @@ public class GameManager : MonoBehaviour {
 	public void ReloadCurrentScene() {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
+
+	public void MakeNewFight() {
+		FindObjectOfType<CurrentCharacterManager>().SetRandomOpponent();
+		ReloadCurrentScene();
+	}
 }

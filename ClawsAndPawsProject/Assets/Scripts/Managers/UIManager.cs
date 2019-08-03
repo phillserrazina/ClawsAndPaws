@@ -12,8 +12,16 @@ public class UIManager : MonoBehaviour {
 	[SerializeField] private GameObject winnerWidget;
 
 	[Header("Player Stats")]
+	[SerializeField] private Text leftCharacterName;
+	[SerializeField] private Text leftCharacterLevel;
+
+	[Space(10)]
 	[SerializeField] private Image leftCharacterHealthGraphic;
 	[SerializeField] private Image leftCharacterStaminaGraphic;
+
+	[Space(20)]
+	[SerializeField] private Text rightCharacterName;
+	[SerializeField] private Text rightCharacterLevel;
 
 	[Space(10)]
 	[SerializeField] private Image rightCharacterHealthGraphic;
@@ -40,9 +48,13 @@ public class UIManager : MonoBehaviour {
 	}
 
 	private void UpdatePlayerStats() {
+		leftCharacterName.text = player.actorName;
+		leftCharacterLevel.text = "Level " + player.level.ToString();
 		leftCharacterHealthGraphic.fillAmount = player.stats.healthDecimalPercentage;
 		leftCharacterStaminaGraphic.fillAmount = player.stats.staminaDecimalPercentage;
 
+		rightCharacterName.text = cpu.actorName;
+		rightCharacterLevel.text = "Level " + cpu.level.ToString();
 		rightCharacterHealthGraphic.fillAmount = cpu.stats.healthDecimalPercentage;
 		rightCharacterStaminaGraphic.fillAmount = cpu.stats.staminaDecimalPercentage;
 	}

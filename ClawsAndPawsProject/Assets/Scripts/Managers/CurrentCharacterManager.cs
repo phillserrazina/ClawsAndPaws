@@ -41,8 +41,14 @@ public class CurrentCharacterManager : MonoBehaviour {
 
 		if (currentOpponent == null) {
 			CharacterData newData = new CharacterData();
-			newData.CreateDefault();
+			newData.CreateRandom(currentCharacter.experiencePoints);
 			currentOpponent = newData.GetSO();
 		}
+	}
+
+	public void SetRandomOpponent() {
+		CharacterData newData = new CharacterData();
+		newData.CreateRandom(currentCharacter.experiencePoints);
+		currentOpponent = newData.GetSO();
 	}
 }

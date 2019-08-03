@@ -57,11 +57,8 @@ public class Stats : MonoBehaviour {
 		var newStack = new Stack<ConditionSO>(currentConditions);
 		currentConditions.Clear();
 
-		print ("Hi");
-
 		while (newStack.Count > 0) {
 			ConditionSO c = newStack.Pop();
-			print("Applying " + c.condition.ToString());
 			ExecuteConditions(c);
 		}
 	}

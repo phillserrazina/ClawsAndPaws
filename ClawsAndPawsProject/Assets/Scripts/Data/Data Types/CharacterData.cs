@@ -36,6 +36,21 @@ public class CharacterData {
 		intimidationPoints = 1;
 	}
 
+	public void CreateRandom(int playerExperiencePoints) {
+		TextAsset file = Resources.Load("RandomCatNames") as TextAsset;
+		string[] nameList = file.text.Split(',');
+
+		characterName = nameList[Random.Range(0, nameList.Length)];
+		characterExperiencePoints = Random.Range(playerExperiencePoints-2000, playerExperiencePoints+2000);
+		characterExperiencePoints = Mathf.Clamp(characterExperiencePoints, 0, 20000);
+
+		strengthPoints = Random.Range(0, 10);
+		agilityPoints = Random.Range(0, 10);
+		healthPoints = Random.Range(0, 10);
+		staminaPoints = Random.Range(0, 10);
+		intimidationPoints = Random.Range(0, 10);
+	}
+
 	public CharacterSO GetSO() {
 		CharacterSO character = ScriptableObject.CreateInstance<CharacterSO>();
 
