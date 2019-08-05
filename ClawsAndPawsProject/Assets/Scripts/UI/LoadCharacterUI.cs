@@ -35,7 +35,9 @@ public class LoadCharacterUI : MonoBehaviour {
 
 			CharacterData retrieveCharacterdData = CustomJson.ReadData(paths[i]).characterData;
 
-			saveSlots[i].TriggerExistingCharacter(retrieveCharacterdData.GetSO());
+			saveSlots[i].assignedPath = paths[i];
+			saveSlots[i].assignedCharacter = retrieveCharacterdData.GetSO();
+			saveSlots[i].TriggerExistingCharacter();
 		}
 	}
 
@@ -43,7 +45,8 @@ public class LoadCharacterUI : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene(CHARACTER_CREATION_SCENE);
 	}
 
-	public void LoadCharacter(CharacterSO character) {
+	public void LoadCharacter(CharacterSO character, string savePath) {
+		SaveManager.currentSavePath = savePath;
 		FindObjectOfType<CurrentCharacterManager>().SetCharacter(character);
 		// TODO: Teleport to current player location
 		UnityEngine.SceneManagement.SceneManager.LoadScene("FightScene");

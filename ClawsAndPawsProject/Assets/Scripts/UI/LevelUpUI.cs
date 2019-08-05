@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharCreationUI : MonoBehaviour {
+public class LevelUpUI : MonoBehaviour {
 
-	[SerializeField] private InputField nameInputField;
 	[SerializeField] private Text availablePointsText;
 
 	[Space(10)]
@@ -26,14 +25,10 @@ public class CharCreationUI : MonoBehaviour {
 	[Space(10)]
 	[SerializeField] private GameObject createButton;
 
-	private void Update() {
-		createButton.SetActive(CheckIfAllFieldsAreFilled());
-	}
+	private CharacterSO player;
 
-	private bool CheckIfAllFieldsAreFilled() {
-		if (nameInputField.text.Length.Equals(0)) return false;
-
-		return true;
+	private void Awake() {
+		player = FindObjectOfType<CurrentCharacterManager>().currentCharacter;
 	}
 
 	public void IncreaseAttribute(string a) {
@@ -90,23 +85,14 @@ public class CharCreationUI : MonoBehaviour {
 		availablePointsText.text = availablePoints.ToString();
 	}
 
-	public void CreateNewCharacter() {
-		var newCharacter = ScriptableObject.CreateInstance<CharacterSO>();
+	public void UpdateCharacter() {
+		player.strengthPoints = strengthValue;
+		player.healthPoints = healthValue;
+		player.staminaPoints = staminaValue;
+		player.agilityPoints = agilityValue;
+		player.intimidationPoints = intimidationValue;
 
-		newCharacter.actorName = nameInputField.text;
-		newCharacter.experiencePoints = 0;
-		newCharacter.level = 1;
-
-		newCharacter.strengthPoints = strengthValue;
-		newCharacter.healthPoints = healthValue;
-		newCharacter.staminaPoints = staminaValue;
-		newCharacter.agilityPoints = agilityValue;
-		newCharacter.intimidationPoints = intimidationValue;
-
-		newCharacter.name = "Character_" + newCharacter.actorName;
-
-		FindObjectOfType<CurrentCharacterManager>().SetCharacter(newCharacter);
-		SaveManager.currentSavePath = SaveManager.CreateNewSaveFile(newCharacter);
+		SaveManager.Save(player);
 
 		FindObjectOfType<MenuManager>().LoadScene("FightScene");
 	}

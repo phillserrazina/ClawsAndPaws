@@ -82,10 +82,10 @@ public class TurnManager : MonoBehaviour {
 				if (winner == player) {
 					OpponentSO opponentData = cpu.characterData as OpponentSO;
 
-					player.experiencePoints += opponentData.xpReward;
+					player.characterData.experiencePoints += opponentData.xpReward;
 					inventory.gold += opponentData.goldReward;
 					inventory.Add(opponentData.itemRewards.ToArray());
-					
+
 					uiManager.TriggerPlayerWinWidget(opponentData.goldReward, opponentData.xpReward, opponentData.itemRewards.ToArray());
 				}
 				else {

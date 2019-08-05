@@ -10,7 +10,7 @@ public class CurrentCharacterManager : MonoBehaviour {
 		if (instance == null)
 			instance = this;
 		else if (instance != this) {
-			Destroy(instance.gameObject);
+			Destroy(gameObject);
 			instance = this;
 		}
 
@@ -26,6 +26,12 @@ public class CurrentCharacterManager : MonoBehaviour {
 
 	public void SetOpponent(OpponentSO character) {
 		currentOpponent = character;
+	}
+
+	private void Awake() {
+		if (FindObjectOfType<CombatInitManager>() != null) return;
+
+		Singleton();
 	}
 
 	public void Initialize() {
@@ -44,7 +50,8 @@ public class CurrentCharacterManager : MonoBehaviour {
 
 	public void SetRandomOpponent() {
 		OpponentSO newOpponent = ScriptableObject.CreateInstance<OpponentSO>();
-		newOpponent.CreateRandom(currentCharacter.experiencePoints);
+		int level = currentCharacter.level;
+		newOpponent.CreateRandom(level);
 		currentOpponent = newOpponent;
 	}
 }

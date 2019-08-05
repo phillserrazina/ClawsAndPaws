@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FightScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/HubScene.unity
+    guid: 5f3042aba88f23043a6792186fdbb10b
+  - enabled: 1
+    path: Assets/Scenes/LevelUpScene.unity
+    guid: 6d39250b44a3a3f47b4499827f65960d
   m_configObjects: {}

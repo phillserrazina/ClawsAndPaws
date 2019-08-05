@@ -10,12 +10,7 @@ public class Actor : MonoBehaviour {
 	public string actorName { get; private set; }
 
 	public int experiencePoints;
-
-	public int level {
-		get {
-			return Mathf.FloorToInt((experiencePoints + 1000) / 1000);
-		}
-	}
+	public int level;
 
 	public Actor opponent;
 
@@ -35,6 +30,9 @@ public class Actor : MonoBehaviour {
 		opponent = GetOpponent();
 
 		experiencePoints = characterData.experiencePoints;
+		level = characterData.level;
+		if (gameObject.tag.Equals("Player"))
+			UpdateLevel();
 
 		stats = GetComponent<Stats>();
 		combat = GetComponent<Combat>();
@@ -53,5 +51,14 @@ public class Actor : MonoBehaviour {
 		}
 
 		return null;
+	}
+
+	public void UpdateLevel() {
+		int curLvl = Mathf.FloorToInt(0.1f * Mathf.Sqrt(experiencePoints)) + 1;
+		
+		if (curLvl != level) {
+			characterData.level = curLvl;
+			FindObjectOfType<GameManager>().LoadScene("LevelUpScene");
+		}
 	}
 }

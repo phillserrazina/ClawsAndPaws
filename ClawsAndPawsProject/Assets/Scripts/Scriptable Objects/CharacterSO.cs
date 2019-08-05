@@ -8,6 +8,7 @@ public class CharacterSO : ScriptableObject {
 
 	public string actorName;
 	public int experiencePoints;
+	public int level;
 	
 	public int strengthPoints;
 	public int agilityPoints;
