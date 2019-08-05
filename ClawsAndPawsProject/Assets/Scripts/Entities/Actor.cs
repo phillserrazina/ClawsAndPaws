@@ -9,7 +9,7 @@ public class Actor : MonoBehaviour {
 	public CharacterSO characterData;
 	public string actorName { get; private set; }
 
-	public float experiencePoints { get; private set; }
+	public int experiencePoints;
 
 	public int level {
 		get {

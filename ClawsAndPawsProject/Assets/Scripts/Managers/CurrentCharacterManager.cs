@@ -18,21 +18,19 @@ public class CurrentCharacterManager : MonoBehaviour {
 	}
 
 	public CharacterSO currentCharacter { get; private set; }
-	public CharacterSO currentOpponent { get; private set; }
+	public OpponentSO currentOpponent { get; private set; }
 
 	public void SetCharacter(CharacterSO character) {
 		currentCharacter = character;
 	}
 
-	public void SetOpponent(CharacterSO character) {
+	public void SetOpponent(OpponentSO character) {
 		currentOpponent = character;
 	}
 
-	private void Awake() {
-		Singleton();
-	}
-
 	public void Initialize() {
+		Singleton();
+
 		if (currentCharacter == null) {
 			CharacterData newData = new CharacterData();
 			newData.CreateDefault();
@@ -40,15 +38,13 @@ public class CurrentCharacterManager : MonoBehaviour {
 		}
 
 		if (currentOpponent == null) {
-			CharacterData newData = new CharacterData();
-			newData.CreateRandom(currentCharacter.experiencePoints);
-			currentOpponent = newData.GetSO();
+			SetRandomOpponent();
 		}
 	}
 
 	public void SetRandomOpponent() {
-		CharacterData newData = new CharacterData();
-		newData.CreateRandom(currentCharacter.experiencePoints);
-		currentOpponent = newData.GetSO();
+		OpponentSO newOpponent = ScriptableObject.CreateInstance<OpponentSO>();
+		newOpponent.CreateRandom(currentCharacter.experiencePoints);
+		currentOpponent = newOpponent;
 	}
 }

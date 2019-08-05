@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour {
 	[Header("UI Objects")]
 	[SerializeField] private GameObject playerChoiceMenu;
 	[SerializeField] private GameObject winnerWidget;
+	[SerializeField] private GameObject loserWidget;
 
 	[Header("Player Stats")]
 	[SerializeField] private Text leftCharacterName;
@@ -29,6 +30,9 @@ public class UIManager : MonoBehaviour {
 
 	[Header("Text")]
 	[SerializeField] private Text winnerText;
+	[SerializeField] private Text winnerRewardText;
+	[SerializeField] private Text loserText;
+	[SerializeField] private Text loserGoldText;
 
 	private Actor player;
 	private Actor cpu;
@@ -74,9 +78,16 @@ public class UIManager : MonoBehaviour {
 		player.combat.SetAttack(attackData);
 	}
 
-	public void TriggerWinnerWidget() {
-		winnerText.text = string.Format("{0} Wins!", turnManager.winner.actorName);
+	public void TriggerPlayerWinWidget(int goldWon, int xpWon, ItemSO[] itemsWon) {
+		winnerText.text = string.Format("{0} Wins!", player.actorName);
+		winnerRewardText.text = string.Format("Awarded {0} gold and {1} XP!", goldWon, xpWon);
 		winnerWidget.SetActive(true);
+	}
+
+	public void TriggerLoserWinWidget(int goldLost) {
+		loserText.text = string.Format("{0} Wins!", turnManager.winner.actorName);
+		loserGoldText.text = string.Format("{0} lost {1} gold...", player, goldLost);
+		loserWidget.SetActive(true);
 	}
 
 	public void UseItem(ItemSO itemData) {
