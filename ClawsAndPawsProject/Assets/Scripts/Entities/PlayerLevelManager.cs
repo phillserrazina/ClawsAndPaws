@@ -9,6 +9,7 @@ public class PlayerLevelManager : MonoBehaviour {
 
 	private static int currentPlayerLevel;
 	public static int availableAttributePoints;
+	private static bool awaitingLevelUp = false;
 
 	private static Actor player;
 
@@ -31,14 +32,24 @@ public class PlayerLevelManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 	}
 
-	public static bool UpdateLevel() {
+	public static bool CheckLevel() {
 		int curLvl = Mathf.FloorToInt(0.1f * Mathf.Sqrt(player.experiencePoints)) + 1;
 		
 		if (curLvl != currentPlayerLevel) {
-			availableAttributePoints = 5;
+			if (awaitingLevelUp == false) {
+				availableAttributePoints = 5;
+				awaitingLevelUp = true;
+			}
 			return true;
 		}
 
 		return false;
+	}
+
+	public static void UpdateLevel() {
+		int curLvl = Mathf.FloorToInt(0.1f * Mathf.Sqrt(player.experiencePoints)) + 1;
+
+		FindObjectOfType<CurrentCharacterManager>().currentCharacter.level = curLvl;
+		awaitingLevelUp = false;
 	}
 }

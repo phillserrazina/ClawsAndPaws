@@ -86,7 +86,7 @@ public class TurnManager : MonoBehaviour {
 					inventory.gold += opponentData.goldReward;
 					inventory.Add(opponentData.itemRewards.ToArray());
 
-					bool lvlUp = PlayerLevelManager.UpdateLevel();
+					bool lvlUp = PlayerLevelManager.CheckLevel();
 
 					uiManager.TriggerPlayerWinWidget(opponentData.goldReward, opponentData.xpReward, opponentData.itemRewards.ToArray(), lvlUp);
 				}

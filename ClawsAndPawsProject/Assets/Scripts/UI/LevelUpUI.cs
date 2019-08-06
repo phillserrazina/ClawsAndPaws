@@ -141,6 +141,8 @@ public class LevelUpUI : MonoBehaviour {
 		player.agilityPoints = agilityValue;
 		player.intimidationPoints = intimidationValue;
 
+		PlayerLevelManager.UpdateLevel();
+
 		SaveManager.Save(player);
 
 		FindObjectOfType<MenuManager>().LoadScene("FightScene");
