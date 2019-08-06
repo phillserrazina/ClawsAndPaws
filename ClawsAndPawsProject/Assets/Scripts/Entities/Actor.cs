@@ -31,8 +31,6 @@ public class Actor : MonoBehaviour {
 
 		experiencePoints = characterData.experiencePoints;
 		level = characterData.level;
-		if (gameObject.tag.Equals("Player"))
-			UpdateLevel();
 
 		stats = GetComponent<Stats>();
 		combat = GetComponent<Combat>();
@@ -51,14 +49,5 @@ public class Actor : MonoBehaviour {
 		}
 
 		return null;
-	}
-
-	public void UpdateLevel() {
-		int curLvl = Mathf.FloorToInt(0.1f * Mathf.Sqrt(experiencePoints)) + 1;
-		
-		if (curLvl != level) {
-			characterData.level = curLvl;
-			FindObjectOfType<GameManager>().LoadScene("LevelUpScene");
-		}
 	}
 }

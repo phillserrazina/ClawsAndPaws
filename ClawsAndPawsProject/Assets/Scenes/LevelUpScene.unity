@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: IncreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: IncreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -2182,7 +2182,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: IncreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: DecreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -2627,7 +2627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1146269177
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2906,7 +2906,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: DecreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -3356,7 +3356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: IncreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -3930,7 +3930,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: DecreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -4088,7 +4088,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: DecreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -4363,7 +4363,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: DecreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -4717,7 +4717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CREATE
+  m_Text: DONE
 --- !u!222 &1805570424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4891,7 +4891,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1972374677}
         m_MethodName: IncreaseAttribute
         m_Mode: 5
         m_Arguments:
@@ -5121,7 +5121,7 @@ MonoBehaviour:
   staminaText: {fileID: 16148952}
   agilityText: {fileID: 51418059}
   intimidationText: {fileID: 419927678}
-  createButton: {fileID: 0}
+  doneButton: {fileID: 2075750800}
 --- !u!4 &1972374678
 Transform:
   m_ObjectHideFlags: 0
@@ -5187,12 +5187,12 @@ GameObject:
   - component: {fileID: 2075750803}
   - component: {fileID: 2075750802}
   m_Layer: 5
-  m_Name: Create Button
+  m_Name: Done Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2075750801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5251,8 +5251,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: CreateNewCharacter
+      - m_Target: {fileID: 1972374677}
+        m_MethodName: UpdateCharacter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
