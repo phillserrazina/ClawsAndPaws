@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // TODO: Have this be read from a save file instead of an SO
-[CreateAssetMenu(menuName="Character Data", fileName="New Character Data")]
+[CreateAssetMenu(menuName="Actors/Character Data", fileName="New Character Data")]
 public class CharacterSO : ScriptableObject {
 
 	public string actorName;
 	public int experiencePoints;
+	public int level;
 	
 	public int strengthPoints;
 	public int agilityPoints;

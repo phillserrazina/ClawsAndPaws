@@ -95,6 +95,7 @@ public class CharCreationUI : MonoBehaviour {
 
 		newCharacter.actorName = nameInputField.text;
 		newCharacter.experiencePoints = 0;
+		newCharacter.level = 1;
 
 		newCharacter.strengthPoints = strengthValue;
 		newCharacter.healthPoints = healthValue;
@@ -105,7 +106,7 @@ public class CharCreationUI : MonoBehaviour {
 		newCharacter.name = "Character_" + newCharacter.actorName;
 
 		FindObjectOfType<CurrentCharacterManager>().SetCharacter(newCharacter);
-		SaveManager.CreateNewSaveFile(newCharacter);
+		SaveManager.currentSavePath = SaveManager.CreateNewSaveFile(newCharacter);
 
 		FindObjectOfType<MenuManager>().LoadScene("FightScene");
 	}

@@ -12,16 +12,11 @@ MonoBehaviour:
   m_Name: Speed Potion
   m_EditorClassIdentifier: 
   name: Speed Point
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 1f361b74eab5afb49bcb9b652ff95211, type: 3}
   description: 
   effects:
   - effect:
-      effect: 0
-      strength: -10
-    duration: 0
-    infinite: 1
-  - effect:
       effect: 1
       strength: 10
-    duration: 2
-    infinite: 0
+    duration: 0
+    infinite: 1

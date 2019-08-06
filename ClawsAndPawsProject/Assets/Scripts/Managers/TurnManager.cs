@@ -76,7 +76,25 @@ public class TurnManager : MonoBehaviour {
 			
 			// ==== FIGHT END ====
 			case States.End:
-				FindObjectOfType<UIManager>().TriggerWinnerWidget();
+				Inventory inventory = FindObjectOfType<Inventory>();
+				UIManager uiManager = FindObjectOfType<UIManager>();
+
+				if (winner == player) {
+					OpponentSO opponentData = cpu.characterData as OpponentSO;
+
+					player.characterData.experiencePoints += opponentData.xpReward;
+					inventory.gold += opponentData.goldReward;
+					inventory.Add(opponentData.itemRewards.ToArray());
+
+					bool lvlUp = PlayerLevelManager.CheckLevel();
+
+					uiManager.TriggerPlayerWinWidget(opponentData.goldReward, opponentData.xpReward, opponentData.itemRewards.ToArray(), lvlUp);
+				}
+				else {
+					inventory.gold /= 2;
+					uiManager.TriggerLoserWinWidget(inventory.gold);
+				}
+
 				runStateMachine = false;
 				break;
 

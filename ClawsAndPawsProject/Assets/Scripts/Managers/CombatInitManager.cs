@@ -14,6 +14,8 @@ public class CombatInitManager : MonoBehaviour {
 		player.opponent.Initialize();
 
 		FindObjectOfType<Inventory>().Initialize();
+		FindObjectOfType<PlayerLevelManager>().Initialize();
+		
 		FindObjectOfType<TurnManager>().Initialize();
 		FindObjectOfType<UIManager>().Initialize();
 	}

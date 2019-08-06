@@ -7,6 +7,7 @@ public class CharacterData {
 
 	public string characterName;
 	public int characterExperiencePoints;
+	public int characterLevel;
 	
 	public int strengthPoints;
 	public int agilityPoints;
@@ -17,6 +18,7 @@ public class CharacterData {
 	public void Create(CharacterSO data) {
 		characterName = data.actorName;
 		characterExperiencePoints = data.experiencePoints;
+		characterLevel = data.level;
 
 		strengthPoints = data.strengthPoints;
 		agilityPoints = data.agilityPoints;
@@ -28,6 +30,7 @@ public class CharacterData {
 	public void CreateDefault() {
 		characterName = "Default";
 		characterExperiencePoints = 0;
+		characterLevel = 1;
 
 		strengthPoints = 1;
 		agilityPoints = 1;
@@ -39,9 +42,10 @@ public class CharacterData {
 	public CharacterSO GetSO() {
 		CharacterSO character = ScriptableObject.CreateInstance<CharacterSO>();
 
-		character.name = "Default";
+		character.name = characterName + " Object";
 		character.actorName = characterName;
 		character.experiencePoints = characterExperiencePoints;
+		character.level = characterLevel;
 
 		character.strengthPoints = strengthPoints;
 		character.agilityPoints = agilityPoints;

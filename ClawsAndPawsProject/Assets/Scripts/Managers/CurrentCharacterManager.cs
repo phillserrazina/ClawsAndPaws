@@ -10,7 +10,7 @@ public class CurrentCharacterManager : MonoBehaviour {
 		if (instance == null)
 			instance = this;
 		else if (instance != this) {
-			Destroy(instance.gameObject);
+			Destroy(gameObject);
 			instance = this;
 		}
 
@@ -18,21 +18,25 @@ public class CurrentCharacterManager : MonoBehaviour {
 	}
 
 	public CharacterSO currentCharacter { get; private set; }
-	public CharacterSO currentOpponent { get; private set; }
+	public OpponentSO currentOpponent { get; private set; }
 
 	public void SetCharacter(CharacterSO character) {
 		currentCharacter = character;
 	}
 
-	public void SetOpponent(CharacterSO character) {
+	public void SetOpponent(OpponentSO character) {
 		currentOpponent = character;
 	}
 
 	private void Awake() {
+		if (FindObjectOfType<CombatInitManager>() != null) return;
+
 		Singleton();
 	}
 
 	public void Initialize() {
+		Singleton();
+
 		if (currentCharacter == null) {
 			CharacterData newData = new CharacterData();
 			newData.CreateDefault();
@@ -40,9 +44,14 @@ public class CurrentCharacterManager : MonoBehaviour {
 		}
 
 		if (currentOpponent == null) {
-			CharacterData newData = new CharacterData();
-			newData.CreateDefault();
-			currentOpponent = newData.GetSO();
+			SetRandomOpponent();
 		}
+	}
+
+	public void SetRandomOpponent() {
+		OpponentSO newOpponent = ScriptableObject.CreateInstance<OpponentSO>();
+		int level = currentCharacter.level;
+		newOpponent.CreateRandom(level);
+		currentOpponent = newOpponent;
 	}
 }

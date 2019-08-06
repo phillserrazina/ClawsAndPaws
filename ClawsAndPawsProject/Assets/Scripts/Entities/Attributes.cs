@@ -6,8 +6,6 @@ public class Attributes : MonoBehaviour {
 
 	// VARIABLES
 
-	public int availableAttributePoints;
-
 	public int strengthPoints { get; private set; }
 	public int agilityPoints { get; private set; }
 	public int healthPoints { get; private set; }

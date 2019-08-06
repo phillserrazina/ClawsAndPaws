@@ -6,6 +6,10 @@ public class Inventory : MonoBehaviour {
 
 	// VARIABLES
 
+	public static Inventory instance;
+
+	public int gold;
+
 	public List<ItemSO> keyItems = new List<ItemSO>();
 	public List<HeldItemSO> heldItems = new List<HeldItemSO>();
 	public List<ConsumableSO> consumableItems = new List<ConsumableSO>();
@@ -15,6 +19,7 @@ public class Inventory : MonoBehaviour {
 	// METHODS
 
 	public void Initialize() {
+		Singleton();
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 	}
 
@@ -30,6 +35,12 @@ public class Inventory : MonoBehaviour {
 		}
 
 		keyItems.Add(item);
+	}
+
+	public void Add(ItemSO[] items) {
+		foreach (ItemSO item in items) {
+			Add(item);
+		}
 	}
 
 	public void Remove(ItemSO item) {
@@ -53,5 +64,16 @@ public class Inventory : MonoBehaviour {
 			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 
 		item.Use(player);
+	}
+
+	private void Singleton() {
+		if (instance == null)
+			instance = this;
+		else if (instance != this) {
+			Destroy(gameObject);
+			instance = this;
+		}
+
+		DontDestroyOnLoad(gameObject);
 	}
 }

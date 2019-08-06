@@ -9,13 +9,8 @@ public class Actor : MonoBehaviour {
 	public CharacterSO characterData;
 	public string actorName { get; private set; }
 
-	public float experiencePoints { get; private set; }
-
-	public int level {
-		get {
-			return Mathf.FloorToInt((experiencePoints + 1000) / 1000);
-		}
-	}
+	public int experiencePoints;
+	public int level;
 
 	public Actor opponent;
 
@@ -35,6 +30,7 @@ public class Actor : MonoBehaviour {
 		opponent = GetOpponent();
 
 		experiencePoints = characterData.experiencePoints;
+		level = characterData.level;
 
 		stats = GetComponent<Stats>();
 		combat = GetComponent<Combat>();

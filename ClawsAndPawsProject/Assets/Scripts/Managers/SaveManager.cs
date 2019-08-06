@@ -6,6 +6,7 @@ using System.IO;
 public class SaveManager {
 
 	private static string folderPath = Application.persistentDataPath + "/SaveFiles";
+	public static string currentSavePath;
 
 	public static void DirectoryCheck() {
 		if (!Directory.Exists(folderPath)) {
@@ -13,7 +14,15 @@ public class SaveManager {
 		}
 	}
 
-	public static void CreateNewSaveFile(CharacterSO data) {
+	public static void Save(CharacterSO data) {
+		string path = currentSavePath;
+		GameData gameData = CustomJson.ReadData(path);
+
+		gameData.characterData.Create(data);
+		CustomJson.SaveData(path, gameData);
+	} 
+
+	public static string CreateNewSaveFile(CharacterSO data) {
 		GameData gameData = new GameData();
 		gameData.Create(data);
 
@@ -22,9 +31,11 @@ public class SaveManager {
 		FileStream stream = File.Create(path);
 		stream.Close();
 		CustomJson.SaveData(path, gameData);
+
+		return path;
 	}
 
-	public static void CreateDefaultSaveFile() {
+	public static string CreateDefaultSaveFile() {
 		GameData gameData = new GameData();
 		gameData.CreateDefault();
 
@@ -33,6 +44,8 @@ public class SaveManager {
 		FileStream stream = File.Create(path);
 		stream.Close();
 		CustomJson.SaveData(path, gameData);
+
+		return path;
 	}
 
 	public static List<string> GetSaveFilesInDirectory() {
