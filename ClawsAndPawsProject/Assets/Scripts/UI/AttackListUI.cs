@@ -18,6 +18,8 @@ public class AttackListUI : MonoBehaviour {
 		allAttacks = player.combat.attackList.attacks;
 
 		for (int i = 0; i < allAttacks.Length; i++) {
+			if (allAttacks[i].requiredLevel > player.characterData.level) continue;
+
 			itemPrefab.GetComponent<AttackItem>().attackData = allAttacks[i];
 
 			GameObject go = Instantiate(itemPrefab) as GameObject;

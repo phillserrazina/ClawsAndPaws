@@ -33,6 +33,10 @@ public class Actor : MonoBehaviour {
 		attributes.Initialize();
 		stats.Initialize();
 		combat.Initialize();
+
+		if (transform.position.x > opponent.transform.position.x) {
+			transform.rotation = Quaternion.LookRotation(Vector3.back);
+		}
 	}
 
 	private Actor GetOpponent() {

@@ -50,6 +50,7 @@ public class Combat : MonoBehaviour {
 	}
 
 	public void ExecuteAction() {
+		
 		switch (currentChoice)
 		{
 			case Actions.Attack:
@@ -71,6 +72,8 @@ public class Combat : MonoBehaviour {
 				Debug.LogError("Actor::ExecuteAction --- Invalid Action.");
 				return;
 		}
+
+		GetComponent<Animator>().Play("Action");
 	}
 
 	private void ExecuteAttack() {
