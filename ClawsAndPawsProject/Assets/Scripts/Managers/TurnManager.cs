@@ -25,6 +25,8 @@ public class TurnManager : MonoBehaviour {
 
 	private bool runStateMachine = false;
 
+	[SerializeField] private RewardsUI rewardsUI;
+
 	// EXECUTION METHODS
 
 	private void Update() {
@@ -81,6 +83,9 @@ public class TurnManager : MonoBehaviour {
 
 				if (winner == player) {
 					OpponentSO opponentData = cpu.characterData as OpponentSO;
+
+					rewardsUI.battleEndXP = player.characterData.experiencePoints;
+					rewardsUI.battleEndGold = inventory.gold;
 
 					player.characterData.experiencePoints += opponentData.xpReward;
 					inventory.gold += opponentData.goldReward;

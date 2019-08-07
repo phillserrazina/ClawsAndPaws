@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour {
 	[SerializeField] private GameObject playerChoiceMenu;
 	[SerializeField] private GameObject winnerWidget;
 	[SerializeField] private GameObject loserWidget;
+	[SerializeField] private GameObject levelUpText;
+	[SerializeField] private GameObject regularButton;
 	[SerializeField] private GameObject levelUpButton;
 
 	[Header("Player Stats")]
@@ -31,7 +33,6 @@ public class UIManager : MonoBehaviour {
 
 	[Header("Text")]
 	[SerializeField] private Text winnerText;
-	[SerializeField] private Text winnerRewardText;
 	[SerializeField] private Text loserText;
 	[SerializeField] private Text loserGoldText;
 
@@ -54,12 +55,12 @@ public class UIManager : MonoBehaviour {
 
 	private void UpdatePlayerStats() {
 		leftCharacterName.text = player.actorName;
-		leftCharacterLevel.text = "Level " + player.level.ToString();
+		leftCharacterLevel.text = "Level " + player.characterData.level.ToString();
 		leftCharacterHealthGraphic.fillAmount = player.stats.healthDecimalPercentage;
 		leftCharacterStaminaGraphic.fillAmount = player.stats.staminaDecimalPercentage;
 
 		rightCharacterName.text = cpu.actorName;
-		rightCharacterLevel.text = "Level " + cpu.level.ToString();
+		rightCharacterLevel.text = "Level " + cpu.characterData.level.ToString();
 		rightCharacterHealthGraphic.fillAmount = cpu.stats.healthDecimalPercentage;
 		rightCharacterStaminaGraphic.fillAmount = cpu.stats.staminaDecimalPercentage;
 	}
@@ -81,9 +82,10 @@ public class UIManager : MonoBehaviour {
 
 	public void TriggerPlayerWinWidget(int goldWon, int xpWon, ItemSO[] itemsWon, bool lvlUp=false) {
 		winnerText.text = string.Format("{0} Wins!", player.actorName);
-		winnerRewardText.text = string.Format("Awarded {0} gold and {1} XP!", goldWon, xpWon);
 		winnerWidget.SetActive(true);
-		if (lvlUp) levelUpButton.SetActive(true);
+		levelUpText.SetActive(lvlUp);
+		levelUpButton.SetActive(lvlUp);
+		regularButton.SetActive(!lvlUp);
 	}
 
 	public void TriggerLoserWinWidget(int goldLost) {
