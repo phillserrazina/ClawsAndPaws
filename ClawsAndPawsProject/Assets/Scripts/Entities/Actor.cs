@@ -9,9 +9,6 @@ public class Actor : MonoBehaviour {
 	public CharacterSO characterData;
 	public string actorName { get; private set; }
 
-	public int experiencePoints;
-	public int level;
-
 	public Actor opponent;
 
 	public Stats stats { get; private set; }
@@ -29,9 +26,6 @@ public class Actor : MonoBehaviour {
 		actorName = characterData.actorName;
 		opponent = GetOpponent();
 
-		experiencePoints = characterData.experiencePoints;
-		level = characterData.level;
-
 		stats = GetComponent<Stats>();
 		combat = GetComponent<Combat>();
 		attributes = GetComponent<Attributes>();
@@ -39,6 +33,10 @@ public class Actor : MonoBehaviour {
 		attributes.Initialize();
 		stats.Initialize();
 		combat.Initialize();
+
+		if (transform.position.x > opponent.transform.position.x) {
+			transform.rotation = Quaternion.LookRotation(Vector3.back);
+		}
 	}
 
 	private Actor GetOpponent() {

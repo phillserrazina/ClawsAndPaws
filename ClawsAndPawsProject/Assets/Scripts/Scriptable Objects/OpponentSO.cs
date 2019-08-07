@@ -17,7 +17,7 @@ public class OpponentSO : CharacterSO {
 
 		// === EXPERIENCE POINTS AND LEVEL
 
-		experiencePoints = Random.Range(playerLevel-(300*playerLevel), playerLevel+(300*playerLevel));
+		experiencePoints = Random.Range(playerLevel-(100*playerLevel), playerLevel+(100*playerLevel));
 		experiencePoints = Mathf.Clamp(experiencePoints, 0, 20000);
 		level = Mathf.FloorToInt(0.1f * Mathf.Sqrt(experiencePoints)) + 1;
 

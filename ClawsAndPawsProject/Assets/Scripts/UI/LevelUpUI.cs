@@ -131,7 +131,7 @@ public class LevelUpUI : MonoBehaviour {
 		}
 
 		availablePointsText.text = PlayerLevelManager.availableAttributePoints.ToString();
-		doneButton.SetActive(PlayerLevelManager.availableAttributePoints <= 0);
+		doneButton.GetComponent<Button>().interactable = (PlayerLevelManager.availableAttributePoints <= 0);
 	}
 
 	public void UpdateCharacter() {

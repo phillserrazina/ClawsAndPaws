@@ -26,12 +26,8 @@ public class CharCreationUI : MonoBehaviour {
 	[Space(10)]
 	[SerializeField] private GameObject createButton;
 
-	private void Update() {
-		createButton.SetActive(CheckIfAllFieldsAreFilled());
-	}
-
 	private bool CheckIfAllFieldsAreFilled() {
-		if (nameInputField.text.Length.Equals(0)) return false;
+		if (nameInputField.text.Length.Equals(0) || availablePoints > 0) return false;
 
 		return true;
 	}
@@ -88,6 +84,7 @@ public class CharCreationUI : MonoBehaviour {
 		}
 
 		availablePointsText.text = availablePoints.ToString();
+		createButton.GetComponent<Button>().interactable = CheckIfAllFieldsAreFilled();
 	}
 
 	public void CreateNewCharacter() {

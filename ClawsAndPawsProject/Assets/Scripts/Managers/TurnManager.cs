@@ -25,6 +25,9 @@ public class TurnManager : MonoBehaviour {
 
 	private bool runStateMachine = false;
 
+	[SerializeField] private RewardsUI rewardsUI;
+	private UIManager uiManager;
+
 	// EXECUTION METHODS
 
 	private void Update() {
@@ -37,8 +40,19 @@ public class TurnManager : MonoBehaviour {
 		currentState = States.Start;
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 		cpu = player.opponent;
+		uiManager = FindObjectOfType<UIManager>();
 
 		runStateMachine = true;
+	}
+
+	private bool CheckIfAnimationIsPlaying() {
+		foreach (Actor a in FindObjectsOfType<Actor>()) {
+			if (!a.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	private void StateMachine() {
@@ -52,12 +66,12 @@ public class TurnManager : MonoBehaviour {
 				currentState = States.Choice;
 				player.stats.ApplyConditions();
 				cpu.stats.ApplyConditions();
-				FindObjectOfType<UIManager>().UpdateUI();
+				uiManager.UpdateUI();
 				break;
 			
 			// ==== PLAYER CHOICE ====
 			case States.Choice:
-				FindObjectOfType<UIManager>().TriggerPlayerChoiceMenu();
+				uiManager.TriggerPlayerChoiceMenu();
 				cpu.combat.SetRandomChoice();
 				cpu.combat.SetRandomAttack();
 				fightQueue = GetFightQueue();
@@ -71,16 +85,18 @@ public class TurnManager : MonoBehaviour {
 			// ==== AFTERMATH ====
 			case States.Aftermath:
 				CalculateAftermath();
-				FindObjectOfType<UIManager>().UpdateUI();
+				uiManager.UpdateUI();
 				break;
 			
 			// ==== FIGHT END ====
 			case States.End:
 				Inventory inventory = FindObjectOfType<Inventory>();
-				UIManager uiManager = FindObjectOfType<UIManager>();
 
 				if (winner == player) {
 					OpponentSO opponentData = cpu.characterData as OpponentSO;
+
+					rewardsUI.battleEndXP = player.characterData.experiencePoints;
+					rewardsUI.battleEndGold = inventory.gold;
 
 					player.characterData.experiencePoints += opponentData.xpReward;
 					inventory.gold += opponentData.goldReward;
@@ -107,7 +123,7 @@ public class TurnManager : MonoBehaviour {
 	private Queue<Actor> GetFightQueue() {
 		Queue<Actor> queue = new Queue<Actor>();
 
-		if (player.stats.speedPoints < cpu.stats.speedPoints) {
+		if (player.stats.speedPoints <= cpu.stats.speedPoints) {
 			queue.Enqueue(cpu);
 			queue.Enqueue(player);
 		}
@@ -120,12 +136,15 @@ public class TurnManager : MonoBehaviour {
 	}
 
 	private void ExecuteFightQueue() {
+		if (CheckIfAnimationIsPlaying()) return;
+		
 		if (fightQueue.Count == 0) {
 			currentState = States.Aftermath;
 			return;
 		}
 
 		fightQueue.Dequeue().combat.ExecuteAction();
+		uiManager.UpdateUI();
 	}
 
 	private void CalculateAftermath() {

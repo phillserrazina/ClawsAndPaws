@@ -15,8 +15,10 @@ public class Stats : MonoBehaviour {
 	public float currentStaminaPoints { get; private set; }
 	public float staminaDecimalPercentage { get { return currentStaminaPoints / maxStaminaPoints; } }
 
-	public float speedPoints { get { return GetComponent<Attributes>().agilityPoints; } set { speedPoints = value; } }
-	public float attackPoints { get { return GetComponent<Attributes>().strengthPoints; } set { attackPoints = value; } }
+	private float sp = 0;
+	public float speedPoints { get { return GetComponent<Attributes>().agilityPoints + sp; } set { sp = value; } }
+	private float ap = 0;
+	public float attackPoints { get { return GetComponent<Attributes>().strengthPoints + ap; } set { ap = value; } }
 
 	private Stack<ConditionSO> currentConditions = new Stack<ConditionSO>();
 
