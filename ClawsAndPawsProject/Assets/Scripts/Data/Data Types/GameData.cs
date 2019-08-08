@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameData {
 
 	public CharacterData characterData = new CharacterData();
+    public Inventory inventoryData = new Inventory();
 
     public void Create(CharacterSO data) {
         characterData.Create(data);

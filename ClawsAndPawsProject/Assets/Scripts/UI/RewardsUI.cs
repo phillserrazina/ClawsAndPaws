@@ -18,8 +18,6 @@ public class RewardsUI : MonoBehaviour
 
     private void OnEnable() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
-        //StartCoroutine(UpdateXPBar(battleEndXP, player.characterData.experiencePoints));
-        //StartCoroutine(UpdateGoldText(battleEndGold, FindObjectOfType<Inventory>().gold));
     }
 
     private void Update() {
