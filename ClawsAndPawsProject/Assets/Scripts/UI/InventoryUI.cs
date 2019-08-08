@@ -7,14 +7,8 @@ public class InventoryUI : MonoBehaviour {
 	public GameObject itemPrefab;
 	public GameObject itemList;
 
-	private Inventory inventory;
-
-	private void Awake() {
-		inventory = FindObjectOfType<Inventory>();
-	}
-
 	private void OnEnable() {
-		List<ConsumableSO> items = inventory.consumableItems;
+		List<ConsumableSO> items = Inventory.instance.ConsumableItems;
 
 		for (int i = 0; i < items.Count; i++) {
 			itemPrefab.GetComponent<ItemUI>().itemData = items[i];

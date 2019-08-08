@@ -15,12 +15,20 @@ public class SaveManager {
 	}
 
 	public static void Save(CharacterSO data) {
-		string path = currentSavePath;
-		GameData gameData = CustomJson.ReadData(path);
+		GameData gameData = CustomJson.ReadData(currentSavePath);
 
 		gameData.characterData.Create(data);
-		CustomJson.SaveData(path, gameData);
+		gameData.inventoryData = Inventory.instance;
+		CustomJson.SaveData(currentSavePath, gameData);
 	} 
+
+	public static GameData Load(string path) {
+		return CustomJson.ReadData(path);
+	}
+
+	public static GameData LoadCurrentSaveData() {
+		return CustomJson.ReadData(currentSavePath);
+	}
 
 	public static string CreateNewSaveFile(CharacterSO data) {
 		GameData gameData = new GameData();

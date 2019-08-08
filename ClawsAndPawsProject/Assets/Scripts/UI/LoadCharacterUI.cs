@@ -33,7 +33,7 @@ public class LoadCharacterUI : MonoBehaviour {
 				continue;
 			}
 
-			CharacterData retrieveCharacterdData = CustomJson.ReadData(paths[i]).characterData;
+			CharacterData retrieveCharacterdData = SaveManager.Load(paths[i]).characterData;
 
 			saveSlots[i].assignedPath = paths[i];
 			saveSlots[i].assignedCharacter = retrieveCharacterdData.GetSO();

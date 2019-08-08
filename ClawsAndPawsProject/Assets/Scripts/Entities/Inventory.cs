@@ -2,25 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour {
+[System.Serializable]
+public class Inventory {
+
+	public static Inventory instance = new Inventory();
 
 	// VARIABLES
 
-	public static Inventory instance;
-
 	public int gold;
 
-	public List<ItemSO> keyItems = new List<ItemSO>();
-	public List<HeldItemSO> heldItems = new List<HeldItemSO>();
-	public List<ConsumableSO> consumableItems = new List<ConsumableSO>();
+	[SerializeField] private List<ItemSO> keyItems = new List<ItemSO>();
+	public List<ItemSO> KeyItems { get { return keyItems; } }
+
+	[SerializeField] private List<HeldItemSO> heldItems = new List<HeldItemSO>();
+	public List<HeldItemSO> HeldItems { get { return heldItems; } }
+
+	[SerializeField] private List<ConsumableSO> consumableItems = new List<ConsumableSO>();
+	public List<ConsumableSO> ConsumableItems { get { return consumableItems; } }
 
 	private Actor player;
 
-	// METHODS
+	// METHODS	
 
 	public void Initialize() {
-		Singleton();
+		instance = this;
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+		Inventory loadedInventory = SaveManager.LoadCurrentSaveData().inventoryData;
+
+		gold = loadedInventory.gold;
+		keyItems = loadedInventory.keyItems;
+		heldItems = loadedInventory.heldItems;
+		consumableItems = loadedInventory.consumableItems;
 	}
 
 	public void Add(ItemSO item) {
@@ -64,16 +76,5 @@ public class Inventory : MonoBehaviour {
 			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 
 		item.Use(player);
-	}
-
-	private void Singleton() {
-		if (instance == null)
-			instance = this;
-		else if (instance != this) {
-			Destroy(gameObject);
-			instance = this;
-		}
-
-		DontDestroyOnLoad(gameObject);
 	}
 }

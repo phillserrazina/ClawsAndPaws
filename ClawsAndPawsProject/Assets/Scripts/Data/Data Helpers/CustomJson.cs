@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomJson : MonoBehaviour {
-
+public class CustomJson {
+	
 	private const string XOR_CODEWORD = "midjSNCjids92nJSN17bsk91n28SIx2z";
 
 	public static void SaveData(string path, GameData data, bool xor=false) {
@@ -59,4 +59,5 @@ public class CustomJson : MonoBehaviour {
 
 		return ans;
 	}
+	
 }
