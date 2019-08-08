@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class AttackItem : MonoBehaviour {
+public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
 	public Image itemIcon;
 	public Text itemName;
@@ -22,5 +23,15 @@ public class AttackItem : MonoBehaviour {
 		if (attackData.staminaCost > pStats.currentStaminaPoints) {
 			b.interactable = false;
 		}
+	}
+
+	public void OnPointerEnter(PointerEventData data) {
+		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
+		dui.UpdateDescriptionText(attackData.description);
+		dui.descriptionObject.SetActive(true);
+	}
+
+	public void OnPointerExit(PointerEventData data) {
+		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
 	}
 }

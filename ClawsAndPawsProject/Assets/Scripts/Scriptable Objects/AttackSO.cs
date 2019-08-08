@@ -7,6 +7,7 @@ public class AttackSO : ScriptableObject {
 
 	public Sprite attackIcon;
 	public new string name;
+	[TextArea(1, 3)] public string description;
 	public int requiredLevel;
 	public float damagePoints;
 	public float staminaCost;
