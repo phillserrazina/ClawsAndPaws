@@ -34,6 +34,10 @@ public class CurrentCharacterManager : MonoBehaviour {
 		Singleton();
 	}
 
+	private void Update() {
+		if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "MainMenu") Destroy(gameObject);
+	}
+
 	public void Initialize() {
 		Singleton();
 

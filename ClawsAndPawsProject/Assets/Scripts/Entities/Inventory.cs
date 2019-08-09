@@ -24,17 +24,12 @@ public class Inventory {
 
 	// METHODS	
 
-	private void Clear() {
-		gold = 0;
-		keyItems.Clear();
-		heldItems.Clear();
-		consumableItems.Clear();
-	}
-
 	public void Initialize() {
 		Clear();
 		instance = this;
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+		GameObject go = GameObject.FindGameObjectWithTag("Player");
+		if (go != null)
+			player = go.GetComponent<Actor>();
 		
 		List<string> loadedInventory = SaveManager.LoadCurrentSaveData().inventoryData;
 
@@ -103,5 +98,26 @@ public class Inventory {
 			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 
 		item.Use(player);
+	}
+
+	private void Clear() {
+		gold = 0;
+		keyItems.Clear();
+		heldItems.Clear();
+		consumableItems.Clear();
+	}
+
+	public bool Contains(ItemSO item) {
+		if (item is HeldItemSO) {
+			if (heldItems.Contains((HeldItemSO)item)) return true;
+		}
+		
+		if (item is ConsumableSO) {
+			if (consumableItems.Contains((ConsumableSO)item)) return true;
+		}
+
+		if (keyItems.Contains(item)) return true;
+		
+		return false;
 	}
 }
