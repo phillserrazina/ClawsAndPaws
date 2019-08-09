@@ -23,9 +23,7 @@ public class ItemSO : ScriptableObject {
 	[TextArea(1, 3)]
 	public string description;
 
-	public virtual void Use(Actor target) {
-
-	}
+	public virtual void Use(Actor target) { }
 
 	protected void ApplyEffect(Actor target, Effect effect) {
 		switch (effect.effect)
@@ -44,8 +42,7 @@ public class ItemSO : ScriptableObject {
 				break;
 			
 			case Effect.Effects.Change_Speed:
-				if (effect.strength > 0) target.stats.speedPoints += effect.strength;
-				else target.stats.speedPoints -= effect.strength;
+				target.stats.speedPoints += effect.strength;
 				break;
 
 			default:

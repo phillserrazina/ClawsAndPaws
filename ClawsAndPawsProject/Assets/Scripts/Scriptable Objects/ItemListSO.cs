@@ -20,6 +20,8 @@ public class ItemListSO : ScriptableObject {
 			if (i.name.Equals(itemName)) return i;
 		}
 
+		Debug.LogError("ItemListSO::Search() --- " + itemName + " does not exist! Did you forget to add it to the list?");
+
 		return null;
 	}
 }

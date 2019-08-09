@@ -6,4 +6,10 @@ using UnityEngine;
 public class HeldItemSO : ItemSO {
 
 	public Effect[] effects;
+
+	public override void Use(Actor target) {
+		foreach (Effect effect in effects) {
+			ApplyEffect(target, effect);
+		}
+	}
 }
