@@ -50,9 +50,18 @@ public class Inventory {
 
 		data.Add(gold.ToString());
 
-		foreach (ItemSO i in keyItems) data.Add(i.name);
-		foreach (ItemSO i in heldItems) data.Add(i.name);
-		foreach (ItemSO i in consumableItems) data.Add(i.name);
+		foreach (ItemSO i in keyItems) {
+			if (i == null) continue;
+			data.Add(i.name);
+		}
+		foreach (ItemSO i in heldItems) {
+			if (i == null) continue;
+			data.Add(i.name);
+		}
+		foreach (ItemSO i in consumableItems) {
+			if (i == null) continue;
+			data.Add(i.name);
+		}
 
 		return data;
 	}
@@ -117,6 +126,25 @@ public class Inventory {
 		}
 
 		if (keyItems.Contains(item)) return true;
+		
+		return false;
+	}
+
+	public bool Contains(string item) {
+		foreach (HeldItemSO i in heldItems) {
+			if (i == null) continue;
+			if (i.name == item) return true;
+		}
+		
+		foreach (ConsumableSO i in consumableItems) {
+			if (i == null) continue;
+			if (i.name == item) return true;
+		}
+
+		foreach (ItemSO i in keyItems) {
+			if (i == null) continue;
+			if (i.name == item) return true;
+		}
 		
 		return false;
 	}

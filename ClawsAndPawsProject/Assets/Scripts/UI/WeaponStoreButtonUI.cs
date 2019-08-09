@@ -11,8 +11,8 @@ public class WeaponStoreButtonUI : MonoBehaviour
 
     private void Update() {
         if (GetComponent<Button>().interactable == false) return;
-        
-        if (Inventory.instance.Contains(item) || 
+
+        if (Inventory.instance.Contains(item.name) || 
             Inventory.instance.gold < price ||
             FindObjectOfType<CurrentCharacterManager>().currentCharacter.level < requiredLevel) {
                 GetComponent<Button>().interactable = false;
