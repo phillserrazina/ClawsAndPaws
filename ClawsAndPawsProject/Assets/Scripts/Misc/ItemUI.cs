@@ -8,6 +8,7 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
 	public Image itemIcon;
 	public Text itemName;
+	public Text itemQuantity;
 	public ItemSO itemData;
 
 	private void OnEnable() {

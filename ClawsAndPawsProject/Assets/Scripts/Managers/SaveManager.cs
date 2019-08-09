@@ -18,7 +18,7 @@ public class SaveManager {
 		GameData gameData = CustomJson.ReadData(currentSavePath);
 
 		gameData.characterData.Create(data);
-		gameData.inventoryData = Inventory.instance;
+		gameData.inventoryData = Inventory.instance.GetInventoryData();
 		CustomJson.SaveData(currentSavePath, gameData);
 	} 
 
