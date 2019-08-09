@@ -24,15 +24,42 @@ public class Inventory {
 
 	// METHODS	
 
+	private void Clear() {
+		gold = 0;
+		keyItems.Clear();
+		heldItems.Clear();
+		consumableItems.Clear();
+	}
+
 	public void Initialize() {
+		Clear();
 		instance = this;
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
-		Inventory loadedInventory = SaveManager.LoadCurrentSaveData().inventoryData;
+		
+		List<string> loadedInventory = SaveManager.LoadCurrentSaveData().inventoryData;
 
-		gold = loadedInventory.gold;
-		keyItems = loadedInventory.keyItems;
-		heldItems = loadedInventory.heldItems;
-		consumableItems = loadedInventory.consumableItems;
+		if (loadedInventory.Count <= 0) return;
+
+		gold = int.Parse(loadedInventory[0]);
+		loadedInventory.RemoveAt(0);
+
+		ItemListSO allItemList = Resources.Load("All Items") as ItemListSO;
+
+		foreach (string n in loadedInventory) {
+			Add(allItemList.Search(n));
+		}
+	}
+
+	public List<string> GetInventoryData() {
+		List<string> data = new List<string>();
+
+		data.Add(gold.ToString());
+
+		foreach (ItemSO i in keyItems) data.Add(i.name);
+		foreach (ItemSO i in heldItems) data.Add(i.name);
+		foreach (ItemSO i in consumableItems) data.Add(i.name);
+
+		return data;
 	}
 
 	public void Add(ItemSO item) {

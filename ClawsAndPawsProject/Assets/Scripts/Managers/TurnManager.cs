@@ -138,7 +138,7 @@ public class TurnManager : MonoBehaviour {
 	private void ExecuteFightQueue() {
 		if (CheckIfAnimationIsPlaying()) return;
 		
-		if (fightQueue.Count == 0) {
+		if (fightQueue.Count == 0 || player.stats.currentHealthPoints <= 0 || cpu.stats.currentHealthPoints <= 0) {
 			currentState = States.Aftermath;
 			return;
 		}
