@@ -104,7 +104,5 @@ public class CharCreationUI : MonoBehaviour {
 
 		FindObjectOfType<CurrentCharacterManager>().SetCharacter(newCharacter);
 		SaveManager.currentSavePath = SaveManager.CreateNewSaveFile(newCharacter);
-
-		FindObjectOfType<MenuManager>().LoadScene("FightScene");
 	}
 }

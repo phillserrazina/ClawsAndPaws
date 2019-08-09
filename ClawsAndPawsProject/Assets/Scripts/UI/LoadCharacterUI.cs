@@ -48,7 +48,6 @@ public class LoadCharacterUI : MonoBehaviour {
 	public void LoadCharacter(CharacterSO character, string savePath) {
 		SaveManager.currentSavePath = savePath;
 		FindObjectOfType<CurrentCharacterManager>().SetCharacter(character);
-		// TODO: Teleport to current player location
-		UnityEngine.SceneManagement.SceneManager.LoadScene("FightScene");
+		UnityEngine.SceneManagement.SceneManager.LoadScene("HubScene");
 	}
 }

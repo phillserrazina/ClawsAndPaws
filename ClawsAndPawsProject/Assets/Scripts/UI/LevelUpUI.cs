@@ -144,7 +144,5 @@ public class LevelUpUI : MonoBehaviour {
 		PlayerLevelManager.UpdateLevel();
 
 		SaveManager.Save(player);
-
-		FindObjectOfType<MenuManager>().LoadScene("FightScene");
 	}
 }

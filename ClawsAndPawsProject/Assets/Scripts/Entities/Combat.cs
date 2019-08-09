@@ -47,6 +47,8 @@ public class Combat : MonoBehaviour {
 
 	public void Initialize() {
 		actor = GetComponent<Actor>();
+
+		ApplyHeldItemsEffects();
 	}
 
 	public void ExecuteAction() {
@@ -108,5 +110,13 @@ public class Combat : MonoBehaviour {
 	private void RestAction() {
 		actor.stats.RestoreHealth(5);
 		actor.stats.RestoreStamina(10f);
+	}
+
+	private void ApplyHeldItemsEffects() {
+		if (!(actor.tag == "Player")) return;
+
+		foreach (HeldItemSO item in Inventory.instance.HeldItems) {
+			item.Use(actor);
+		}
 	}
 }
