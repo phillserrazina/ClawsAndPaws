@@ -96,8 +96,6 @@ public class UIManager : MonoBehaviour {
 
 	public void UseItem(ItemSO itemData) {
 		SetPlayerAction("Items");
-		Inventory.instance.UseItem(itemData);
-		turnManager.NextState();
-		playerChoiceMenu.SetActive(false);
+		player.combat.SetItem((ConsumableSO)itemData);
 	}
 }
