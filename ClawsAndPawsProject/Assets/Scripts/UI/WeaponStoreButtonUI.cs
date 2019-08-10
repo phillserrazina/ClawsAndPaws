@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class WeaponStoreButtonUI : MonoBehaviour
+public class WeaponStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private int price;
     [SerializeField] private int requiredLevel;
@@ -24,4 +25,14 @@ public class WeaponStoreButtonUI : MonoBehaviour
         Inventory.instance.Add(item);
         SaveManager.Save(FindObjectOfType<CurrentCharacterManager>().currentCharacter);
     }
+
+    public void OnPointerEnter(PointerEventData data) {
+		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
+		dui.UpdateDescriptionText(item.description);
+		dui.descriptionObject.SetActive(true);
+	}
+
+	public void OnPointerExit(PointerEventData data) {
+		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
+	}
 }
