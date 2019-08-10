@@ -18,6 +18,12 @@ public class RewardsUI : MonoBehaviour
 
     private void OnEnable() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+
+        int finalValue = GetNextLevelXP();
+        xpText.text = string.Format("XP: {0}/{1}", battleEndXP, finalValue);
+        xpBarGraphic.fillAmount = (float)battleEndXP / (float)finalValue;
+
+        goldText.text = battleEndGold.ToString();
     }
 
     private void Update() {

@@ -111,7 +111,6 @@ public class TurnManager : MonoBehaviour {
 				}
 
 				runStateMachine = false;
-				SaveManager.Save(player.characterData);
 				break;
 
 			default:

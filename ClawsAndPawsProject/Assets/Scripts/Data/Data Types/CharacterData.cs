@@ -15,6 +15,8 @@ public class CharacterData {
 	public int staminaPoints;
 	public int intimidationPoints;
 
+	public int currentTournament;
+
 	public void Create(CharacterSO data) {
 		characterName = data.actorName;
 		characterExperiencePoints = data.experiencePoints;
@@ -25,6 +27,8 @@ public class CharacterData {
 		healthPoints = data.healthPoints;
 		staminaPoints = data.staminaPoints;
 		intimidationPoints = data.intimidationPoints;
+
+		currentTournament = data.currentTournament;
 	}
 
 	public void CreateDefault() {
@@ -37,6 +41,8 @@ public class CharacterData {
 		healthPoints = 1;
 		staminaPoints = 1;
 		intimidationPoints = 1;
+
+		currentTournament = 0;
 	}
 
 	public CharacterSO GetSO() {

@@ -8,6 +8,9 @@ public class CombatInitManager : MonoBehaviour {
 
 		FindObjectOfType<CurrentCharacterManager>().Initialize();
 
+		TournamentManager tManager = FindObjectOfType<TournamentManager>();
+		if (tManager != null) tManager.Initialize();
+
 		Actor player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 
 		player.Initialize();

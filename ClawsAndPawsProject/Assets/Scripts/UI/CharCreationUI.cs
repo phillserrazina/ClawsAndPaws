@@ -100,6 +100,8 @@ public class CharCreationUI : MonoBehaviour {
 		newCharacter.agilityPoints = agilityValue;
 		newCharacter.intimidationPoints = intimidationValue;
 
+		newCharacter.currentTournament = 0;
+
 		newCharacter.name = "Character_" + newCharacter.actorName;
 
 		FindObjectOfType<CurrentCharacterManager>().SetCharacter(newCharacter);

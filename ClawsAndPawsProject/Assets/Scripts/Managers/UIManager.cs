@@ -84,6 +84,15 @@ public class UIManager : MonoBehaviour {
 		winnerText.text = string.Format("{0} Wins!", player.actorName);
 		winnerWidget.SetActive(true);
 		levelUpText.SetActive(lvlUp);
+
+		TournamentTracker tTracker = FindObjectOfType<TournamentTracker>();
+
+		if (tTracker != null) {
+			if ((tTracker.currentOpponentIndex+1) != FindObjectOfType<TournamentManager>().currentTournament.opponentOrder.Length) {
+				return;
+			}
+		}
+
 		levelUpButton.SetActive(lvlUp);
 		regularButton.SetActive(!lvlUp);
 	}

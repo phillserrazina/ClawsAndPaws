@@ -15,4 +15,6 @@ public class CharacterSO : ScriptableObject {
 	public int healthPoints;
 	public int staminaPoints;
 	public int intimidationPoints;
+
+	public int currentTournament;
 }
