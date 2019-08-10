@@ -11,24 +11,7 @@ public class InventoryUI : MonoBehaviour {
 		List<ConsumableSO> items = Inventory.instance.ConsumableItems;
 
 		for (int i = 0; i < items.Count; i++) {
-			itemPrefab.GetComponent<ItemUI>().itemData = items[i];
-
-			int duplicateItems = FetchExistingQuantity(items, items[i]);
-
-			if (duplicateItems > 0) {
-				ItemUI[] allInventoryItems = FindObjectsOfType<ItemUI>();
-
-				foreach (ItemUI dItem in allInventoryItems) {
-					if (dItem.itemData.name == items[i].name) {
-						dItem.itemQuantity.text = "x" + duplicateItems.ToString();
-						return;
-					}
-				}
-			}
-
-			GameObject go = Instantiate(itemPrefab) as GameObject;
-			go.transform.SetParent(itemList.transform);
-			go.transform.localScale = Vector3.one;
+			InstantiateItem(items, i);
 		}
 	}
 
@@ -48,5 +31,26 @@ public class InventoryUI : MonoBehaviour {
 		}
 
 		return answer;
+	}
+
+	private void InstantiateItem(List<ConsumableSO> items, int i) {
+		itemPrefab.GetComponent<ItemUI>().itemData = items[i];
+
+		int duplicateItems = FetchExistingQuantity(items, items[i]);
+
+		if (duplicateItems > 0) {
+			ItemUI[] allInventoryItems = FindObjectsOfType<ItemUI>();
+
+			foreach (ItemUI dItem in allInventoryItems) {
+				if (dItem.itemData.name == items[i].name) {
+					dItem.itemQuantity.text = "x" + duplicateItems.ToString();
+					return;
+				}
+			}
+		}
+
+		GameObject go = Instantiate(itemPrefab) as GameObject;
+		go.transform.SetParent(itemList.transform);
+		go.transform.localScale = Vector3.one;
 	}
 }

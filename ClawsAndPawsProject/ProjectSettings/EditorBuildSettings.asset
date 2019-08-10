@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WeaponStoreScene.unity
     guid: 654022a79a3f3a74398bc15bedf9eb10
+  - enabled: 1
+    path: Assets/Scenes/ItemStoreScene.unity
+    guid: e804238a0f8308c49b473b6d533e0767
   m_configObjects: {}

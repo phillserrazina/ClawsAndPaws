@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Attack Potion
   m_EditorClassIdentifier: 
-  name: Speed Point
+  name: Attack Potion
   icon: {fileID: 21300000, guid: 3a78fbec52ed4b1489b87ea4ac158c0d, type: 3}
   description: Increases Attack for 2 turns.
   effects:
