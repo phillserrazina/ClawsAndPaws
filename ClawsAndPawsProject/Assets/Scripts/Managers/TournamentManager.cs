@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TournamentManager : MonoBehaviour
 {
-    public TournamentSO[] allTournaments;
+    [SerializeField] private TournamentSO[] allTournaments;
     public TournamentSO currentTournament { get; private set; }
     private OpponentSO currentOpponent;
 
@@ -24,7 +24,7 @@ public class TournamentManager : MonoBehaviour
     public void NextFight() {
         TournamentTracker tracker = FindObjectOfType<TournamentTracker>();
 
-        if ((tracker.currentOpponentIndex+1) == currentTournament.opponentOrder.Length) {
+        if (tracker == null) {
             SceneManager.LoadScene("HubScene");
             return;
         }

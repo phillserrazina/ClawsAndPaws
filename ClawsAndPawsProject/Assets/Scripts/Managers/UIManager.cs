@@ -91,6 +91,10 @@ public class UIManager : MonoBehaviour {
 			if ((tTracker.currentOpponentIndex+1) != FindObjectOfType<TournamentManager>().currentTournament.opponentOrder.Length) {
 				return;
 			}
+			else {
+				FindObjectOfType<CurrentCharacterManager>().currentCharacter.currentTournament++;
+				Destroy(tTracker.gameObject);
+			}
 		}
 
 		levelUpButton.SetActive(lvlUp);

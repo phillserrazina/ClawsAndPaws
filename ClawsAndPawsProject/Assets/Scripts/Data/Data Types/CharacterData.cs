@@ -59,6 +59,8 @@ public class CharacterData {
 		character.staminaPoints = staminaPoints;
 		character.intimidationPoints = intimidationPoints;
 
+		character.currentTournament = currentTournament;
+
 		return character;
 	}
 }
