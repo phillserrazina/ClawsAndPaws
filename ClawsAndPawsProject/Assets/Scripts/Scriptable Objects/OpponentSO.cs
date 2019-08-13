@@ -5,9 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName="Actors/Custom Opponent", fileName="New Opponent")]
 public class OpponentSO : CharacterSO {
 
-	public int goldReward;
+	public int goldReward { get; private set; }
 	public int xpReward { get; private set; }
 	public List<ItemSO> itemRewards = new List<ItemSO>();
+
+	public void Create() {
+		goldReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
+		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));
+
+		xpReward = (int)(experiencePoints * Random.Range(0.2f, 0.4f));
+		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.3f, 1f));
+	}
 
 	public void CreateRandom(int playerLevel) {
 		// === NAME ===

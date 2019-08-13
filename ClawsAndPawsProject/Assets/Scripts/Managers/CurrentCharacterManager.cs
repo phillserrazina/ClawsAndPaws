@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CurrentCharacterManager : MonoBehaviour {
 
@@ -35,7 +36,7 @@ public class CurrentCharacterManager : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "MainMenu") Destroy(gameObject);
+		if (SceneManager.GetActiveScene().name == "MainMenu") Destroy(gameObject);
 	}
 
 	public void Initialize() {
@@ -47,7 +48,7 @@ public class CurrentCharacterManager : MonoBehaviour {
 			currentCharacter = newData.GetSO();
 		}
 
-		if (currentOpponent == null) {
+		if (SceneManager.GetActiveScene().name == "FightScene") {
 			SetRandomOpponent();
 		}
 	}

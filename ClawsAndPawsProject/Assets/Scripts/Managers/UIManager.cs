@@ -84,6 +84,19 @@ public class UIManager : MonoBehaviour {
 		winnerText.text = string.Format("{0} Wins!", player.actorName);
 		winnerWidget.SetActive(true);
 		levelUpText.SetActive(lvlUp);
+
+		TournamentTracker tTracker = FindObjectOfType<TournamentTracker>();
+
+		if (tTracker != null) {
+			if ((tTracker.currentOpponentIndex+1) != FindObjectOfType<TournamentManager>().currentTournament.opponentOrder.Length) {
+				return;
+			}
+			else {
+				FindObjectOfType<CurrentCharacterManager>().currentCharacter.currentTournament++;
+				Destroy(tTracker.gameObject);
+			}
+		}
+
 		levelUpButton.SetActive(lvlUp);
 		regularButton.SetActive(!lvlUp);
 	}
@@ -96,8 +109,6 @@ public class UIManager : MonoBehaviour {
 
 	public void UseItem(ItemSO itemData) {
 		SetPlayerAction("Items");
-		Inventory.instance.UseItem(itemData);
-		turnManager.NextState();
-		playerChoiceMenu.SetActive(false);
+		player.combat.SetItem((ConsumableSO)itemData);
 	}
 }

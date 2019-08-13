@@ -6,5 +6,6 @@ public class HubInitializer : MonoBehaviour
 {
     private void Start() {
         Inventory.instance.Initialize();
+        SaveManager.Save(FindObjectOfType<CurrentCharacterManager>().currentCharacter);
     }
 }

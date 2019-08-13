@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220dec5fa0d6a2e45b423142d71bd387, type: 3}
+  m_Name: Tournament 1
+  m_EditorClassIdentifier: 
+  requiredLevel: 2
+  opponentOrder:
+  - {fileID: 11400000, guid: b5f39b7abef8e7f4395e10a7b4d6949c, type: 2}
+  - {fileID: 11400000, guid: 40af44bae3e389d4eaf6802987ef96e5, type: 2}
+  - {fileID: 11400000, guid: 84d9622c5bd691a44a31d94dc92bdab7, type: 2}
