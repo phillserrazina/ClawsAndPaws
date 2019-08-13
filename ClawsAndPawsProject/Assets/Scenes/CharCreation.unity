@@ -4677,7 +4677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b48812828416dc4ebdd903a7d9c54c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInputField: {fileID: 0}
+  nameInputField: {fileID: 8790736}
   availablePointsText: {fileID: 1312594809}
   strengthText: {fileID: 1142582804}
   healthText: {fileID: 1327072817}
