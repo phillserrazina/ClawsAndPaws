@@ -7,13 +7,15 @@ public class TournamentInfoUI : MonoBehaviour
 {
     [SerializeField] private TournamentSO[] allTournaments;
     private TournamentSO currentTournament;
-    private OpponentSO currentOpponent;
 
     [SerializeField] private Text tournamentTitle;
     [SerializeField] private Text contenstantsText;
 
     [SerializeField] private GameObject noTournamentAvailableObject;
     [SerializeField] private GameObject tournamentAvailableObject;
+
+    [SerializeField] private GameObject notEnoughLevelText;
+    [SerializeField] private GameObject fightButton;
 
     public void Start() {
         CurrentCharacterManager charManager = FindObjectOfType<CurrentCharacterManager>();
@@ -29,6 +31,11 @@ public class TournamentInfoUI : MonoBehaviour
 
         tournamentTitle.text = currentTournament.name;
         contenstantsText.text = GetContestantsText();
+
+        bool playerHasLevel = (FindObjectOfType<CurrentCharacterManager>().currentCharacter.level >= currentTournament.requiredLevel);
+        notEnoughLevelText.GetComponent<Text>().text = string.Format("You need to be level {0} to enter!", currentTournament.requiredLevel);
+        notEnoughLevelText.SetActive(!playerHasLevel);
+        fightButton.SetActive(playerHasLevel);
     }
 
     private string GetContestantsText() {
