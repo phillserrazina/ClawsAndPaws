@@ -5,24 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class TournamentManager : MonoBehaviour
 {
-    [SerializeField] private TournamentSO[] allTournaments;
-    public TournamentSO currentTournament { get; private set; }
+    private TournamentTracker tournamentTracker;
     private OpponentSO currentOpponent;
 
     public void Initialize() {
+        tournamentTracker = FindObjectOfType<TournamentTracker>();
         CurrentCharacterManager charManager = FindObjectOfType<CurrentCharacterManager>();
 
-        int currentTournamentIndex = charManager.currentCharacter.currentTournament;
-        currentTournament = allTournaments[currentTournamentIndex];
-
-        currentOpponent = currentTournament.opponentOrder[GetCurrentOpponentIndex()];
+        currentOpponent = tournamentTracker.currentTournament.opponentOrder[GetCurrentOpponentIndex()];
 
         charManager.SetOpponent(currentOpponent);
         charManager.currentOpponent.Create();
     }
 
     public void NextFight() {
-        TournamentTracker tracker = FindObjectOfType<TournamentTracker>();
+        TournamentOpponentTracker tracker = FindObjectOfType<TournamentOpponentTracker>();
 
         if (tracker == null) {
             SceneManager.LoadScene("HubScene");
@@ -35,13 +32,13 @@ public class TournamentManager : MonoBehaviour
     }
 
     private int GetCurrentOpponentIndex() {
-		if (FindObjectOfType<TournamentTracker>() == null) {
+		if (FindObjectOfType<TournamentOpponentTracker>() == null) {
 			GameObject go = new GameObject();
             go.name = "Opponent Tracker";
-			go.AddComponent<TournamentTracker>();
+			go.AddComponent<TournamentOpponentTracker>();
 			Instantiate(go);
 		}
 
-		return FindObjectOfType<TournamentTracker>().currentOpponentIndex;
+		return FindObjectOfType<TournamentOpponentTracker>().currentOpponentIndex;
 	}
 }

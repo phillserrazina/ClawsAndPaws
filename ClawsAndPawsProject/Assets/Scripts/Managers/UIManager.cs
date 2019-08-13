@@ -85,10 +85,10 @@ public class UIManager : MonoBehaviour {
 		winnerWidget.SetActive(true);
 		levelUpText.SetActive(lvlUp);
 
-		TournamentTracker tTracker = FindObjectOfType<TournamentTracker>();
+		TournamentOpponentTracker tTracker = FindObjectOfType<TournamentOpponentTracker>();
 
 		if (tTracker != null) {
-			if ((tTracker.currentOpponentIndex+1) != FindObjectOfType<TournamentManager>().currentTournament.opponentOrder.Length) {
+			if ((tTracker.currentOpponentIndex+1) != FindObjectOfType<TournamentTracker>().currentTournament.opponentOrder.Length) {
 				return;
 			}
 			else {

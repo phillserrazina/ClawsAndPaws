@@ -17,7 +17,7 @@ public class OpponentSO : CharacterSO {
 		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.3f, 1f));
 	}
 
-	public void CreateRandom(int playerLevel) {
+	public void CreateRandom() {
 		// === NAME ===
 		TextAsset file = Resources.Load("RandomCatNames") as TextAsset;
 		string[] nameList = file.text.Split(',');
@@ -25,8 +25,13 @@ public class OpponentSO : CharacterSO {
 
 		// === EXPERIENCE POINTS AND LEVEL
 
-		experiencePoints = Random.Range(playerLevel-(100*playerLevel), playerLevel+(100*playerLevel));
+		CharacterSO cCharacter = FindObjectOfType<CurrentCharacterManager>().currentCharacter;
+		TournamentSO cTournament = FindObjectOfType<TournamentTracker>().currentTournament;
+
+		int tLevel = cTournament == null ? cCharacter.level : cTournament.requiredLevel;
+		experiencePoints = Random.Range(tLevel-(100*tLevel), tLevel+(100*tLevel));
 		experiencePoints = Mathf.Clamp(experiencePoints, 0, 20000);
+		
 		level = Mathf.FloorToInt(0.1f * Mathf.Sqrt(experiencePoints)) + 1;
 
 		// === ATTRIBUTES ===
