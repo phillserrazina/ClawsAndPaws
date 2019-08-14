@@ -14,4 +14,8 @@ public class AudioSettings : MonoBehaviour
     // EXECUTION METHODS
 
     // METHODS
+
+    public void RestoreDefaults() {
+        
+    }
 }

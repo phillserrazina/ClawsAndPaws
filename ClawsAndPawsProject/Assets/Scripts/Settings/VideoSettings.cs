@@ -47,8 +47,20 @@ public class VideoSettings : MonoBehaviour
 		}
 
 		fullscreenToggle.isOn = isFullscreen;
+		resolutionButton.interactable = !isFullscreen;
 		resolutionButton.GetComponentInChildren<Text>().text = currentResolution.width + "x" + currentResolution.height;
     }
+
+	public void RestoreDefaults() {
+		fullscreenToggle.isOn = true;
+
+		currentResolution.width = Screen.currentResolution.width;
+		currentResolution.height = Screen.currentResolution.height;
+		resolutionButton.GetComponentInChildren<Text>().text = currentResolution.width + "x" + currentResolution.height;
+		currentResolutionIndex = fullScreenResolutionIndex;
+
+		Save(filePath);
+	}
 
     public void SetFullscreen() {
 		isFullscreen = fullscreenToggle.isOn;
