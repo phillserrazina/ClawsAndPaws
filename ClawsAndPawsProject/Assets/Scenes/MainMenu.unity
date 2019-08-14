@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 67871279}
   - component: {fileID: 67871278}
   - component: {fileID: 67871277}
+  - component: {fileID: 67871280}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -240,6 +241,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67871275}
   m_CullTransparentMesh: 0
+--- !u!114 &67871280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67871275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
 --- !u!1 &76682705
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +266,7 @@ GameObject:
   - component: {fileID: 76682709}
   - component: {fileID: 76682708}
   - component: {fileID: 76682707}
+  - component: {fileID: 76682710}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -317,7 +332,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 76682708}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1890865615}
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SettingsScene
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &76682708
@@ -357,6 +383,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76682705}
   m_CullTransparentMesh: 0
+--- !u!114 &76682710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76682705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
 --- !u!1 &197521072
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +489,7 @@ RectTransform:
   - {fileID: 1959922224}
   - {fileID: 1601455591}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -551,6 +590,7 @@ GameObject:
   - component: {fileID: 588824012}
   - component: {fileID: 588824011}
   - component: {fileID: 588824010}
+  - component: {fileID: 588824013}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -667,6 +707,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588824008}
   m_CullTransparentMesh: 0
+--- !u!114 &588824013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588824008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
 --- !u!1 &1064164142
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,8 +784,77 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1457757421
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7343648015161536581, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_Name
+      value: Sound Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343648015161536579, guid: 20479128eb4b9794ca818b514676855c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20479128eb4b9794ca818b514676855c, type: 3}
 --- !u!1 &1601455590
 GameObject:
   m_ObjectHideFlags: 0

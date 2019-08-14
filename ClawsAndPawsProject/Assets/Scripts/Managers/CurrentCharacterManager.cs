@@ -55,8 +55,7 @@ public class CurrentCharacterManager : MonoBehaviour {
 
 	public void SetRandomOpponent() {
 		OpponentSO newOpponent = ScriptableObject.CreateInstance<OpponentSO>();
-		int level = currentCharacter.level;
-		newOpponent.CreateRandom(level);
+		newOpponent.CreateRandom();
 		currentOpponent = newOpponent;
 	}
 }
