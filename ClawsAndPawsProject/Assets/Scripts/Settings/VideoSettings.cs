@@ -27,11 +27,11 @@ public class VideoSettings : MonoBehaviour
     // METHODS
 
     private void Initialize() {
-        filePath = Application.persistentDataPath + "/" + "Config.json";
+        filePath = Application.persistentDataPath + "/Config.json";
 
 		if (System.IO.File.Exists(filePath) == false) {
 			System.IO.File.Create(filePath).Close();
-			CreateNewVideoSettingsFile();
+			CreateNewSettingsFile();
 		}
 
         InitData();
@@ -90,9 +90,9 @@ public class VideoSettings : MonoBehaviour
         Save(filePath);
 	}
 
-	public static ConfigData CreateNewVideoSettingsFile() {
+	public static ConfigData CreateNewSettingsFile() {
 		ConfigData configData = new ConfigData();
-        configData.videoSettingsData.CreateDefault();
+        configData.CreateDefault();
 
 		Save(filePath, configData);
         return configData;
@@ -109,7 +109,7 @@ public class VideoSettings : MonoBehaviour
             configData = ReadData(filePath);
         
             if (configData == null)
-                configData = CreateNewVideoSettingsFile();
+                configData = CreateNewSettingsFile();
         }
 
         configData.videoSettingsData.currentResolutionWidth = currentResolution.width;
@@ -148,7 +148,7 @@ public class VideoSettings : MonoBehaviour
 		ConfigData configData = ReadData(filePath);
 
         if (configData == null)
-            configData = CreateNewVideoSettingsFile();
+            configData = CreateNewSettingsFile();
         
         VideoSettingsData data = configData.videoSettingsData;
 

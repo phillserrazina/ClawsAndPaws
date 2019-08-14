@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 723275932}
   - component: {fileID: 723275931}
   - component: {fileID: 723275930}
+  - component: {fileID: 723275933}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -820,6 +821,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723275928}
   m_CullTransparentMesh: 0
+--- !u!114 &723275933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723275928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
 --- !u!1 &724417885
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +845,7 @@ GameObject:
   - component: {fileID: 724417886}
   - component: {fileID: 724417887}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: VFX Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -899,13 +913,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 1599868917}
   m_HandleRect: {fileID: 1667664628}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 947430915}
+        m_MethodName: SetVfx
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &746811488
@@ -1030,7 +1055,7 @@ GameObject:
   - component: {fileID: 801033364}
   - component: {fileID: 801033365}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: General Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1098,13 +1123,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 86582026}
   m_HandleRect: {fileID: 1026396782}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 947430915}
+        m_MethodName: SetGeneral
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &831018669
@@ -1118,7 +1154,7 @@ GameObject:
   - component: {fileID: 831018670}
   - component: {fileID: 831018671}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Music Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1186,13 +1222,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 972149658}
   m_HandleRect: {fileID: 1081003202}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 947430915}
+        m_MethodName: SetMusic
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &946225314
@@ -1206,6 +1253,7 @@ GameObject:
   - component: {fileID: 946225315}
   - component: {fileID: 946225317}
   - component: {fileID: 946225316}
+  - component: {fileID: 946225318}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1270,6 +1318,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946225314}
   m_CullTransparentMesh: 0
+--- !u!114 &946225318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946225314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
 --- !u!1 &947430911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,8 +1363,8 @@ RectTransform:
   m_Children:
   - {fileID: 1137229422}
   - {fileID: 1899628027}
-  - {fileID: 1104626618}
   - {fileID: 1064384555}
+  - {fileID: 1104626618}
   m_Father: {fileID: 1060619826}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1361,9 +1422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1bf1c20c4df5a64389309d6fd3beb10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 1021cb9bdd016134d91b04ee44ca9dd7, type: 2}
   generalSlider: {fileID: 801033365}
-  musicSlider: {fileID: 724417887}
-  vfxSlider: {fileID: 831018671}
+  musicSlider: {fileID: 831018671}
+  vfxSlider: {fileID: 724417887}
 --- !u!1 &970541108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064384555}
   m_Layer: 5
-  m_Name: Music Slider
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1719,7 +1781,7 @@ RectTransform:
   - {fileID: 1436581731}
   - {fileID: 831018670}
   m_Father: {fileID: 947430912}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1810,7 +1872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104626618}
   m_Layer: 5
-  m_Name: VFX Slider
+  m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1830,7 +1892,7 @@ RectTransform:
   - {fileID: 1888375892}
   - {fileID: 724417886}
   m_Father: {fileID: 947430912}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2757,6 +2819,7 @@ GameObject:
   - component: {fileID: 1657108509}
   - component: {fileID: 1657108508}
   - component: {fileID: 1657108507}
+  - component: {fileID: 1657108510}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -2873,6 +2936,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657108505}
   m_CullTransparentMesh: 0
+--- !u!114 &1657108510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657108505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
 --- !u!1 &1667664627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,6 +3072,7 @@ GameObject:
   - component: {fileID: 1884593735}
   - component: {fileID: 1884593734}
   - component: {fileID: 1884593737}
+  - component: {fileID: 1884593738}
   m_Layer: 5
   m_Name: Restore Defaults Button
   m_TagString: Untagged
@@ -3124,6 +3201,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e533e09d7dc23874d9a29d0205419451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1884593738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884593732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
 --- !u!1 &1888375891
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,7 +3298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899628027}
   m_Layer: 5
-  m_Name: General Slider
+  m_Name: General
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
