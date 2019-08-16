@@ -4289,6 +4289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionObject: {fileID: 1187028869}
   descriptionText: {fileID: 2037468708}
+  goldText: {fileID: 0}
 --- !u!1 &1704952722
 GameObject:
   m_ObjectHideFlags: 0

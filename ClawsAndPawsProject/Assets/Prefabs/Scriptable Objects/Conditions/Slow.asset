@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99063bdc8545fbf41bd8eddea83fcb7f, type: 3}
-  m_Name: Poison
+  m_Name: Slow
   m_EditorClassIdentifier: 
-  condition: 0
+  condition: 4
   targetSelf: 0
-  duration: 3
-  strength: 10
+  duration: 2
+  strength: 5

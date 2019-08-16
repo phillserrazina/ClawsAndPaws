@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7977beb62d5c08f47bc6c564d5d5413c, type: 3}
-  m_Name: Basic Attack
+  m_Name: Bite
   m_EditorClassIdentifier: 
-  attackIcon: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
-  name: Claw
-  description: 'You lunge at your opponent, piercing them with your claws.
+  attackIcon: {fileID: 21300000, guid: 47e60dc9e8ac1b44493212687fc32de2, type: 3}
+  name: Bite
+  description: 'You bite your opponent in the leg, leaving them crippled.
 
-    -Deals 50pts of damage.
+    -Deals 50pts of damage. Slows opponent for 2 turns.
 
-    -Costs 0pts of stamina.'
-  requiredLevel: 0
+    -Costs 50pts of stamina.'
+  requiredLevel: 3
   damagePoints: 50
-  staminaCost: 0
+  staminaCost: 50
   manaCost: 0
-  conditions: []
+  conditions:
+  - {fileID: 11400000, guid: 9af1739ead859d94785a9d31955410b2, type: 2}
