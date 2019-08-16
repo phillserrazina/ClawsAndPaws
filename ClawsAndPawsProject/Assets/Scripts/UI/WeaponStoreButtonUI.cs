@@ -28,7 +28,7 @@ public class WeaponStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerEnter(PointerEventData data) {
 		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
-		dui.UpdateDescriptionText(item.description);
+		dui.UpdateStoreDescriptionText(item.description, price);
 		dui.descriptionObject.SetActive(true);
 	}
 

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 136965260}
   - component: {fileID: 136965259}
   - component: {fileID: 136965258}
+  - component: {fileID: 136965261}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -240,6 +241,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136965256}
   m_CullTransparentMesh: 0
+--- !u!114 &136965261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136965256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!224 &189226380 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224976387750756130, guid: 4ce07601017f0d742a5fad30631ce8d0,
