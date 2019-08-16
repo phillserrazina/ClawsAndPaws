@@ -801,8 +801,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxName: Knock
-  changeSize: 0
-  newSize: 0
+  changeSize: 1
+  newSize: 1.05
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1001 &624689947
