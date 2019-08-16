@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 175765652}
   - component: {fileID: 175765651}
   - component: {fileID: 175765650}
+  - component: {fileID: 175765653}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -241,6 +242,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175765648}
   m_CullTransparentMesh: 0
+--- !u!114 &175765653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175765648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &539096891
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,8 +777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8174ca6ce895a7e46a026d2ed62d8dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allTournaments:
-  - {fileID: 11400000, guid: b7328f99da8509242a230fbeb3e9cc0c, type: 2}
   tournamentTitle: {fileID: 1235467416}
   contenstantsText: {fileID: 736447595}
   noTournamentAvailableObject: {fileID: 1398290660}
@@ -969,6 +985,7 @@ GameObject:
   - component: {fileID: 1304793769}
   - component: {fileID: 1304793768}
   - component: {fileID: 1304793767}
+  - component: {fileID: 1304793770}
   m_Layer: 5
   m_Name: Fight Button
   m_TagString: Untagged
@@ -1086,6 +1103,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304793765}
   m_CullTransparentMesh: 0
+--- !u!114 &1304793770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304793765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1398290660
 GameObject:
   m_ObjectHideFlags: 0

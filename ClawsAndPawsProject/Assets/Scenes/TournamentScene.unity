@@ -1043,8 +1043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61fe46f2b6f01204293b32177aa5051a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allTournaments:
-  - {fileID: 11400000, guid: b7328f99da8509242a230fbeb3e9cc0c, type: 2}
 --- !u!1 &364683654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1150,7 @@ GameObject:
   - component: {fileID: 444537208}
   - component: {fileID: 444537207}
   - component: {fileID: 444537206}
+  - component: {fileID: 444537209}
   m_Layer: 5
   m_Name: Rest Button
   m_TagString: Untagged
@@ -1268,6 +1267,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444537204}
   m_CullTransparentMesh: 0
+--- !u!114 &444537209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444537204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.03
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!114 &468495510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114123046220556162, guid: 51bb06134f13e2447a7bbe7de136eb64,
@@ -1716,6 +1732,7 @@ GameObject:
   - component: {fileID: 567902498}
   - component: {fileID: 567902497}
   - component: {fileID: 567902496}
+  - component: {fileID: 567902499}
   m_Layer: 5
   m_Name: Items
   m_TagString: Untagged
@@ -1843,6 +1860,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567902494}
   m_CullTransparentMesh: 0
+--- !u!114 &567902499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567902494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.03
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &606063852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +1889,7 @@ GameObject:
   - component: {fileID: 606063856}
   - component: {fileID: 606063855}
   - component: {fileID: 606063854}
+  - component: {fileID: 606063857}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -1983,6 +2018,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606063852}
   m_CullTransparentMesh: 0
+--- !u!114 &606063857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606063852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 0
+  newSize: 0
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &629888096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,6 +2360,7 @@ GameObject:
   - component: {fileID: 766255186}
   - component: {fileID: 766255185}
   - component: {fileID: 766255184}
+  - component: {fileID: 766255187}
   m_Layer: 5
   m_Name: Attack Button
   m_TagString: Untagged
@@ -2435,6 +2488,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766255182}
   m_CullTransparentMesh: 0
+--- !u!114 &766255187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766255182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.03
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &793081227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2612,7 @@ GameObject:
   - component: {fileID: 793355507}
   - component: {fileID: 793355506}
   - component: {fileID: 793355505}
+  - component: {fileID: 793355508}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -2670,6 +2741,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793355503}
   m_CullTransparentMesh: 0
+--- !u!114 &793355508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793355503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 0
+  newSize: 0
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &842212644
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,6 +5503,7 @@ GameObject:
   - component: {fileID: 2091541187}
   - component: {fileID: 2091541186}
   - component: {fileID: 2091541185}
+  - component: {fileID: 2091541188}
   m_Layer: 5
   m_Name: Defend Button
   m_TagString: Untagged
@@ -5531,6 +5620,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091541183}
   m_CullTransparentMesh: 0
+--- !u!114 &2091541188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091541183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.03
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1001 &2104770759
 PrefabInstance:
   m_ObjectHideFlags: 0
