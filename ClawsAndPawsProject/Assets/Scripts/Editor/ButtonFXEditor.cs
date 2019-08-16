@@ -4,30 +4,41 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 
-[CanEditMultipleObjects]
-[CustomEditor(typeof(ButtonFX))]
+[CustomEditor(typeof(ButtonFX)), CanEditMultipleObjects]
 public class ButtonFXEditor : Editor
 {
     private ButtonFX buttonScript;
 
+    private SerializedProperty sfxName;
+    private SerializedProperty changeSize;
+    private SerializedProperty newSize;
+    private SerializedProperty changeSprite;
+
     private void OnEnable() {
         buttonScript = target as ButtonFX;
+
+        sfxName = serializedObject.FindProperty("sfxName");
+        changeSize = serializedObject.FindProperty("changeSize");
+        newSize = serializedObject.FindProperty("newSize");
+        changeSprite = serializedObject.FindProperty("changeSprite");
     }
 
     public override void OnInspectorGUI() {
-        buttonScript.sfxName = EditorGUILayout.TextField("SFX Name: ", buttonScript.sfxName);
+        serializedObject.Update();
+
+        sfxName.stringValue = EditorGUILayout.TextField("SFX Name: ", buttonScript.sfxName);
 
         EditorGUILayout.BeginHorizontal();
-        buttonScript.changeSize = EditorGUILayout.Toggle("Change Size: ", buttonScript.changeSize);
+        changeSize.boolValue = EditorGUILayout.Toggle("Change Size: ", buttonScript.changeSize);
 
         if (buttonScript.changeSize) {
-            buttonScript.newSize = EditorGUILayout.FloatField(buttonScript.newSize);
+            newSize.floatValue = EditorGUILayout.FloatField(buttonScript.newSize);
         }
         EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.BeginHorizontal();
 
-        buttonScript.changeSprite = EditorGUILayout.Toggle("Change Sprite: ", buttonScript.changeSprite);
+        changeSprite.boolValue = EditorGUILayout.Toggle("Change Sprite: ", buttonScript.changeSprite);
 
         if (buttonScript.changeSprite) {
             buttonScript.newSprite = (Sprite)EditorGUILayout.ObjectField(buttonScript.newSprite, typeof(Sprite), false);
@@ -39,5 +50,7 @@ public class ButtonFXEditor : Editor
             EditorUtility.SetDirty(buttonScript);
             EditorSceneManager.MarkSceneDirty(buttonScript.gameObject.scene);
         }
+
+        serializedObject.ApplyModifiedProperties();
     }
 }

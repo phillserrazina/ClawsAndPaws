@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 42904542}
   - component: {fileID: 42904541}
   - component: {fileID: 42904540}
+  - component: {fileID: 42904543}
   m_Layer: 5
   m_Name: Increase Button
   m_TagString: Untagged
@@ -319,6 +320,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42904538}
   m_CullTransparentMesh: 0
+--- !u!114 &42904543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42904538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &51418058
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.0998, y: -116.1}
+  m_AnchoredPosition: {x: -5.0997925, y: -116.09999}
   m_SizeDelta: {x: -53.7, y: 57}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &397400453
@@ -820,6 +838,7 @@ GameObject:
   - component: {fileID: 445772069}
   - component: {fileID: 445772068}
   - component: {fileID: 445772067}
+  - component: {fileID: 445772070}
   m_Layer: 5
   m_Name: Increase Button
   m_TagString: Untagged
@@ -936,6 +955,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445772065}
   m_CullTransparentMesh: 0
+--- !u!114 &445772070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445772065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &473031754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.9, y: -5.9}
+  m_AnchoredPosition: {x: 2.899994, y: -5.899994}
   m_SizeDelta: {x: -177.1, y: -426.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &497619321
@@ -1349,7 +1385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -159.84, y: -0.0002079}
+  m_AnchoredPosition: {x: -159.84, y: -0.00020599365}
   m_SizeDelta: {x: 93.44, y: 120.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933899210
@@ -1607,6 +1643,7 @@ GameObject:
   - component: {fileID: 1049776182}
   - component: {fileID: 1049776181}
   - component: {fileID: 1049776180}
+  - component: {fileID: 1049776183}
   m_Layer: 5
   m_Name: Increase Button
   m_TagString: Untagged
@@ -1723,6 +1760,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049776178}
   m_CullTransparentMesh: 0
+--- !u!114 &1049776183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049776178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1121716328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1789,7 @@ GameObject:
   - component: {fileID: 1121716332}
   - component: {fileID: 1121716331}
   - component: {fileID: 1121716330}
+  - component: {fileID: 1121716333}
   m_Layer: 5
   m_Name: Decrease Button
   m_TagString: Untagged
@@ -1851,6 +1906,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121716328}
   m_CullTransparentMesh: 0
+--- !u!114 &1121716333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121716328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1125575868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,7 +2157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.1, y: -24}
+  m_AnchoredPosition: {x: -5.100006, y: -24}
   m_SizeDelta: {x: -53.7, y: 51.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1288949242
@@ -2137,6 +2209,7 @@ GameObject:
   - component: {fileID: 1307336302}
   - component: {fileID: 1307336301}
   - component: {fileID: 1307336300}
+  - component: {fileID: 1307336303}
   m_Layer: 5
   m_Name: Decrease Button
   m_TagString: Untagged
@@ -2253,6 +2326,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307336298}
   m_CullTransparentMesh: 0
+--- !u!114 &1307336303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307336298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1312594808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,6 +2702,7 @@ GameObject:
   - component: {fileID: 1405697676}
   - component: {fileID: 1405697675}
   - component: {fileID: 1405697674}
+  - component: {fileID: 1405697677}
   m_Layer: 5
   m_Name: Increase Button
   m_TagString: Untagged
@@ -2728,6 +2819,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405697672}
   m_CullTransparentMesh: 0
+--- !u!114 &1405697677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405697672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1445090130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,7 +2871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -166.4, y: 0.00024557}
+  m_AnchoredPosition: {x: -166.4, y: 0.00024414062}
   m_SizeDelta: {x: 58.8, y: 129.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1445090132
@@ -3009,7 +3117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.1018, y: -312.2}
+  m_AnchoredPosition: {x: -5.1018066, y: -312.2}
   m_SizeDelta: {x: -53.696, y: 53}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1551483423
@@ -3061,6 +3169,7 @@ GameObject:
   - component: {fileID: 1640992168}
   - component: {fileID: 1640992167}
   - component: {fileID: 1640992166}
+  - component: {fileID: 1640992169}
   m_Layer: 5
   m_Name: Decrease Button
   m_TagString: Untagged
@@ -3177,6 +3286,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640992164}
   m_CullTransparentMesh: 0
+--- !u!114 &1640992169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640992164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1641833518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,6 +3352,7 @@ GameObject:
   - component: {fileID: 1648213743}
   - component: {fileID: 1648213742}
   - component: {fileID: 1648213741}
+  - component: {fileID: 1648213744}
   m_Layer: 5
   m_Name: Decrease Button
   m_TagString: Untagged
@@ -3342,6 +3469,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648213739}
   m_CullTransparentMesh: 0
+--- !u!114 &1648213744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648213739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1661035358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3580,7 @@ GameObject:
   - component: {fileID: 1712885283}
   - component: {fileID: 1712885282}
   - component: {fileID: 1712885281}
+  - component: {fileID: 1712885284}
   m_Layer: 5
   m_Name: Decrease Button
   m_TagString: Untagged
@@ -3552,6 +3697,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712885279}
   m_CullTransparentMesh: 0
+--- !u!114 &1712885284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712885279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1759038992
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,6 +3995,7 @@ GameObject:
   - component: {fileID: 1889804121}
   - component: {fileID: 1889804120}
   - component: {fileID: 1889804119}
+  - component: {fileID: 1889804122}
   m_Layer: 5
   m_Name: Increase Button
   m_TagString: Untagged
@@ -3949,6 +4112,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889804117}
   m_CullTransparentMesh: 0
+--- !u!114 &1889804122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889804117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: 
+  changeSize: 1
+  newSize: 1.07
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1952923151
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,7 +4164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.3, y: -65.1}
+  m_AnchoredPosition: {x: 6.299988, y: -65.100006}
   m_SizeDelta: {x: -82.8, y: 154.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1952923153
@@ -4149,6 +4329,7 @@ GameObject:
   - component: {fileID: 2075750804}
   - component: {fileID: 2075750803}
   - component: {fileID: 2075750802}
+  - component: {fileID: 2075750805}
   m_Layer: 5
   m_Name: Done Button
   m_TagString: Untagged
@@ -4173,7 +4354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 2.26, y: 48}
+  m_AnchoredPosition: {x: 2.2600098, y: 48}
   m_SizeDelta: {x: 242.92, y: 102.84}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2075750802
@@ -4277,6 +4458,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075750800}
   m_CullTransparentMesh: 0
+--- !u!114 &2075750805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075750800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 0
+  newSize: 0
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &2088242331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,7 +4510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -166.4, y: -0.00023794}
+  m_AnchoredPosition: {x: -166.4, y: -0.00023651123}
   m_SizeDelta: {x: 58.8, y: 123.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088242333
@@ -4407,7 +4605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -166.4, y: -0.0000090599}
+  m_AnchoredPosition: {x: -166.4, y: -0.0000076293945}
   m_SizeDelta: {x: 58.8, y: 133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115108889

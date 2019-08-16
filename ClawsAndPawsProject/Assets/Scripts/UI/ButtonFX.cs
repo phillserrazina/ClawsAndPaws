@@ -19,7 +19,8 @@ public class ButtonFX : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
-        FindObjectOfType<AudioManager>().Play(sfxName);
+        if (sfxName.Length > 0)
+            FindObjectOfType<AudioManager>().Play(sfxName);
 
         if (changeSize) transform.localScale *= newSize;
         if (changeSprite) GetComponent<Image>().sprite = newSprite;

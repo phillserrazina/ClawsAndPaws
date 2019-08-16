@@ -834,6 +834,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &724417885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1335,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &947430911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,6 +2957,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1667664627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,6 +3226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1888375891
 GameObject:
   m_ObjectHideFlags: 0
