@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
 	public Image itemIcon;
-	public Text itemName;
 	public AttackSO attackData;
 
 	private void OnEnable() {
@@ -16,7 +15,6 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 		Stats pStats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
 
 		itemIcon.sprite = attackData.attackIcon;
-		itemName.text = attackData.name;
 
 		b.onClick.AddListener(() => { FindObjectOfType<UIManager>().SetPlayerAttack(attackData); } );
 
@@ -27,7 +25,7 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
 	public void OnPointerEnter(PointerEventData data) {
 		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
-		dui.UpdateDescriptionText(attackData.description);
+		dui.UpdateDescriptionText(attackData.name, attackData.description);
 		dui.descriptionObject.SetActive(true);
 	}
 

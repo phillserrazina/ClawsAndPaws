@@ -170,7 +170,9 @@ public class TurnManager : MonoBehaviour {
 	public void Surrender() {
 		winner = cpu;
 		currentState = States.End;
-		GameObject.Find("Pause Menu").SetActive(false);
-		GameObject.Find("Pause Button").SetActive(false);
+		GameObject pMenu = GameObject.Find("Pause Menu");
+		GameObject pButton = GameObject.Find("Pause Button");
+		if (pMenu != null) pMenu.SetActive(false);
+		if (pButton != null) pButton.SetActive(false);
 	}
 }

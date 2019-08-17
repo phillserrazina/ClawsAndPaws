@@ -7,11 +7,22 @@ public class InventoryUI : MonoBehaviour {
 	public GameObject itemPrefab;
 	public GameObject itemList;
 
-	private void OnEnable() {
-		List<ConsumableSO> items = Inventory.instance.ConsumableItems;
+	public bool consumables = true;
 
-		for (int i = 0; i < items.Count; i++) {
-			InstantiateItem(items, i);
+	private void OnEnable() {
+
+		if (consumables) {
+			List<ConsumableSO> items = Inventory.instance.ConsumableItems;
+			for (int i = 0; i < items.Count; i++) {
+				InstantiateItem(items, i);
+			}
+
+			return;
+		}
+		
+		List<HeldItemSO> heldItems = Inventory.instance.HeldItems;
+		for (int i = 0; i < heldItems.Count; i++) {
+			InstantiateItem(heldItems, i);
 		}
 	}
 
@@ -48,6 +59,14 @@ public class InventoryUI : MonoBehaviour {
 				}
 			}
 		}
+
+		GameObject go = Instantiate(itemPrefab) as GameObject;
+		go.transform.SetParent(itemList.transform);
+		go.transform.localScale = Vector3.one;
+	}
+
+	private void InstantiateItem(List<HeldItemSO> items, int i) {
+		itemPrefab.GetComponent<ItemUI>().itemData = items[i];
 
 		GameObject go = Instantiate(itemPrefab) as GameObject;
 		go.transform.SetParent(itemList.transform);

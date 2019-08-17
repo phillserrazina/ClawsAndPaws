@@ -27,7 +27,7 @@ public class ItemStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData data) {
 		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
-		dui.UpdateStoreDescriptionText(item.description, price);
+		dui.UpdateStoreDescriptionText(item.name, item.description, price);
 		dui.descriptionObject.SetActive(true);
 	}
 
