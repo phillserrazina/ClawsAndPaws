@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour {
 	[Space(10)]
 	[SerializeField] private Image leftCharacterHealthGraphic;
 	[SerializeField] private Image leftCharacterStaminaGraphic;
+	[SerializeField] private Text leftCharacterHealthText;
+	[SerializeField] private Text leftCharacterStaminaText;
 
 	[Space(20)]
 	[SerializeField] private Text rightCharacterName;
@@ -30,6 +32,8 @@ public class UIManager : MonoBehaviour {
 	[Space(10)]
 	[SerializeField] private Image rightCharacterHealthGraphic;
 	[SerializeField] private Image rightCharacterStaminaGraphic;
+	[SerializeField] private Text rightCharacterHealthText;
+	[SerializeField] private Text rightCharacterStaminaText;
 
 	[Header("Text")]
 	[SerializeField] private Text winnerText;
@@ -58,11 +62,15 @@ public class UIManager : MonoBehaviour {
 		leftCharacterLevel.text = "Level " + player.characterData.level.ToString();
 		leftCharacterHealthGraphic.fillAmount = player.stats.healthDecimalPercentage;
 		leftCharacterStaminaGraphic.fillAmount = player.stats.staminaDecimalPercentage;
+		leftCharacterHealthText.text = player.stats.currentHealthPoints.ToString("F0");
+		leftCharacterStaminaText.text = player.stats.currentStaminaPoints.ToString("F0");
 
 		rightCharacterName.text = cpu.actorName;
 		rightCharacterLevel.text = "Level " + cpu.characterData.level.ToString();
 		rightCharacterHealthGraphic.fillAmount = cpu.stats.healthDecimalPercentage;
 		rightCharacterStaminaGraphic.fillAmount = cpu.stats.staminaDecimalPercentage;
+		rightCharacterHealthText.text = cpu.stats.currentHealthPoints.ToString("F0");
+		rightCharacterStaminaText.text = cpu.stats.currentStaminaPoints.ToString("F0");
 	}
 
 	public void TriggerPlayerChoiceMenu() {
