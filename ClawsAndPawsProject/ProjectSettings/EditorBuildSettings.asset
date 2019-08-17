@@ -24,11 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelUpScene.unity
     guid: 6d39250b44a3a3f47b4499827f65960d
   - enabled: 1
-    path: Assets/Scenes/WeaponStoreScene.unity
-    guid: 654022a79a3f3a74398bc15bedf9eb10
-  - enabled: 1
     path: Assets/Scenes/ItemStoreScene.unity
     guid: e804238a0f8308c49b473b6d533e0767
+  - enabled: 1
+    path: Assets/Scenes/WeaponStoreScene.unity
+    guid: bd2aae123f85b1f41b0742ee90bf63fd
   - enabled: 1
     path: Assets/Scenes/TournamentScene.unity
     guid: ecf0073e88efa4d43bc45037cf9dcc8d
