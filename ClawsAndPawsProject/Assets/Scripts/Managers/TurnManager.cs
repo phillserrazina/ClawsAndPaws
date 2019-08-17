@@ -166,4 +166,11 @@ public class TurnManager : MonoBehaviour {
 	public void NextState() {
 		currentState = (States)(((int)currentState + 1) % 5);
 	}
+
+	public void Surrender() {
+		winner = cpu;
+		currentState = States.End;
+		GameObject.Find("Pause Menu").SetActive(false);
+		GameObject.Find("Pause Button").SetActive(false);
+	}
 }
