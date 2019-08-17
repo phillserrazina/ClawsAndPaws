@@ -21,7 +21,13 @@ public class Combat : MonoBehaviour {
 
 	public AttackSO currentAttack { get; private set; }
 	public void SetAttack(AttackSO attackData) { currentAttack = attackData; }
-	public void SetRandomAttack() { SetAttack(attackList.attacks[Random.Range(0, attackList.attacks.Length-1)]); }
+	public void SetRandomAttack() { 
+		AttackSO chosen = attackList.attacks[Random.Range(0, attackList.attacks.Length)];
+		if (actor.characterData.level >= chosen.requiredLevel)
+			SetAttack(chosen);
+		else
+			SetRandomAttack();
+	}
 
 	public ConsumableSO currentItem { get; private set; }
 	public void SetItem(ConsumableSO itemData) { currentItem = itemData; }
@@ -54,7 +60,7 @@ public class Combat : MonoBehaviour {
 				break;
 			
 			case Actions.Items:
-				if (gameObject.tag != "Player") return;
+				if (gameObject.tag != "Player") break;
 				Inventory.instance.UseItem(currentItem);
 				break;
 

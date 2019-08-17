@@ -15,19 +15,19 @@ public class SaveManager {
 	}
 
 	public static void Save(CharacterSO data) {
-		GameData gameData = CustomJson.ReadData(currentSavePath, true);
+		GameData gameData = CustomJson.ReadData(currentSavePath);
 
 		gameData.characterData.Create(data);
 		gameData.inventoryData = Inventory.instance.GetInventoryData();
-		CustomJson.SaveData(currentSavePath, gameData, true);
+		CustomJson.SaveData(currentSavePath, gameData);
 	} 
 
 	public static GameData Load(string path) {
-		return CustomJson.ReadData(path, true);
+		return CustomJson.ReadData(path);
 	}
 
 	public static GameData LoadCurrentSaveData() {
-		return CustomJson.ReadData(currentSavePath, true);
+		return CustomJson.ReadData(currentSavePath);
 	}
 
 	public static string CreateNewSaveFile(CharacterSO data) {
@@ -38,7 +38,7 @@ public class SaveManager {
 		path = CheckForDuplicates(path, 0);
 		FileStream stream = File.Create(path);
 		stream.Close();
-		CustomJson.SaveData(path, gameData, true);
+		CustomJson.SaveData(path, gameData);
 
 		return path;
 	}
@@ -51,7 +51,7 @@ public class SaveManager {
 		path = CheckForDuplicates(path, 0);
 		FileStream stream = File.Create(path);
 		stream.Close();
-		CustomJson.SaveData(path, gameData, true);
+		CustomJson.SaveData(path, gameData);
 
 		return path;
 	}

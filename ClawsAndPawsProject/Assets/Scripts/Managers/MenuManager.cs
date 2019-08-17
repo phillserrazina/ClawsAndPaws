@@ -33,6 +33,9 @@ public class MenuManager : MonoBehaviour {
 		audioManager.audioMixer.SetFloat("generalVolume", audioData.generalVolume);
 		audioManager.audioMixer.SetFloat("musicVolume", audioData.musicVolume);
 		audioManager.audioMixer.SetFloat("vfxVolume", audioData.vfxVolume);
+
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = 30;
 	}
 
 	public void LoadScene(string sceneName) {

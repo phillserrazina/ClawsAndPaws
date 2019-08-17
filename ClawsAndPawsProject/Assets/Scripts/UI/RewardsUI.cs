@@ -13,8 +13,8 @@ public class RewardsUI : MonoBehaviour
     [SerializeField] private float lerpSpeed;
 
     private Actor player;
-    public int battleEndXP { private get; set; }
-    public int battleEndGold { private get; set; }
+    public float battleEndXP { private get; set; }
+    public float battleEndGold { private get; set; }
 
     private void OnEnable() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
@@ -41,15 +41,15 @@ public class RewardsUI : MonoBehaviour
 
     private void UpdateBars() {
         if (battleEndGold != Inventory.instance.gold) {
-            battleEndGold = (int)Mathf.Lerp(battleEndGold, Inventory.instance.gold, Time.deltaTime * lerpSpeed);
-            goldText.text = battleEndGold.ToString();
+            battleEndGold = Mathf.Lerp(battleEndGold, Inventory.instance.gold, Time.deltaTime * lerpSpeed);
+            goldText.text = battleEndGold.ToString("F0");
         }
 
         if (battleEndXP != player.characterData.experiencePoints) {
             int finalValue = GetNextLevelXP();
-            battleEndXP = (int)Mathf.Lerp(battleEndXP, player.characterData.experiencePoints, Time.deltaTime * lerpSpeed);
-            xpText.text = string.Format("XP: {0}/{1}", battleEndXP, finalValue);
-            xpBarGraphic.fillAmount = (float)battleEndXP / (float)finalValue;
+            battleEndXP = Mathf.Lerp(battleEndXP, player.characterData.experiencePoints, Time.deltaTime * lerpSpeed);
+            xpText.text = string.Format("XP: {0}/{1}", battleEndXP.ToString("F0"), finalValue);
+            xpBarGraphic.fillAmount = battleEndXP / (float)finalValue;
         }
     }
 }

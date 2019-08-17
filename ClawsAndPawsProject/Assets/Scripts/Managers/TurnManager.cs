@@ -111,6 +111,7 @@ public class TurnManager : MonoBehaviour {
 				}
 
 				runStateMachine = false;
+				SaveManager.Save(player.characterData);
 				break;
 
 			default:
@@ -164,5 +165,14 @@ public class TurnManager : MonoBehaviour {
 
 	public void NextState() {
 		currentState = (States)(((int)currentState + 1) % 5);
+	}
+
+	public void Surrender() {
+		winner = cpu;
+		currentState = States.End;
+		GameObject pMenu = GameObject.Find("Pause Menu");
+		GameObject pButton = GameObject.Find("Pause Button");
+		if (pMenu != null) pMenu.SetActive(false);
+		if (pButton != null) pButton.SetActive(false);
 	}
 }
