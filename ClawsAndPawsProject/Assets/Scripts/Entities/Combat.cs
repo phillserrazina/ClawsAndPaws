@@ -115,7 +115,7 @@ public class Combat : MonoBehaviour {
 	}
 
 	private void ApplyHeldItemsEffects() {
-		if (!(actor.tag == "Player")) return;
+		if (actor.tag != "Player") return;
 
 		foreach (HeldItemSO item in Inventory.instance.HeldItems) {
 			item.Use(actor);

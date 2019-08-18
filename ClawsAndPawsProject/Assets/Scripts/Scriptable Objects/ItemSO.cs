@@ -34,15 +34,18 @@ public class ItemSO : ScriptableObject {
 				break;
 			
 			case Effect.Effects.Change_Defense:
+				target.stats.defensePoints += effect.strength;
+				if (target.stats.defensePoints < 0) target.stats.defensePoints = 0;
 				break;
 			
 			case Effect.Effects.Change_Attack:
-				if (effect.strength > 0) target.stats.attackPoints += effect.strength;
-				else target.stats.attackPoints -= effect.strength;
+				target.stats.attackPoints += effect.strength;
+				if (target.stats.attackPoints < 0) target.stats.attackPoints = 0;
 				break;
 			
 			case Effect.Effects.Change_Speed:
 				target.stats.speedPoints += effect.strength;
+				if (target.stats.speedPoints < 0) target.stats.speedPoints = 0;
 				break;
 
 			default:
