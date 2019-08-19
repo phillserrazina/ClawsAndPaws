@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler {
 
 	public Image itemIcon;
 	public Text itemQuantity;
@@ -25,6 +25,10 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 	}
 
 	public void OnPointerExit(PointerEventData data) {
+		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
+	}
+
+	public void OnPointerClick(PointerEventData data) {
 		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
 	}
 }

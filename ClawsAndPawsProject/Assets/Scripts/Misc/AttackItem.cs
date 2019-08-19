@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler {
 
 	public Image itemIcon;
 	public AttackSO attackData;
@@ -30,6 +30,10 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 	}
 
 	public void OnPointerExit(PointerEventData data) {
+		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
+	}
+
+	public void OnPointerClick(PointerEventData data) {
 		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
 	}
 }
