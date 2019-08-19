@@ -16,6 +16,7 @@ public class CharacterData {
 	public int intimidationPoints;
 
 	public int currentTournament;
+	public int visualIndex;
 
 	public void Create(CharacterSO data) {
 		characterName = data.actorName;
@@ -29,6 +30,7 @@ public class CharacterData {
 		intimidationPoints = data.intimidationPoints;
 
 		currentTournament = data.currentTournament;
+		visualIndex = data.visualIndex;
 	}
 
 	public void CreateDefault() {
@@ -43,6 +45,7 @@ public class CharacterData {
 		intimidationPoints = 1;
 
 		currentTournament = 0;
+		visualIndex = 0;
 	}
 
 	public CharacterSO GetSO() {
@@ -60,6 +63,7 @@ public class CharacterData {
 		character.intimidationPoints = intimidationPoints;
 
 		character.currentTournament = currentTournament;
+		character.visualIndex = visualIndex;
 
 		return character;
 	}

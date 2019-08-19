@@ -13,9 +13,10 @@ public class Actor : MonoBehaviour {
 
 	public int level { get; private set; }
 
+	public Attributes attributes { get; private set; }
 	public Stats stats { get; private set; }
 	public Combat combat { get; private set; }
-	public Attributes attributes { get; private set; }
+	public Appearance appearance { get; private set; }
 
 	// METHODS
 
@@ -28,13 +29,15 @@ public class Actor : MonoBehaviour {
 		actorName = characterData.actorName;
 		opponent = GetOpponent();
 
+		attributes = GetComponent<Attributes>();
 		stats = GetComponent<Stats>();
 		combat = GetComponent<Combat>();
-		attributes = GetComponent<Attributes>();
+		appearance = GetComponent<Appearance>();
 
 		attributes.Initialize();
 		stats.Initialize();
 		combat.Initialize();
+		appearance.Initialize();
 
 		if (transform.position.x > opponent.transform.position.x) {
 			transform.rotation = Quaternion.LookRotation(Vector3.back);

@@ -4429,7 +4429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descriptionObject: {fileID: 1187028869}
-  nameText: {fileID: 0}
+  nameText: {fileID: 2121472114}
   descriptionText: {fileID: 2037468708}
   goldText: {fileID: 0}
 --- !u!1 &1704952722
@@ -6006,6 +6006,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000093
       objectReference: {fileID: 0}
+    - target: {fileID: 114974617199559036, guid: 51bb06134f13e2447a7bbe7de136eb64,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114121313992176454, guid: 51bb06134f13e2447a7bbe7de136eb64,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 224060773845683396, guid: 51bb06134f13e2447a7bbe7de136eb64,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6025,16 +6035,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: -41.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 114974617199559036, guid: 51bb06134f13e2447a7bbe7de136eb64,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114121313992176454, guid: 51bb06134f13e2447a7bbe7de136eb64,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224609260263369958, guid: 51bb06134f13e2447a7bbe7de136eb64,
         type: 3}

@@ -23,6 +23,8 @@ public class OpponentSO : CharacterSO {
 		string[] nameList = file.text.Split(',');
 		actorName = nameList[Random.Range(0, nameList.Length)];
 
+		visualIndex = Random.Range(0, 4);
+
 		// === EXPERIENCE POINTS AND LEVEL
 
 		CharacterSO cCharacter = FindObjectOfType<CurrentCharacterManager>().currentCharacter;

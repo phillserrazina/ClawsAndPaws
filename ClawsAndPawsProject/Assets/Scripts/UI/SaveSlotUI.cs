@@ -10,7 +10,9 @@ public class SaveSlotUI : MonoBehaviour {
 
 	[SerializeField] private Text characterName;
 	[SerializeField] private Text characterLevel;
-	[SerializeField] private Image characterVisuals; // TODO
+	[SerializeField] private Image characterVisuals;
+
+	[SerializeField] private Sprite[] allVisuals;
 
 	[HideInInspector] public string assignedPath;
 	[HideInInspector] public CharacterSO assignedCharacter;
@@ -24,6 +26,7 @@ public class SaveSlotUI : MonoBehaviour {
 		assignedCharacter.name = assignedCharacter.actorName + " Object";
 		characterName.text = assignedCharacter.actorName;
 		characterLevel.text = "Level " + assignedCharacter.level;
+		characterVisuals.sprite = allVisuals[assignedCharacter.visualIndex];
 
 		newCharacterSlotObject.SetActive(false);
 		existingCharacterSlotObject.SetActive(true);

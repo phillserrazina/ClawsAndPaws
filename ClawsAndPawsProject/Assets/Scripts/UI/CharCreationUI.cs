@@ -7,6 +7,7 @@ public class CharCreationUI : MonoBehaviour {
 
 	[SerializeField] private InputField nameInputField;
 	[SerializeField] private Text availablePointsText;
+	[SerializeField] private Image characterVisual;
 
 	[Space(10)]
 	[SerializeField] private Text strengthText;
@@ -15,11 +16,15 @@ public class CharCreationUI : MonoBehaviour {
 	[SerializeField] private Text agilityText;
 	[SerializeField] private Text intimidationText;
 
+	[SerializeField] private Sprite[] allVisuals;
+
 	private int strengthValue = 1;
 	private int healthValue = 1;
 	private int staminaValue = 1;
 	private int agilityValue = 1;
 	private int intimidationValue = 1;
+
+	private int visualIndexValue = 0;
 
 	private int availablePoints = 5;
 
@@ -81,6 +86,15 @@ public class CharCreationUI : MonoBehaviour {
 				intimidationValue += value;
 				intimidationText.text = intimidationValue.ToString();
 				break;
+			
+			case "Visual":
+				visualIndexValue += value;
+
+				if (visualIndexValue >= allVisuals.Length) visualIndexValue = 0;
+				if (visualIndexValue < 0) visualIndexValue = allVisuals.Length-1;
+
+				characterVisual.sprite = allVisuals[visualIndexValue];
+				break;
 
 			default:
 				Debug.LogError("CharCreationUI::IncreaseAttribute() --- Invalid Attribute");
@@ -104,6 +118,7 @@ public class CharCreationUI : MonoBehaviour {
 		newCharacter.intimidationPoints = intimidationValue;
 
 		newCharacter.currentTournament = 0;
+		newCharacter.visualIndex = visualIndexValue;
 
 		newCharacter.name = "Character_" + newCharacter.actorName;
 

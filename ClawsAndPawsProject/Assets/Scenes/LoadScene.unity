@@ -800,29 +800,6 @@ PrefabInstance:
       objectReference: {fileID: 2107612643}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce07601017f0d742a5fad30631ce8d0, type: 3}
---- !u!1 &466959820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1647872779245650, guid: 4ce07601017f0d742a5fad30631ce8d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 466959819}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &466959821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466959820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxName: Knock
-  changeSize: 1
-  newSize: 1.05
-  changeSprite: 0
-  newSprite: {fileID: 0}
 --- !u!1001 &624689947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1285,7 +1262,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 466959819}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466959820}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 099082a3d875b66488747648746b26e4, type: 3}
