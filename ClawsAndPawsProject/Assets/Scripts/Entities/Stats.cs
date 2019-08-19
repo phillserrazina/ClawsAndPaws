@@ -39,7 +39,6 @@ public class Stats : MonoBehaviour {
 	}
 
 	public void TakeDamage(float damage, bool trueDamage=false) {
-		Debug.Log(actor.characterData.actorName + " taking " + damage + "damage...");
 		if (currentHealthPoints <= 0) return;
 
 		if (actor.combat.isDefending) {
@@ -47,9 +46,8 @@ public class Stats : MonoBehaviour {
 			actor.combat.isDefending = false;
 		}
 
-		damage /= Mathf.Log(defensePoints*10, 10);
+		damage /= Mathf.Log10(defensePoints*10);
 		currentHealthPoints -= damage;
-		Debug.Log(actor.characterData.actorName + " ended up taking " + damage + "damage after defenses...");
 		if (currentHealthPoints <= 0) currentHealthPoints = 0;
 	}
 

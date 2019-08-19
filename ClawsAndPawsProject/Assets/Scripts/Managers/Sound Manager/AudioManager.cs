@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
 			s.source.outputAudioMixerGroup = s.mixerGroup;
 		}
 
-		Play(sounds[UnityEngine.Random.Range(1, 3)].name);
+		Play(sounds[UnityEngine.Random.Range(0, 3)].name);
 	}
 
 	private void Update() {
@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
 				return;
 		}
 
-		Play(sounds[UnityEngine.Random.Range(1, 3)].name);
+		Play(sounds[UnityEngine.Random.Range(0, 3)].name);
 	}
 
 	public void Play(string sound)

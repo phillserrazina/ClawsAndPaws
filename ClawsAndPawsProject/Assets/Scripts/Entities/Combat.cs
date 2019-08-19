@@ -53,6 +53,17 @@ public class Combat : MonoBehaviour {
 
 	public void ExecuteAction() {
 		
+		string action = "Action";
+
+		float chanceToFlinch = actor.opponent.characterData.intimidationPoints * 3;
+		float hit = Random.Range(0, 100);
+
+		if (hit < chanceToFlinch) {
+			return;
+		}
+
+		GetComponent<Animator>().Play(action);
+
 		switch (currentChoice)
 		{
 			case Actions.Attack:
@@ -76,8 +87,6 @@ public class Combat : MonoBehaviour {
 				Debug.LogError("Actor::ExecuteAction --- Invalid Action.");
 				return;
 		}
-
-		GetComponent<Animator>().Play("Action");
 	}
 
 	private void ExecuteAttack() {
