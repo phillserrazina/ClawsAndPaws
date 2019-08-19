@@ -56,8 +56,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 243339007934544530, guid: 1021cb9bdd016134d91b04ee44ca9dd7,
       type: 2}
     source: {fileID: 0}
-  - name: Main Theme
-    clip: {fileID: 8300000, guid: 75dbd06147df3494c9ee69854ed6fb43, type: 3}
+  - name: Main Theme 2
+    clip: {fileID: 8300000, guid: 908abc46f5ea7fa41be8b66fd1a07241, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -66,8 +66,8 @@ MonoBehaviour:
     mixerGroup: {fileID: 243339007934544530, guid: 1021cb9bdd016134d91b04ee44ca9dd7,
       type: 2}
     source: {fileID: 0}
-  - name: Main Theme
-    clip: {fileID: 8300000, guid: 75dbd06147df3494c9ee69854ed6fb43, type: 3}
+  - name: Main Theme 3
+    clip: {fileID: 8300000, guid: 164db13b84c070340a5491f9d52c6f7f, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1

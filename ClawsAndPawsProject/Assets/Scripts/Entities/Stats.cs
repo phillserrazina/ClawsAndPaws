@@ -19,6 +19,8 @@ public class Stats : MonoBehaviour {
 	public float speedPoints { get { return GetComponent<Attributes>().agilityPoints + sp; } set { sp = value; } }
 	private float ap = 0;
 	public float attackPoints { get { return GetComponent<Attributes>().strengthPoints + ap; } set { ap = value; } }
+	private float dp = 0;
+	public float defensePoints { get { return 1 + dp; } set { dp = value; dp = Mathf.Clamp(dp, 0, 9); } }
 
 	private Stack<ConditionSO> currentConditions = new Stack<ConditionSO>();
 
@@ -44,6 +46,7 @@ public class Stats : MonoBehaviour {
 			actor.combat.isDefending = false;
 		}
 
+		damage /= Mathf.Log10(defensePoints*10);
 		currentHealthPoints -= damage;
 		if (currentHealthPoints <= 0) currentHealthPoints = 0;
 	}
@@ -77,11 +80,11 @@ public class Stats : MonoBehaviour {
 				break;
 			
 			case ConditionSO.Conditions.Increase_Defense:
-				// TODO
+				defensePoints += cond.strength;
 				break;
 			
 			case ConditionSO.Conditions.Reduce_Defense:
-				// TODO
+				defensePoints -= cond.strength;
 				break;
 			
 			case ConditionSO.Conditions.Increase_Speed:

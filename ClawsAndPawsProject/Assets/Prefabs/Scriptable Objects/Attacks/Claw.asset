@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Claw
   description: 'You lunge at your opponent, piercing them with your claws.
 
-    -Deals 50pts of damage.
+    -Deals 20pts of damage.
 
     -Costs 0pts of stamina.'
   requiredLevel: 0

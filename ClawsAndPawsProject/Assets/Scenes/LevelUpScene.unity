@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -1772,7 +1772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -2831,7 +2831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -3481,7 +3481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -3709,7 +3709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -4124,7 +4124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxName: 
+  sfxName: Knock
   changeSize: 1
   newSize: 1.07
   changeSprite: 0
@@ -4259,6 +4259,12 @@ MonoBehaviour:
   staminaText: {fileID: 16148952}
   agilityText: {fileID: 51418059}
   intimidationText: {fileID: 419927678}
+  playerVisual: {fileID: 615424119}
+  allVisuals:
+  - {fileID: 21300000, guid: 0cdfc47c4c2f6524d8d05ccce6dd3c3c, type: 3}
+  - {fileID: 21300000, guid: de390f15e59af034bbf0b53afdeac039, type: 3}
+  - {fileID: 21300000, guid: 5157409932a32c64da6de9c1c0dc1c6d, type: 3}
+  - {fileID: 21300000, guid: 5efc3954fc14b9a4d96257ee458ab358, type: 3}
   doneButton: {fileID: 2075750800}
 --- !u!4 &1972374678
 Transform:

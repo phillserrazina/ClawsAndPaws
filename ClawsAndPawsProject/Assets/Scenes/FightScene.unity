@@ -5583,10 +5583,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4144848064663396, guid: 52a5252bfe633e647bda6a81ded54b63, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a5252bfe633e647bda6a81ded54b63, type: 3}
 --- !u!1 &2064627774
@@ -6013,6 +6009,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000093
       objectReference: {fileID: 0}
+    - target: {fileID: 114974617199559036, guid: 51bb06134f13e2447a7bbe7de136eb64,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114121313992176454, guid: 51bb06134f13e2447a7bbe7de136eb64,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 224060773845683396, guid: 51bb06134f13e2447a7bbe7de136eb64,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6032,16 +6038,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: -41.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 114974617199559036, guid: 51bb06134f13e2447a7bbe7de136eb64,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114121313992176454, guid: 51bb06134f13e2447a7bbe7de136eb64,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224609260263369958, guid: 51bb06134f13e2447a7bbe7de136eb64,
         type: 3}

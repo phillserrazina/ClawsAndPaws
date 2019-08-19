@@ -10,11 +10,18 @@ public class ItemStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [SerializeField] private int requiredLevel;
     [SerializeField] private ConsumableSO item;
 
+    private CharacterSO character;
+
+    private void Start() {
+        character = FindObjectOfType<CurrentCharacterManager>().currentCharacter;
+        price = Mathf.RoundToInt(price / Mathf.Log10(character.intimidationPoints*10));
+    }
+
     private void Update() {
         if (GetComponent<Button>().interactable == false) return;
 
         if (Inventory.instance.gold < price ||
-            FindObjectOfType<CurrentCharacterManager>().currentCharacter.level < requiredLevel) {
+            character.level < requiredLevel) {
                 GetComponent<Button>().interactable = false;
         }
     }
@@ -22,7 +29,7 @@ public class ItemStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void SellItem() {
         Inventory.instance.gold -= price;
         Inventory.instance.Add(item);
-        SaveManager.Save(FindObjectOfType<CurrentCharacterManager>().currentCharacter);
+        SaveManager.Save(character);
     }
 
     public void OnPointerEnter(PointerEventData data) {
