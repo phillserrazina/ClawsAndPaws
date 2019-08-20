@@ -18,9 +18,9 @@ MonoBehaviour:
 
     -Deals 20pts of damage.
 
-    -Costs 0pts of stamina.'
+    -Costs 5pts of stamina.'
   requiredLevel: 0
   damagePoints: 20
-  staminaCost: 0
+  staminaCost: 5
   manaCost: 0
   conditions: []

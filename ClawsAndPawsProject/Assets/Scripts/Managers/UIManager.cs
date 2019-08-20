@@ -88,7 +88,7 @@ public class UIManager : MonoBehaviour {
 		player.combat.SetAttack(attackData);
 	}
 
-	public void TriggerPlayerWinWidget(int goldWon, int xpWon, ItemSO[] itemsWon, bool lvlUp=false) {
+	public void TriggerPlayerWinWidget(int goldWon, int xpWon, bool lvlUp=false) {
 		winnerText.text = string.Format("{0} Wins!", player.actorName);
 		winnerWidget.SetActive(true);
 		levelUpText.SetActive(lvlUp);

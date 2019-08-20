@@ -6,7 +6,8 @@ using UnityEngine.EventSystems;
 
 public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
-	public Image itemIcon;
+	[SerializeField] private Image itemIcon;
+	[SerializeField] private Text attackName;
 	public AttackSO attackData;
 
 	private void OnEnable() {
@@ -15,6 +16,7 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 		Stats pStats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
 
 		itemIcon.sprite = attackData.attackIcon;
+		attackName.text = attackData.name;
 
 		if (b != null) {
 			b.onClick.AddListener(() => { TurnOffDescriptions(); } );
