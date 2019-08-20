@@ -54,6 +54,7 @@ public class InventoryUI : MonoBehaviour {
 
 			foreach (ItemUI dItem in allInventoryItems) {
 				if (dItem.itemData.name == items[i].name) {
+					dItem.itemQuantity.gameObject.SetActive(true);
 					dItem.itemQuantity.text = "x" + duplicateItems.ToString();
 					return;
 				}

@@ -8,6 +8,7 @@ public class OpponentSO : CharacterSO {
 	public int goldReward { get; private set; }
 	public int xpReward { get; private set; }
 	public List<ItemSO> itemRewards = new List<ItemSO>();
+	public Sprite customSprite;
 
 	public void Create() {
 		goldReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
@@ -58,11 +59,7 @@ public class OpponentSO : CharacterSO {
 		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.3f, 1f));
 
 		ItemListSO rewardList = Resources.Load("Reward Items") as ItemListSO;
-
-		int itemLevel = level;
-		itemLevel -= Random.Range(-2, 2);
-		itemLevel = Mathf.Clamp(itemLevel, 1, 20);
-
+		int itemLevel = Random.Range(0, level);
 		itemRewards.Add(rewardList.items[itemLevel]);
 	}
 

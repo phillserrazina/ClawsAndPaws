@@ -12,7 +12,7 @@ public class WeaponStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointer
 
     private CharacterSO character;
 
-    private void Start() {
+    private void Awake() {
         character = FindObjectOfType<CurrentCharacterManager>().currentCharacter;
         price = Mathf.RoundToInt(price / Mathf.Log10(character.intimidationPoints*10));
     }

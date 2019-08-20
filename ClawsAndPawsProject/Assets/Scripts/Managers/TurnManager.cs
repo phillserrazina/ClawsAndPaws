@@ -96,6 +96,7 @@ public class TurnManager : MonoBehaviour {
 
 					rewardsUI.battleEndXP = player.characterData.experiencePoints;
 					rewardsUI.battleEndGold = Inventory.instance.gold;
+					rewardsUI.itemRewardObject.PushToRewardStack(opponentData.itemRewards.ToArray());
 
 					player.characterData.experiencePoints += opponentData.xpReward;
 					Inventory.instance.gold += opponentData.goldReward;
@@ -103,7 +104,7 @@ public class TurnManager : MonoBehaviour {
 
 					bool lvlUp = PlayerLevelManager.CheckLevel();
 
-					uiManager.TriggerPlayerWinWidget(opponentData.goldReward, opponentData.xpReward, opponentData.itemRewards.ToArray(), lvlUp);
+					uiManager.TriggerPlayerWinWidget(opponentData.goldReward, opponentData.xpReward, lvlUp);
 				}
 				else {
 					Inventory.instance.gold /= 2;
