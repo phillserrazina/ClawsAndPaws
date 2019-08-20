@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler {
+public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
 	public Image itemIcon;
 	public AttackSO attackData;
@@ -16,8 +16,11 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
 		itemIcon.sprite = attackData.attackIcon;
 
-		b.onClick.AddListener(() => { FindObjectOfType<UIManager>().SetPlayerAttack(attackData); } );
-
+		if (b != null) {
+			b.onClick.AddListener(() => { TurnOffDescriptions(); } );
+			b.onClick.AddListener(() => { FindObjectOfType<UIManager>().SetPlayerAttack(attackData); } );
+		}
+		
 		if (attackData.staminaCost > pStats.currentStaminaPoints) {
 			b.interactable = false;
 		}
@@ -30,10 +33,11 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 	}
 
 	public void OnPointerExit(PointerEventData data) {
-		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
+		TurnOffDescriptions();
 	}
 
-	public void OnPointerClick(PointerEventData data) {
-		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
+	private void TurnOffDescriptions() {
+		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
+		if (dui != null) dui.descriptionObject.SetActive(false);
 	}
 }

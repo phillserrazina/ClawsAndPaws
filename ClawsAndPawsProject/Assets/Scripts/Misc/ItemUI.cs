@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler {
+public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
 	public Image itemIcon;
 	public Text itemQuantity;
@@ -14,8 +14,10 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 		itemIcon.sprite = itemData.icon;
 
 		Button b = GetComponent<Button>();
-		if (b != null)
+		if (b != null) {
+			b.onClick.AddListener(() => { TurnOffDescriptions(); } );
 			b.onClick.AddListener(() => { FindObjectOfType<UIManager>().UseItem(itemData); } );
+		}
 	}
 
 	public void OnPointerEnter(PointerEventData data) {
@@ -25,10 +27,11 @@ public class ItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 	}
 
 	public void OnPointerExit(PointerEventData data) {
-		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
+		TurnOffDescriptions();
 	}
 
-	public void OnPointerClick(PointerEventData data) {
-		FindObjectOfType<DescriptionsUI>().descriptionObject.SetActive(false);
+	private void TurnOffDescriptions() {
+		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
+		if (dui != null) dui.descriptionObject.SetActive(false);
 	}
 }
