@@ -14,6 +14,8 @@ public class SaveSlotUI : MonoBehaviour {
 
 	[SerializeField] private Sprite[] allVisuals;
 
+	[SerializeField] private DeleteCharUI deleteConfirmation;
+
 	[HideInInspector] public string assignedPath;
 	[HideInInspector] public CharacterSO assignedCharacter;
 
@@ -36,7 +38,7 @@ public class SaveSlotUI : MonoBehaviour {
 	}
 
 	public void DeleteCharacter() {
-		System.IO.File.Delete(assignedPath);
-		TriggerNewCharacter();
+		deleteConfirmation.currentSlot = this;
+		deleteConfirmation.gameObject.SetActive(true);
 	}
 }
