@@ -81,6 +81,8 @@ public class Inventory {
 	}
 
 	public void Add(ItemSO[] items) {
+		if (items.Length <= 0) return;
+
 		foreach (ItemSO item in items) {
 			Add(item);
 		}
