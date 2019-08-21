@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Actor))]
 public class Stats : MonoBehaviour {
 
 	// VARIABLES
+
+	[SerializeField] private GameObject conditionTab;
 
 	private float maxHealthPoints;
 	public float currentHealthPoints { get; private set; }
@@ -23,6 +26,7 @@ public class Stats : MonoBehaviour {
 	public float defensePoints { get { return 1 + dp; } set { dp = value; dp = Mathf.Clamp(dp, 0, 9); } }
 
 	private Stack<ConditionSO> currentConditions = new Stack<ConditionSO>();
+	private Stack<ConsumableSO> currentEffects = new Stack<ConsumableSO>();
 
 	private Actor actor;
 
@@ -51,12 +55,47 @@ public class Stats : MonoBehaviour {
 		if (currentHealthPoints <= 0) currentHealthPoints = 0;
 	}
 
+	#region Condition Tab
+
+	private void ClearConditionTab() {
+		for (int i = 0; i < conditionTab.transform.childCount; i++) {
+			Transform child = conditionTab.transform.GetChild(i);
+			Destroy(child.gameObject);
+		}
+	}
+
+	private void AddToConditionTab(ConditionSO condition) {
+		GameObject conditionObject = new GameObject();
+		Image img = conditionObject.AddComponent<Image>();
+		img.sprite = condition.icon;
+		
+		GameObject go = Instantiate(conditionObject) as GameObject;
+		go.transform.SetParent(conditionTab.transform);
+		go.transform.localScale = Vector3.one;
+	}
+
+	public void AddToConditionTab(ConsumableSO.Effect effect) {
+		GameObject effectObject = new GameObject();
+		Image img = effectObject.AddComponent<Image>();
+		img.sprite = effect.icon;
+		
+		GameObject go = Instantiate(effectObject) as GameObject;
+		go.transform.SetParent(conditionTab.transform);
+		go.transform.localScale = Vector3.one;
+	}
+
+	#endregion
+
+	#region Conditions
+
 	public void AddCondition(ConditionSO condition) {
 		condition = ScriptableObject.Instantiate(condition);
 		currentConditions.Push(condition);
+		AddToConditionTab(condition);
 	}
 
 	public void ApplyConditions() {
+		ApplyEffects();
 		if (currentConditions.Count <= 0) return;
 
 		var newStack = new Stack<ConditionSO>(currentConditions);
@@ -65,6 +104,7 @@ public class Stats : MonoBehaviour {
 		while (newStack.Count > 0) {
 			ConditionSO c = newStack.Pop();
 			ExecuteConditions(c);
+			AddToConditionTab(c);
 		}
 	}
 
@@ -76,7 +116,7 @@ public class Stats : MonoBehaviour {
 				break;
 			
 			case ConditionSO.Conditions.Sleep:
-				// TODO
+				
 				break;
 			
 			case ConditionSO.Conditions.Increase_Defense:
@@ -103,6 +143,47 @@ public class Stats : MonoBehaviour {
 		if (cond.duration > 0) currentConditions.Push(cond);
 	}
 
+	#endregion
+
+	public void AddEffect(ConsumableSO item) {
+		item = Instantiate(item);
+		foreach (var effect in item.effects) {
+			if (effect.infinite == false)
+				AddToConditionTab(effect);
+		}
+		
+		ExecuteEffects(item);
+	}
+
+	public void ApplyEffects() {
+		ClearConditionTab();
+		if (currentEffects.Count <= 0) return;
+
+		var newStack = new Stack<ConsumableSO>(currentEffects);
+		currentEffects.Clear();
+
+		while (newStack.Count > 0) {
+			ConsumableSO c = newStack.Pop();
+			ExecuteEffects(c);
+			foreach (var effect in c.effects) {
+				if (effect.infinite == false)
+					AddToConditionTab(effect);
+			}
+		}
+	}
+
+	private void ExecuteEffects(ConsumableSO item) {
+		Debug.Log("Applying " + item.name + " effects");
+		item.Use(actor);
+
+		for (int i = 0; i < item.effects.Length; i++) {
+			item.effects[i].duration--;
+			if (item.effects[i].duration > -1) currentEffects.Push(item);
+		}
+	}
+
+	#region Stamina and Health
+
 	public void DepleteStamina(float value) {
 		if (currentStaminaPoints < value) return;
 
@@ -119,4 +200,6 @@ public class Stats : MonoBehaviour {
 		if (currentStaminaPoints >= maxStaminaPoints) return;
 		currentStaminaPoints += value;
 	}
+
+	#endregion
 }

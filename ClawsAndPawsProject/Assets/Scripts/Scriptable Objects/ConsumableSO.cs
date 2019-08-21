@@ -10,6 +10,8 @@ public class ConsumableSO : ItemSO {
 
 		public ItemSO.Effect effect;
 
+		public Sprite icon;
+
 		[Space(5)]
 		public float duration;
 		public bool infinite;

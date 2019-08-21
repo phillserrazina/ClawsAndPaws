@@ -108,7 +108,7 @@ public class Inventory {
 		if (player == null)
 			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 
-		item.Use(player);
+		player.stats.AddEffect(item as ConsumableSO);
 	}
 
 	private void Clear() {
