@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Big Claw
+  m_Name: Big Claw 1
   m_EditorClassIdentifier: 
-  name: Big Claw
-  icon: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
+  name: Big Claw Cona
+  icon: {fileID: 21300000, guid: 88801a8344374654e981390a219c4d81, type: 3}
   description: Like a claw. But big.
   equipType: 1
   effects:

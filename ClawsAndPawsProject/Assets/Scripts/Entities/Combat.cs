@@ -125,9 +125,10 @@ public class Combat : MonoBehaviour {
 
 	private void ApplyHeldItemsEffects() {
 		if (actor.tag != "Player") return;
-
-		foreach (HeldItemSO item in Inventory.instance.HeldItems) {
-			item.Use(actor);
-		}
+	
+		if (Inventory.instance.WallEquipedObject != null) Inventory.instance.WallEquipedObject.Use(actor);
+		if (Inventory.instance.BedEquipedObject != null) Inventory.instance.BedEquipedObject.Use(actor);
+		if (Inventory.instance.LitterboxEquipedObject != null) Inventory.instance.LitterboxEquipedObject.Use(actor);
+		if (Inventory.instance.FoodEquipedObject != null) Inventory.instance.FoodEquipedObject.Use(actor);
 	}
 }

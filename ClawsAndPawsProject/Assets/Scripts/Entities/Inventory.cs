@@ -20,6 +20,15 @@ public class Inventory {
 	[SerializeField] private List<ConsumableSO> consumableItems = new List<ConsumableSO>();
 	public List<ConsumableSO> ConsumableItems { get { return consumableItems; } }
 
+	[SerializeField] private HeldItemSO wallEquipedObject = null;
+	public HeldItemSO WallEquipedObject { get { return wallEquipedObject; } }
+	[SerializeField] private HeldItemSO bedEquipedObject = null;
+	public HeldItemSO BedEquipedObject { get { return bedEquipedObject; } }
+	[SerializeField] private HeldItemSO litterboxEquipedObject = null;
+	public HeldItemSO LitterboxEquipedObject { get { return litterboxEquipedObject; } }
+	[SerializeField] private HeldItemSO foodEquipedObject = null;
+	public HeldItemSO FoodEquipedObject { get { return foodEquipedObject; } }
+
 	private Actor player;
 
 	// METHODS	
@@ -40,6 +49,22 @@ public class Inventory {
 
 		ItemListSO allItemList = Resources.Load("All Items") as ItemListSO;
 
+		if (loadedInventory[0] != "null")
+			wallEquipedObject = allItemList.Search(loadedInventory[0]) as HeldItemSO;
+		loadedInventory.RemoveAt(0);
+
+		if (loadedInventory[0] != "null")
+			bedEquipedObject = allItemList.Search(loadedInventory[0]) as HeldItemSO;
+		loadedInventory.RemoveAt(0);
+
+		if (loadedInventory[0] != "null")
+			litterboxEquipedObject = allItemList.Search(loadedInventory[0]) as HeldItemSO;
+		loadedInventory.RemoveAt(0);
+
+		if (loadedInventory[0] != "null")
+			foodEquipedObject = allItemList.Search(loadedInventory[0]) as HeldItemSO;
+		loadedInventory.RemoveAt(0);
+
 		foreach (string n in loadedInventory) {
 			Add(allItemList.Search(n));
 		}
@@ -48,7 +73,11 @@ public class Inventory {
 	public List<string> GetInventoryData() {
 		List<string> data = new List<string>();
 
-		data.Add(gold.ToString());
+		data.Add(gold.ToString()); 
+		data.Add((wallEquipedObject == null) ? "null" : wallEquipedObject.name);
+		data.Add((bedEquipedObject == null) ? "null" : bedEquipedObject.name);
+		data.Add((litterboxEquipedObject == null) ? "null" : litterboxEquipedObject.name);
+		data.Add((foodEquipedObject == null) ? "null" : foodEquipedObject.name);
 
 		foreach (ItemSO i in keyItems) {
 			if (i == null) continue;
@@ -149,5 +178,30 @@ public class Inventory {
 		}
 		
 		return false;
+	}
+
+	public void EquipItem(HeldItemSO itemData) {
+		switch (itemData.equipType)
+        {
+            case HeldItemSO.EquipTypes.Wall:
+                wallEquipedObject = itemData;
+                break;
+            
+            case HeldItemSO.EquipTypes.Bed:
+                bedEquipedObject = itemData;
+                break;
+            
+            case HeldItemSO.EquipTypes.LitterBox:
+                litterboxEquipedObject = itemData;
+                break;
+            
+            case HeldItemSO.EquipTypes.Food:
+                foodEquipedObject = itemData;
+                break;
+            
+            default:
+                Debug.LogError("Inventory::EquipItem() --- Invalid HeldItemSO.EquipTypes type!");
+                return;
+        }
 	}
 }
