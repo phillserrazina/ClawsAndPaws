@@ -24,7 +24,7 @@ public class ItemRewardUI : MonoBehaviour
             ItemSO currentItem = rewardsList.Pop();
             InstantiateItem(currentItem);
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
 
             StartCoroutine(InstantiateItemCoroutine());
         }

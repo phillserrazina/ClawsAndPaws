@@ -59,8 +59,20 @@ public class OpponentSO : CharacterSO {
 		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.3f, 1f));
 
 		ItemListSO rewardList = Resources.Load("Reward Items") as ItemListSO;
-		int itemLevel = Random.Range(0, level);
-		itemRewards.Add(rewardList.items[itemLevel]);
+
+		int noOfItemsToGive;
+		float chance = Random.Range(0, 100);
+
+		if (chance <= 5) noOfItemsToGive = 4;
+		else if (chance <= 15) noOfItemsToGive = 3;
+		else if (chance <= 40) noOfItemsToGive = 2;
+		else if (chance <= 90) noOfItemsToGive = 1;
+		else noOfItemsToGive = 0;
+
+		for (int i = 0; i < noOfItemsToGive; i++) {
+			int itemLevel = Random.Range(0, level);
+			itemRewards.Add(rewardList.items[itemLevel]);
+		}
 	}
 
 	private void PointDistributionHelper() {

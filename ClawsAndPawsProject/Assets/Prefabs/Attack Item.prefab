@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 224182783099079634}
   - component: {fileID: 114873167921837792}
   - component: {fileID: 114186504553511182}
+  - component: {fileID: 1227825661192704373}
   m_Layer: 5
   m_Name: Attack Item
   m_TagString: Untagged
@@ -36,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115, y: -25}
+  m_AnchoredPosition: {x: 150, y: -25}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114873167921837792
@@ -57,7 +58,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -75,7 +76,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 114397071837429890}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -96,6 +97,23 @@ MonoBehaviour:
   itemIcon: {fileID: 114397071837429890}
   attackName: {fileID: 114099095213668936}
   attackData: {fileID: 11400000, guid: 85a5ec2ac874dc34f80a6727c5451fe0, type: 2}
+--- !u!114 &1227825661192704373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079537295112732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.03
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1592507689381742
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 23.99, y: 0.000009536743}
+  m_AnchoredPosition: {x: 28, y: 0.000009536743}
   m_SizeDelta: {x: 1006.18, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222564528078317440
@@ -166,16 +184,16 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 4172cfb573c6d3b4180222daa273222f, type: 3}
     m_FontSize: 200
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
-    m_MaxSize: 200
-    m_Alignment: 4
+    m_MaxSize: 300
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Basic Attack
+  m_Text: Claw
 --- !u!114 &6646343206243038563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
+  m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
 --- !u!1 &1745880044146798
 GameObject:

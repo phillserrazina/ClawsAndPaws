@@ -12,6 +12,7 @@ public class ButtonFXEditor : Editor
     private SerializedProperty sfxName;
     private SerializedProperty changeSize;
     private SerializedProperty newSize;
+    private SerializedProperty keepSizeOnClick;
     private SerializedProperty changeSprite;
 
     private void OnEnable() {
@@ -20,6 +21,7 @@ public class ButtonFXEditor : Editor
         sfxName = serializedObject.FindProperty("sfxName");
         changeSize = serializedObject.FindProperty("changeSize");
         newSize = serializedObject.FindProperty("newSize");
+        keepSizeOnClick = serializedObject.FindProperty("keepSizeOnClick");
         changeSprite = serializedObject.FindProperty("changeSprite");
     }
 
@@ -35,6 +37,10 @@ public class ButtonFXEditor : Editor
             newSize.floatValue = EditorGUILayout.FloatField(buttonScript.newSize);
         }
         EditorGUILayout.EndHorizontal();
+
+        if (buttonScript.changeSize) {
+            keepSizeOnClick.boolValue = EditorGUILayout.Toggle("Keep Size On Click: ", buttonScript.keepSizeOnClick);
+        }
 
         EditorGUILayout.BeginHorizontal();
 

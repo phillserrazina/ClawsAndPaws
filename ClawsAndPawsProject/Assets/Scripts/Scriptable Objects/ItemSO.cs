@@ -9,6 +9,7 @@ public class ItemSO : ScriptableObject {
 	public struct Effect {
 		public enum Effects {
 			Change_Health,
+			Change_Stamina,
 			Change_Speed,
 			Change_Defense,
 			Change_Attack
@@ -31,6 +32,11 @@ public class ItemSO : ScriptableObject {
 			case Effect.Effects.Change_Health:
 				if (effect.strength > 0) target.stats.RestoreHealth(effect.strength);
 				else target.stats.TakeDamage(-effect.strength, true);
+				break;
+
+			case Effect.Effects.Change_Stamina:
+				if (effect.strength > 0) target.stats.RestoreStamina(effect.strength);
+				else target.stats.DepleteStamina(-effect.strength);
 				break;
 			
 			case Effect.Effects.Change_Defense:
