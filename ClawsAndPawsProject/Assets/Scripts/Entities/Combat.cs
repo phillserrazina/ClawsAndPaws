@@ -17,7 +17,7 @@ public class Combat : MonoBehaviour {
 	public Actions currentChoice { get; private set; }
 	public void SetChoice(string choice) { currentChoice = (Actions)System.Enum.Parse(typeof(Actions), choice); }
 	public void SetChoice(Actions choice) { currentChoice = choice; }
-	public void SetRandomChoice() { SetChoice((Actions)Random.Range(0, 3)); }
+	public void SetRandomChoice() { SetChoice(GetActionChoice()); }
 
 	public AttackSO currentAttack { get; private set; }
 	public void SetAttack(AttackSO attackData) { currentAttack = attackData; }
@@ -34,7 +34,15 @@ public class Combat : MonoBehaviour {
 	public void SetRandomItem() { 
 		ItemListSO allItems = Resources.Load("All Items") as ItemListSO;
 
-		SetItem((ConsumableSO)allItems.Search("Health Potion"));
+		float val = Random.Range(0, 500);
+		if (val < 100)
+			SetItem((ConsumableSO)allItems.Search("Health Potion"));
+		else if (val < 250)
+			SetItem((ConsumableSO)allItems.Search("Attack Potion"));
+		else if (val < 350)
+			SetItem((ConsumableSO)allItems.Search("Speed Potion"));
+		else
+			SetItem((ConsumableSO)allItems.Search("Defense Potion"));
 	}
 
 	public AttackListSO attackList;
@@ -62,11 +70,13 @@ public class Combat : MonoBehaviour {
 			return;
 		}
 
-		GetComponent<Animator>().Play(action);
-
 		switch (currentChoice)
 		{
 			case Actions.Attack:
+				if (actor.stats.currentStaminaPoints < currentAttack.staminaCost) {
+					RestAction();
+					break;
+				}
 				ExecuteAttack();
 				break;
 			
@@ -87,14 +97,11 @@ public class Combat : MonoBehaviour {
 				Debug.LogError("Actor::ExecuteAction --- Invalid Action.");
 				return;
 		}
+
+		GetComponent<Animator>().Play(action);
 	}
 
 	private void ExecuteAttack() {
-		if (actor.stats.currentStaminaPoints < currentAttack.staminaCost) {
-			RestAction();
-			return;
-		}
-
 		actor.stats.DepleteStamina(currentAttack.staminaCost);
 		float damage = currentAttack.damagePoints + actor.stats.attackPoints;
 		actor.opponent.stats.TakeDamage(damage);
@@ -130,5 +137,31 @@ public class Combat : MonoBehaviour {
 		if (Inventory.instance.BedEquipedObject != null) Inventory.instance.BedEquipedObject.Use(actor);
 		if (Inventory.instance.LitterboxEquipedObject != null) Inventory.instance.LitterboxEquipedObject.Use(actor);
 		if (Inventory.instance.FoodEquipedObject != null) Inventory.instance.FoodEquipedObject.Use(actor);
+	}
+
+	private Actions GetActionChoice() {
+		float hp = actor.stats.currentHealthPoints;
+		float oHp = actor.opponent.stats.currentHealthPoints;
+
+		float sp = actor.stats.currentStaminaPoints;
+		float oSp = actor.opponent.stats.currentStaminaPoints;
+
+		float ap = actor.stats.speedPoints;
+		float oAp = actor.opponent.stats.speedPoints;
+
+		if (hp < oHp) {
+			if ((oHp - hp) > 60) {
+				if (sp > oSp) {
+					return Random.value < 0.5 ? Actions.Attack : Actions.Defend;
+				}
+
+				return Random.value < 0.7 ? Actions.Attack : Actions.Items;
+			}
+			else {
+				return Random.value < 0.8 ? Actions.Attack : Actions.Rest;
+			}
+		}
+		
+		return Random.value < 0.5 ? Actions.Attack : Actions.Items;
 	}
 }

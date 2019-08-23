@@ -256,6 +256,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 1
   newSprite: {fileID: 21300000, guid: 7a21f33d7e1c65c47a177301cfd53180, type: 3}
 --- !u!1 &29531152
@@ -312,6 +313,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 1
   newSprite: {fileID: 21300000, guid: 5d9a577343aaad8449cb51a9d5d80e59, type: 3}
 --- !u!114 &29531155
@@ -715,6 +717,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 1
   newSprite: {fileID: 21300000, guid: 5d9a577343aaad8449cb51a9d5d80e59, type: 3}
 --- !u!1 &138868634 stripped
@@ -1031,6 +1034,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!114 &356521737
@@ -1321,6 +1325,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &408453739
@@ -1711,6 +1716,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 1
   newSprite: {fileID: 21300000, guid: 8838931a1862ddf42b7b98fb32af8823, type: 3}
 --- !u!1 &810618566
@@ -1869,6 +1875,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &848026034
@@ -2536,6 +2543,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &1661985919
@@ -2800,6 +2808,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &1763205540
@@ -3255,6 +3264,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 1
   newSprite: {fileID: 21300000, guid: 25b76466775cfbd4c8c409f014de7f5b, type: 3}
 --- !u!1 &1901680550

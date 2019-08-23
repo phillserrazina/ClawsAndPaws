@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class ItemEquipUI : MonoBehaviour
 {
     [SerializeField] private string itemType;
-    [SerializeField] private Image currentItemImage;
-    public Image GetCurrentImage { get { return currentItemImage; } }
+    public Image currentItemImage;
 
     [SerializeField] private InventoryEquipDisplayUI inventoryDisplay;
 
@@ -56,7 +55,7 @@ public class ItemEquipUI : MonoBehaviour
         }
     }
 
-    private HeldItemSO.EquipTypes GetItemType() {
+    public HeldItemSO.EquipTypes GetItemType() {
         return (HeldItemSO.EquipTypes)System.Enum.Parse( typeof(HeldItemSO.EquipTypes), itemType );
     }
 

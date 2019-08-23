@@ -6,6 +6,7 @@ public class InventoryEquipDisplayUI : MonoBehaviour
 {
     [SerializeField] private GameObject layoutGroup;
     [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private GameObject backToHubButton;
 
     public void Enable(HeldItemSO.EquipTypes itemType) {
         var items = new List<HeldItemSO>();
@@ -23,6 +24,8 @@ public class InventoryEquipDisplayUI : MonoBehaviour
 		for (int i = 0; i < layoutGroup.transform.childCount; i++) {
 			Destroy(layoutGroup.transform.GetChild(i).gameObject);
 		}
+
+        backToHubButton.SetActive(true);
 	}
 
     private void InstantiateItem(List<HeldItemSO> items, int i) {

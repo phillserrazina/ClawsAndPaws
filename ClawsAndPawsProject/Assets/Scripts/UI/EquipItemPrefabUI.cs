@@ -38,6 +38,14 @@ public class EquipItemPrefabUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void EquipItem() {
         Inventory.instance.EquipItem(itemData);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		FindObjectOfType<InventoryEquipDisplayUI>().gameObject.SetActive(false);
+
+		ItemEquipUI[] allEquipButtons = FindObjectsOfType<ItemEquipUI>();
+
+		foreach (ItemEquipUI i in allEquipButtons) {
+			if (i.GetItemType() == itemData.equipType) {
+				i.currentItemImage.sprite = itemData.icon;
+			}
+		}
     }
 }

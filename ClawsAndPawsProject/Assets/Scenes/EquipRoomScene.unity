@@ -390,6 +390,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &202971109
@@ -494,17 +495,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1885257882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &202971112
@@ -559,6 +549,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &588745261
@@ -929,17 +920,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885257882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1040601803}
         m_MethodName: SetActive
         m_Mode: 6
@@ -990,6 +970,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!114 &762218253
@@ -1277,6 +1258,7 @@ MonoBehaviour:
   layoutGroup: {fileID: 33565642}
   itemPrefab: {fileID: 1537023921473672805, guid: 968677fdc7b156d448f1813bc20dff1f,
     type: 3}
+  backToHubButton: {fileID: 202661649}
 --- !u!1 &1131822982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,17 +1525,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885257882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1040601803}
         m_MethodName: SetActive
         m_Mode: 6
@@ -1604,6 +1575,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!114 &1262743558
@@ -1858,17 +1830,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885257882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1040601803}
         m_MethodName: SetActive
         m_Mode: 6
@@ -1919,6 +1880,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!114 &1688352448
@@ -2149,17 +2111,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885257882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1040601803}
         m_MethodName: SetActive
         m_Mode: 6
@@ -2210,6 +2161,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!114 &1823524318
