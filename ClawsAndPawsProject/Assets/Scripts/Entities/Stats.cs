@@ -45,7 +45,7 @@ public class Stats : MonoBehaviour {
 	public void TakeDamage(float damage, bool trueDamage=false) {
 		if (currentHealthPoints <= 0) return;
 
-		if (actor.combat.isDefending) {
+		if (actor.combat.isDefending && !trueDamage) {
 			damage /= 2;
 			actor.combat.isDefending = false;
 		}

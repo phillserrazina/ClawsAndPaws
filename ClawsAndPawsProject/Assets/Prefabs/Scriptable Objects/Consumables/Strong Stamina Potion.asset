@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
-  m_Name: Health Potion
+  m_Name: Strong Stamina Potion
   m_EditorClassIdentifier: 
-  name: Health Potion
-  icon: {fileID: 21300000, guid: 88772e652536c8c46b45deb07b93543c, type: 3}
-  description: Restores 25hp.
+  name: Strong Stamina Potion
+  icon: {fileID: 21300000, guid: 80b734418c346644282ddad7e9c726c2, type: 3}
+  description: 'Restores 75sp.
+
+
+    (Level 5)'
   effects:
   - effect:
-      effect: 0
-      strength: 25
+      effect: 1
+      strength: 75
     icon: {fileID: 0}
     duration: 0
     infinite: 1

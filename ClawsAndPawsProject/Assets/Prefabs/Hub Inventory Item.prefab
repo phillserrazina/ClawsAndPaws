@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2971604429748508018}
   - component: {fileID: 2971604429748508019}
   - component: {fileID: 2774417402623306933}
+  - component: {fileID: 419930353333366541}
   m_Layer: 5
   m_Name: Hub Inventory Item
   m_TagString: Untagged
@@ -91,6 +92,24 @@ MonoBehaviour:
   itemIcon: {fileID: 2971604429748508019}
   itemQuantity: {fileID: 2971604431287067665}
   itemData: {fileID: 11400000, guid: 437b2c91fb0f3d145b30955fb62356b4, type: 2}
+--- !u!114 &419930353333366541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971604429748508017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  keepSizeOnClick: 1
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &2971604431287067692
 GameObject:
   m_ObjectHideFlags: 0
