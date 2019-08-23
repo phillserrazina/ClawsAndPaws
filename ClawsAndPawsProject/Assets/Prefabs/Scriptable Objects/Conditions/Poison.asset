@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Poison
   m_EditorClassIdentifier: 
   condition: 0
+  icon: {fileID: 21300000, guid: 6fdfe9c050016584b9eddcf5f4e555d1, type: 3}
   targetSelf: 0
   duration: 3
   strength: 10

@@ -68,6 +68,7 @@ public class Stats : MonoBehaviour {
 		GameObject conditionObject = new GameObject();
 		Image img = conditionObject.AddComponent<Image>();
 		img.sprite = condition.icon;
+		img.preserveAspect = true;
 		
 		GameObject go = Instantiate(conditionObject) as GameObject;
 		go.transform.SetParent(conditionTab.transform);
@@ -78,6 +79,7 @@ public class Stats : MonoBehaviour {
 		GameObject effectObject = new GameObject();
 		Image img = effectObject.AddComponent<Image>();
 		img.sprite = effect.icon;
+		img.preserveAspect = true;
 		
 		GameObject go = Instantiate(effectObject) as GameObject;
 		go.transform.SetParent(conditionTab.transform);
@@ -173,7 +175,6 @@ public class Stats : MonoBehaviour {
 	}
 
 	private void ExecuteEffects(ConsumableSO item) {
-		Debug.Log("Applying " + item.name + " effects");
 		item.Use(actor);
 
 		for (int i = 0; i < item.effects.Length; i++) {

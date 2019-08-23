@@ -19,6 +19,6 @@ MonoBehaviour:
   - effect:
       effect: 2
       strength: 2
-    icon: {fileID: 21300000, guid: efe4254aed6311b4fa759f582097ae8a, type: 3}
+    icon: {fileID: 21300000, guid: 06dbaaddfed787b478e7dbba28fb7e9f, type: 3}
     duration: 2
     infinite: 0
