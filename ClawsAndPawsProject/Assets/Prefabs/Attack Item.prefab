@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 114397071837429890}
-  itemName: {fileID: 114099095213668936}
-  attackData: {fileID: 11400000, guid: 8d3134f487babf84785f25c04f6fda60, type: 2}
+  attackName: {fileID: 114099095213668936}
+  attackData: {fileID: 11400000, guid: 85a5ec2ac874dc34f80a6727c5451fe0, type: 2}
 --- !u!1 &1592507689381742
 GameObject:
   m_ObjectHideFlags: 0

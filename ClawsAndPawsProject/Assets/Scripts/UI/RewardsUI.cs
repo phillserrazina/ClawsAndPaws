@@ -16,8 +16,12 @@ public class RewardsUI : MonoBehaviour
     public float battleEndXP { private get; set; }
     public float battleEndGold { private get; set; }
 
+    public ItemRewardUI itemRewardObject;
+
     private void OnEnable() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
+        GameObject pauseButton = GameObject.Find("Pause Button");
+        if (pauseButton != null) pauseButton.SetActive(false);
 
         int finalValue = GetNextLevelXP();
         xpText.text = string.Format("XP: {0}/{1}", battleEndXP, finalValue);
