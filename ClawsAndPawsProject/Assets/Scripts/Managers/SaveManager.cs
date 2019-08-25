@@ -68,7 +68,7 @@ public class SaveManager {
 			}
 		}
 
-		Debug.Log("Number of Files Found: " + answer.Count);
+		// Debug.Log("Number of Files Found: " + answer.Count);
 		return answer;
 	}
 

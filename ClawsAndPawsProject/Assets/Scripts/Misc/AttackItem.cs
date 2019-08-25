@@ -10,10 +10,15 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 	[SerializeField] private Text attackName;
 	public AttackSO attackData;
 
+	private Stats pStats;	// Player stats
+	private Image staminaImage;	// Player Stamina Image
+
 	private void OnEnable() {
 
 		Button b = GetComponent<Button>();
-		Stats pStats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
+		pStats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
+
+		staminaImage = GameObject.Find("Left Stamina Background").GetComponent<Image>();
 
 		itemIcon.sprite = attackData.attackIcon;
 		attackName.text = attackData.name;
@@ -22,24 +27,32 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 			b.onClick.AddListener(() => { TurnOffDescriptions(); } );
 			b.onClick.AddListener(() => { FindObjectOfType<UIManager>().SetPlayerAttack(attackData); } );
 		}
-		
-		if (attackData.staminaCost > pStats.currentStaminaPoints) {
-			b.interactable = false;
-		}
+
+		attackName.color = Color.white;
 	}
 
 	public void OnPointerEnter(PointerEventData data) {
 		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
 		dui.UpdateDescriptionText(attackData.name, attackData.description);
 		dui.descriptionObject.SetActive(true);
+
+		if (attackData.staminaCost > pStats.currentStaminaPoints) {
+			Color color = new Color(0.8f, 0.1f, 0.1f, 1f);
+			attackName.color = color;
+			staminaImage.color = color;
+		}
 	}
 
 	public void OnPointerExit(PointerEventData data) {
 		TurnOffDescriptions();
+		attackName.color = Color.white;
+		staminaImage.color = Color.black;
 	}
 
 	private void TurnOffDescriptions() {
 		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
 		if (dui != null) dui.descriptionObject.SetActive(false);
+
+		staminaImage.color = Color.black;
 	}
 }

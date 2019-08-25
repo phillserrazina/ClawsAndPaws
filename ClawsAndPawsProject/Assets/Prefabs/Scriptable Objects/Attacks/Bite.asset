@@ -14,14 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackIcon: {fileID: 21300000, guid: 47e60dc9e8ac1b44493212687fc32de2, type: 3}
   name: Bite
-  description: 'You bite your opponent in the leg, leaving them crippled.
+  description: 'You sprint towards you enemy and bite their leg.
 
-    -Deals 50pts of damage. Slows opponent for 2 turns.
+    -Deals 50pts of damage.
 
     -Costs 50pts of stamina.'
   requiredLevel: 3
   damagePoints: 30
   staminaCost: 50
   manaCost: 0
-  conditions:
-  - {fileID: 11400000, guid: 9af1739ead859d94785a9d31955410b2, type: 2}
+  conditions: []

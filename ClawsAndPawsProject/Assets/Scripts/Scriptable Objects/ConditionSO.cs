@@ -23,6 +23,7 @@ public class ConditionSO : ScriptableObject {
 	}
 
 	public Conditions condition;
+	public Sprite icon;
 	public bool targetSelf;
 	public float duration;
 	public float strength;

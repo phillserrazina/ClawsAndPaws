@@ -256,6 +256,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 0
   newSize: 0
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &76682705
@@ -402,6 +403,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 0
   newSize: 0
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &197521072
@@ -730,6 +732,7 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 0
   newSize: 0
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
 --- !u!1 &1064164142
@@ -982,8 +985,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1, y: 1}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959922225
 MonoBehaviour:
@@ -1005,7 +1008,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a4d3cf4c1a2cd8047a57a2a048ca3a82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16afc509d2c8efd42b41d51900952fd0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

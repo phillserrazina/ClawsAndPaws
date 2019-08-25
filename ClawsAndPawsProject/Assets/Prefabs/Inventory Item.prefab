@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 224182783099079634}
   - component: {fileID: 114873167921837792}
   - component: {fileID: 114477337347328530}
+  - component: {fileID: 4471745124577789096}
   m_Layer: 5
   m_Name: Inventory Item
   m_TagString: Untagged
@@ -96,6 +97,23 @@ MonoBehaviour:
   itemIcon: {fileID: 114397071837429890}
   itemQuantity: {fileID: 7569569665834526033}
   itemData: {fileID: 11400000, guid: b1971819132c47c4aa323e4d424ba2b8, type: 2}
+--- !u!114 &4471745124577789096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079537295112732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  changeSprite: 0
+  newSprite: {fileID: 0}
 --- !u!1 &1745880044146798
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +181,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

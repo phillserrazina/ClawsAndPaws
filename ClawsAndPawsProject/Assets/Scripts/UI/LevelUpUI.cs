@@ -17,7 +17,9 @@ public class LevelUpUI : MonoBehaviour {
 	[SerializeField] private Text intimidationText;
 
 	[SerializeField] private Image playerVisual;
+	[SerializeField] private Image pointVisual;
 	[SerializeField] private Sprite[] allVisuals;
+	[SerializeField] private Sprite[] allPointVisuals;
 
 	private int strengthValue = 1;
 	private int healthValue = 1;
@@ -60,6 +62,7 @@ public class LevelUpUI : MonoBehaviour {
 		intimidationText.text = player.intimidationPoints.ToString();
 
 		playerVisual.sprite = allVisuals[player.visualIndex];
+		pointVisual.sprite = allPointVisuals[player.visualIndex];
 	}
 
 	// METHODS

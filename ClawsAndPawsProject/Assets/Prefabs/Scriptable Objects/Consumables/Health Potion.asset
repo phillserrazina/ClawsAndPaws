@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Health Potion
   m_EditorClassIdentifier: 
   name: Health Potion
-  icon: {fileID: 21300000, guid: 40538c9b8f55ee8459cb56b218edc38c, type: 3}
-  description: Restores 25HP.
+  icon: {fileID: 21300000, guid: 88772e652536c8c46b45deb07b93543c, type: 3}
+  description: Restores 25hp.
   effects:
   - effect:
       effect: 0
       strength: 25
+    icon: {fileID: 0}
     duration: 0
     infinite: 1

@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 956495152}
   - component: {fileID: 956495151}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4260,11 +4260,17 @@ MonoBehaviour:
   agilityText: {fileID: 51418059}
   intimidationText: {fileID: 419927678}
   playerVisual: {fileID: 615424119}
+  pointVisual: {fileID: 286638646}
   allVisuals:
   - {fileID: 21300000, guid: 0cdfc47c4c2f6524d8d05ccce6dd3c3c, type: 3}
   - {fileID: 21300000, guid: de390f15e59af034bbf0b53afdeac039, type: 3}
   - {fileID: 21300000, guid: 5157409932a32c64da6de9c1c0dc1c6d, type: 3}
   - {fileID: 21300000, guid: 5efc3954fc14b9a4d96257ee458ab358, type: 3}
+  allPointVisuals:
+  - {fileID: 21300000, guid: f29b1b943a3a5e149902fc8dbec5d4cb, type: 3}
+  - {fileID: 21300000, guid: d2dab3ca37025bd4fa17093015e4b57e, type: 3}
+  - {fileID: 21300000, guid: afff588cf770a1f439ecbda0392e9512, type: 3}
+  - {fileID: 21300000, guid: 0636feb2e0700d84bb2e70cfa13e459a, type: 3}
   doneButton: {fileID: 2075750800}
 --- !u!4 &1972374678
 Transform:

@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Big Claw
   icon: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
   description: Like a claw. But big.
+  equipType: 1
   effects:
   - effect: 1
     strength: 100
