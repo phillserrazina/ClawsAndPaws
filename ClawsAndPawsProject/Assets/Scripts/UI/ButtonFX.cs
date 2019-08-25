@@ -12,6 +12,7 @@ public class ButtonFX : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public bool keepSizeOnClick;
     public bool changeSprite = false;
     public Sprite newSprite;
+    public bool keepSpriteOnClick;
 
     private Image image;
     private Vector3 originalSize;
@@ -36,7 +37,7 @@ public class ButtonFX : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnClick() {
         if (changeSize && isAltered() && !keepSizeOnClick) transform.localScale /= newSize;
-        if (changeSprite && isAltered()) image.sprite = originalSprite;
+        if (changeSprite && isAltered() && !keepSpriteOnClick) image.sprite = originalSprite;
     }
 
     public void OnPointerExit(PointerEventData eventData) {

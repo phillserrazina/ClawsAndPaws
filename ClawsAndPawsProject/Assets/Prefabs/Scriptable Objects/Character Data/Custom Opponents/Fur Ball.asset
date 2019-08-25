@@ -15,10 +15,12 @@ MonoBehaviour:
   actorName: Fur Ball
   experiencePoints: 500
   level: 3
-  strengthPoints: 5
-  agilityPoints: 2
-  healthPoints: 3
-  staminaPoints: 1
-  intimidationPoints: 2
+  strengthPoints: 2
+  agilityPoints: 4
+  healthPoints: 1
+  staminaPoints: 2
+  intimidationPoints: 5
   currentTournament: 0
+  visualIndex: 0
   itemRewards: []
+  customSprite: {fileID: 0}

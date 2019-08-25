@@ -14,6 +14,7 @@ public class ButtonFXEditor : Editor
     private SerializedProperty newSize;
     private SerializedProperty keepSizeOnClick;
     private SerializedProperty changeSprite;
+    private SerializedProperty keepSpriteOnClick;
 
     private void OnEnable() {
         buttonScript = target as ButtonFX;
@@ -23,6 +24,7 @@ public class ButtonFXEditor : Editor
         newSize = serializedObject.FindProperty("newSize");
         keepSizeOnClick = serializedObject.FindProperty("keepSizeOnClick");
         changeSprite = serializedObject.FindProperty("changeSprite");
+        keepSpriteOnClick = serializedObject.FindProperty("keepSpriteOnClick");
     }
 
     public override void OnInspectorGUI() {
@@ -51,6 +53,10 @@ public class ButtonFXEditor : Editor
         }
 
         EditorGUILayout.EndHorizontal();
+
+        if (buttonScript.changeSprite) {
+            keepSpriteOnClick.boolValue = EditorGUILayout.Toggle("Keep Sprite On Click: ", buttonScript.keepSpriteOnClick);
+        }
 
         if (GUI.changed) {
             EditorUtility.SetDirty(buttonScript);
