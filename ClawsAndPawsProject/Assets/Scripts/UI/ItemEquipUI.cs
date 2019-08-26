@@ -14,37 +14,25 @@ public class ItemEquipUI : MonoBehaviour
         switch (GetItemType())
         {
             case HeldItemSO.EquipTypes.Wall:
-                if (Inventory.instance.WallEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+                if (Inventory.instance.WallEquipedObject == null) return;
 
                 currentItemImage.sprite = Inventory.instance.WallEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.Bed:
-                if (Inventory.instance.BedEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+                if (Inventory.instance.BedEquipedObject == null) return;
 
                 currentItemImage.sprite = Inventory.instance.BedEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.LitterBox:
-                if (Inventory.instance.LitterboxEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+                if (Inventory.instance.LitterboxEquipedObject == null) return;
 
                 currentItemImage.sprite = Inventory.instance.LitterboxEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.Food:
-                if (Inventory.instance.FoodEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+                if (Inventory.instance.FoodEquipedObject == null) return;
 
                 currentItemImage.sprite = Inventory.instance.FoodEquipedObject.icon;
                 break;

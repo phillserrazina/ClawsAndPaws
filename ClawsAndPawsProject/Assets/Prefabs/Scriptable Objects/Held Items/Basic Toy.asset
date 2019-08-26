@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Big Claw
+  m_Name: Basic Toy
   m_EditorClassIdentifier: 
-  name: Big Claw
-  icon: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
-  description: Like a claw. But big.
-  equipType: 1
+  name: Basic Toy
+  icon: {fileID: 21300000, guid: 82dda76a2ae3f6a4981e44557af79a50, type: 3}
+  description: Scratch, scratch! Increases speed.
+  equipType: 3
   effects:
-  - effect: 1
-    strength: 100
+  - effect: 2
+    strength: 2

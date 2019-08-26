@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Big Claw 1
+  m_Name: Basic Litterbox
   m_EditorClassIdentifier: 
-  name: Big Claw Cona
-  icon: {fileID: 21300000, guid: 88801a8344374654e981390a219c4d81, type: 3}
-  description: Like a claw. But big.
-  equipType: 1
+  name: Basic Litterbox
+  icon: {fileID: 21300000, guid: 1b1382438074dbb4bbd4017fe02c73a3, type: 3}
+  description: Disgusting and ugly, but it gets the job done. Increases Stamina and
+    Health.
+  equipType: 2
   effects:
+  - effect: 0
+    strength: 10
   - effect: 1
-    strength: 100
+    strength: 10
