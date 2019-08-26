@@ -335,8 +335,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &51418058
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,8 +972,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &473031754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,8 +1779,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1121716328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,8 +1927,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1125575868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,8 +2349,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1312594808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,8 +2844,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1445090130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,8 +3313,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1641833518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,8 +3498,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1661035358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,8 +3728,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1759038992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4127,8 +4145,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.07
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1952923151
 GameObject:
   m_ObjectHideFlags: 0
@@ -4485,8 +4505,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 0
   newSize: 0
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &2088242331
 GameObject:
   m_ObjectHideFlags: 0
