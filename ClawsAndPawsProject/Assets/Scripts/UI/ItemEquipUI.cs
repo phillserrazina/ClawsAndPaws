@@ -9,6 +9,7 @@ public class ItemEquipUI : MonoBehaviour
     public Image currentItemImage;
 
     [SerializeField] private InventoryEquipDisplayUI inventoryDisplay;
+    [SerializeField] private HeldItemSO firstItem;
 
     private void Awake() {
         switch (GetItemType())
@@ -48,6 +49,62 @@ public class ItemEquipUI : MonoBehaviour
     }
 
     public void EnableInventoryDisplay() {
+
+        if (FirstItemHelper()) {
+            SaveManager.Save(FindObjectOfType<CurrentCharacterManager>().currentCharacter);
+            return;
+        }
+
         inventoryDisplay.Enable(GetItemType());
+    }
+
+    private bool FirstItemHelper() {
+        switch (GetItemType())
+        {
+            case HeldItemSO.EquipTypes.Wall:
+                if (Inventory.instance.WallEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.WallEquipedObject.icon;
+                    return true;
+                } 
+
+                return false;
+            
+            case HeldItemSO.EquipTypes.Bed:
+                if (Inventory.instance.BedEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.BedEquipedObject.icon;
+                    return true;
+                } 
+
+                return false;
+            
+            case HeldItemSO.EquipTypes.LitterBox:
+                if (Inventory.instance.LitterboxEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.LitterboxEquipedObject.icon;
+
+                    return true;
+                } 
+
+                return false;
+            
+            case HeldItemSO.EquipTypes.Food:
+                if (Inventory.instance.FoodEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.FoodEquipedObject.icon;
+                    return true;
+                } 
+
+                return false;
+            
+            default:
+                Debug.LogError("ItemEquipUI::Awake() --- Invalid HeldItemSO.EquipTypes type! Check your spelling in the itemType var.");
+                return false;
+        }
     }
 }

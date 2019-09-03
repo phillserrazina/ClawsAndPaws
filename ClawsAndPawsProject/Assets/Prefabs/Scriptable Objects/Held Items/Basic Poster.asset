@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Poster
   m_EditorClassIdentifier: 
   name: Basic Poster
-  icon: {fileID: 21300000, guid: 74c99d3c7722f5246aa34af2c2f8c63a, type: 3}
+  icon: {fileID: 21300000, guid: 81601e82552e70c40ac54853ef89a680, type: 3}
   description: Pretty! Reduces damage taken.
   equipType: 0
   effects:

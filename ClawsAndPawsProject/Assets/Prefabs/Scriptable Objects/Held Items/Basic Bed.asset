@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Bed
   m_EditorClassIdentifier: 
   name: Basic Bed
-  icon: {fileID: 21300000, guid: a5de0e3ce9d483d4ca673c3870e1074f, type: 3}
+  icon: {fileID: 21300000, guid: 37b9d2359fea58349aa72243c22c90d4, type: 3}
   description: It's comfy enough, I guess. Increases attack.
   equipType: 1
   effects:

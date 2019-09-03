@@ -354,6 +354,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &76682705
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +502,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &197521072
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +832,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1064164142
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +957,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!114 &1073484634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,7 +1256,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 16afc509d2c8efd42b41d51900952fd0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4d3cf4c1a2cd8047a57a2a048ca3a82, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

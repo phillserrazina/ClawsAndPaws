@@ -836,8 +836,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &724417885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,8 +1339,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &947430911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -410, y: 40}
+  m_AnchoredPosition: {x: -410, y: 85}
   m_SizeDelta: {x: 592, y: 778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947430913
@@ -2265,7 +2269,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1bdc826e44dcb1447abae19d4e6c5280, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 853d0a4e574390c4fba0154ba6222d79, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2761,7 +2765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: 40}
+  m_AnchoredPosition: {x: 410, y: 85}
   m_SizeDelta: {x: 592, y: 778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642207015
@@ -2851,7 +2855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 20, y: 60}
   m_SizeDelta: {x: 251, y: 170}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1657108507
@@ -2959,8 +2963,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1667664627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -460}
+  m_AnchoredPosition: {x: 0, y: -415.00003}
   m_SizeDelta: {x: 697, y: 179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884593734
@@ -3228,8 +3234,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1888375891
 GameObject:
   m_ObjectHideFlags: 0

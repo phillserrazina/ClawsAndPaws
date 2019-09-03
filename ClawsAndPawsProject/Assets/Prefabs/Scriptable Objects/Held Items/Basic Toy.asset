@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Toy
   m_EditorClassIdentifier: 
   name: Basic Toy
-  icon: {fileID: 21300000, guid: 82dda76a2ae3f6a4981e44557af79a50, type: 3}
+  icon: {fileID: 21300000, guid: 3d324ce078171a74e8d203e551073d2e, type: 3}
   description: Scratch, scratch! Increases speed.
   equipType: 3
   effects:

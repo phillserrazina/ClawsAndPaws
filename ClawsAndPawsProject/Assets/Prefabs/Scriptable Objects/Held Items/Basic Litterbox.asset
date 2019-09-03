@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Litterbox
   m_EditorClassIdentifier: 
   name: Basic Litterbox
-  icon: {fileID: 21300000, guid: 1b1382438074dbb4bbd4017fe02c73a3, type: 3}
+  icon: {fileID: 21300000, guid: 81e1f6b40d3c907478fb2aaf8239e1d1, type: 3}
   description: Disgusting and ugly, but it gets the job done. Increases Stamina and
     Health.
   equipType: 2
