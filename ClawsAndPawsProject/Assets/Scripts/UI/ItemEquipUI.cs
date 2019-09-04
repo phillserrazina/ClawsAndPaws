@@ -32,10 +32,10 @@ public class ItemEquipUI : MonoBehaviour
                 currentItemImage.sprite = Inventory.instance.LitterboxEquipedObject.icon;
                 break;
             
-            case HeldItemSO.EquipTypes.Food:
-                if (Inventory.instance.FoodEquipedObject == null) return;
+            case HeldItemSO.EquipTypes.Toy:
+                if (Inventory.instance.ToyEquipedObject == null) return;
 
-                currentItemImage.sprite = Inventory.instance.FoodEquipedObject.icon;
+                currentItemImage.sprite = Inventory.instance.ToyEquipedObject.icon;
                 break;
             
             default:
@@ -92,11 +92,11 @@ public class ItemEquipUI : MonoBehaviour
 
                 return false;
             
-            case HeldItemSO.EquipTypes.Food:
-                if (Inventory.instance.FoodEquipedObject == null) {
+            case HeldItemSO.EquipTypes.Toy:
+                if (Inventory.instance.ToyEquipedObject == null) {
                     Inventory.instance.Add(firstItem);
                     Inventory.instance.EquipItem(firstItem);
-                    currentItemImage.sprite = Inventory.instance.FoodEquipedObject.icon;
+                    currentItemImage.sprite = Inventory.instance.ToyEquipedObject.icon;
                     return true;
                 } 
 

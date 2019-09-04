@@ -136,7 +136,7 @@ public class Combat : MonoBehaviour {
 		if (Inventory.instance.WallEquipedObject != null) Inventory.instance.WallEquipedObject.Use(actor);
 		if (Inventory.instance.BedEquipedObject != null) Inventory.instance.BedEquipedObject.Use(actor);
 		if (Inventory.instance.LitterboxEquipedObject != null) Inventory.instance.LitterboxEquipedObject.Use(actor);
-		if (Inventory.instance.FoodEquipedObject != null) Inventory.instance.FoodEquipedObject.Use(actor);
+		if (Inventory.instance.ToyEquipedObject != null) Inventory.instance.ToyEquipedObject.Use(actor);
 	}
 
 	private Actions GetActionChoice() {

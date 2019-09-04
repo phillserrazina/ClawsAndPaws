@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113f3374e9b7c2742bab541a5462c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: Food
+  itemType: Toy
   currentItemImage: {fileID: 1870722992}
   inventoryDisplay: {fileID: 1040601805}
   firstItem: {fileID: 11400000, guid: 454aa061067418042a43787380d4e7d4, type: 2}
