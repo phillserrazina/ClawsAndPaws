@@ -33,7 +33,9 @@ public class SaveSlotUI : MonoBehaviour {
 		newCharacterSlotObject.SetActive(false);
 		existingCharacterSlotObject.SetActive(true);
 
-		Button button = existingCharacterSlotObject.GetComponent<Button>();
+		Button[] bs = existingCharacterSlotObject.GetComponentsInChildren<Button>();
+		Button button = bs[0].gameObject.name.Equals("Body") ? bs[0] : bs[1];
+
 		button.onClick.AddListener(() => FindObjectOfType<LoadCharacterUI>().LoadCharacter(assignedCharacter, assignedPath));
 	}
 
