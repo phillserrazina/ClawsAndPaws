@@ -8,6 +8,7 @@ public class CharCreationUI : MonoBehaviour {
 	[SerializeField] private InputField nameInputField;
 	[SerializeField] private Text availablePointsText;
 	[SerializeField] private Image characterVisual;
+	[SerializeField] private Image characterPointsVisual;
 
 	[Space(10)]
 	[SerializeField] private Text strengthText;
@@ -17,6 +18,7 @@ public class CharCreationUI : MonoBehaviour {
 	[SerializeField] private Text intimidationText;
 
 	[SerializeField] private Sprite[] allVisuals;
+	[SerializeField] private Sprite[] allPointsVisuals;
 
 	private int strengthValue = 1;
 	private int healthValue = 1;
@@ -94,6 +96,7 @@ public class CharCreationUI : MonoBehaviour {
 				if (visualIndexValue < 0) visualIndexValue = allVisuals.Length-1;
 
 				characterVisual.sprite = allVisuals[visualIndexValue];
+				characterPointsVisual.sprite = allPointsVisuals[visualIndexValue];
 				break;
 
 			default:

@@ -9,44 +9,33 @@ public class ItemEquipUI : MonoBehaviour
     public Image currentItemImage;
 
     [SerializeField] private InventoryEquipDisplayUI inventoryDisplay;
+    [SerializeField] private HeldItemSO firstItem;
 
     private void Awake() {
         switch (GetItemType())
         {
             case HeldItemSO.EquipTypes.Wall:
-                if (Inventory.instance.WallEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+                if (Inventory.instance.WallEquipedObject == null) return;
 
                 currentItemImage.sprite = Inventory.instance.WallEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.Bed:
-                if (Inventory.instance.BedEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+                if (Inventory.instance.BedEquipedObject == null) return;
 
                 currentItemImage.sprite = Inventory.instance.BedEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.LitterBox:
-                if (Inventory.instance.LitterboxEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+                if (Inventory.instance.LitterboxEquipedObject == null) return;
 
                 currentItemImage.sprite = Inventory.instance.LitterboxEquipedObject.icon;
                 break;
             
-            case HeldItemSO.EquipTypes.Food:
-                if (Inventory.instance.FoodEquipedObject == null) {
-                    currentItemImage.gameObject.SetActive(false);
-                    return;
-                }
+            case HeldItemSO.EquipTypes.Toy:
+                if (Inventory.instance.ToyEquipedObject == null) return;
 
-                currentItemImage.sprite = Inventory.instance.FoodEquipedObject.icon;
+                currentItemImage.sprite = Inventory.instance.ToyEquipedObject.icon;
                 break;
             
             default:
@@ -60,6 +49,62 @@ public class ItemEquipUI : MonoBehaviour
     }
 
     public void EnableInventoryDisplay() {
+
+        if (FirstItemHelper()) {
+            SaveManager.Save(FindObjectOfType<CurrentCharacterManager>().currentCharacter);
+            return;
+        }
+
         inventoryDisplay.Enable(GetItemType());
+    }
+
+    private bool FirstItemHelper() {
+        switch (GetItemType())
+        {
+            case HeldItemSO.EquipTypes.Wall:
+                if (Inventory.instance.WallEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.WallEquipedObject.icon;
+                    return true;
+                } 
+
+                return false;
+            
+            case HeldItemSO.EquipTypes.Bed:
+                if (Inventory.instance.BedEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.BedEquipedObject.icon;
+                    return true;
+                } 
+
+                return false;
+            
+            case HeldItemSO.EquipTypes.LitterBox:
+                if (Inventory.instance.LitterboxEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.LitterboxEquipedObject.icon;
+
+                    return true;
+                } 
+
+                return false;
+            
+            case HeldItemSO.EquipTypes.Toy:
+                if (Inventory.instance.ToyEquipedObject == null) {
+                    Inventory.instance.Add(firstItem);
+                    Inventory.instance.EquipItem(firstItem);
+                    currentItemImage.sprite = Inventory.instance.ToyEquipedObject.icon;
+                    return true;
+                } 
+
+                return false;
+            
+            default:
+                Debug.LogError("ItemEquipUI::Awake() --- Invalid HeldItemSO.EquipTypes type! Check your spelling in the itemType var.");
+                return false;
+        }
     }
 }

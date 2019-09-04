@@ -26,8 +26,8 @@ public class Inventory {
 	public HeldItemSO BedEquipedObject { get { return bedEquipedObject; } }
 	[SerializeField] private HeldItemSO litterboxEquipedObject = null;
 	public HeldItemSO LitterboxEquipedObject { get { return litterboxEquipedObject; } }
-	[SerializeField] private HeldItemSO foodEquipedObject = null;
-	public HeldItemSO FoodEquipedObject { get { return foodEquipedObject; } }
+	[SerializeField] private HeldItemSO toyEquipedObject = null;
+	public HeldItemSO ToyEquipedObject { get { return toyEquipedObject; } }
 
 	private Actor player;
 
@@ -62,7 +62,7 @@ public class Inventory {
 		loadedInventory.RemoveAt(0);
 
 		if (loadedInventory[0] != "null")
-			foodEquipedObject = allItemList.Search(loadedInventory[0]) as HeldItemSO;
+			toyEquipedObject = allItemList.Search(loadedInventory[0]) as HeldItemSO;
 		loadedInventory.RemoveAt(0);
 
 		foreach (string n in loadedInventory) {
@@ -77,7 +77,7 @@ public class Inventory {
 		data.Add((wallEquipedObject == null) ? "null" : wallEquipedObject.name);
 		data.Add((bedEquipedObject == null) ? "null" : bedEquipedObject.name);
 		data.Add((litterboxEquipedObject == null) ? "null" : litterboxEquipedObject.name);
-		data.Add((foodEquipedObject == null) ? "null" : foodEquipedObject.name);
+		data.Add((toyEquipedObject == null) ? "null" : toyEquipedObject.name);
 
 		foreach (ItemSO i in keyItems) {
 			if (i == null) continue;
@@ -195,8 +195,8 @@ public class Inventory {
                 litterboxEquipedObject = itemData;
                 break;
             
-            case HeldItemSO.EquipTypes.Food:
-                foodEquipedObject = itemData;
+            case HeldItemSO.EquipTypes.Toy:
+                toyEquipedObject = itemData;
                 break;
             
             default:

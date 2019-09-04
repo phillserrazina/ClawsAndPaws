@@ -831,6 +831,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!114 &468495510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114123046220556162, guid: 51bb06134f13e2447a7bbe7de136eb64,
@@ -1334,6 +1335,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &606063852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1495,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &682875257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,6 +1888,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &793355503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2048,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &842212644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2370,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!114 &1030856221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2383,6 +2389,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1040561743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,6 +2618,7 @@ GameObject:
   - component: {fileID: 1155681072}
   - component: {fileID: 1155681071}
   - component: {fileID: 1155681070}
+  - component: {fileID: 1155681073}
   m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
@@ -2727,6 +2735,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155681068}
   m_CullTransparentMesh: 0
+--- !u!114 &1155681073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155681068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxName: Knock
+  changeSize: 1
+  newSize: 1.05
+  keepSizeOnClick: 0
+  changeSprite: 0
+  newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1181728725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,6 +3367,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1520770131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4737,6 +4765,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1001 &2104770759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5451,6 +5480,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &8908535351095363340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5562,6 +5592,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!222 &8908535351648885989
 CanvasRenderer:
   m_ObjectHideFlags: 0

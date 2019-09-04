@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 386518479}
   - component: {fileID: 386518483}
   m_Layer: 5
-  m_Name: Armor Button (2)
+  m_Name: Basic Poster Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,7 +431,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c5fc395dbfa9517429141052cdbb8148, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74c99d3c7722f5246aa34af2c2f8c63a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -463,8 +463,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &402074487
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +482,7 @@ GameObject:
   - component: {fileID: 402074489}
   - component: {fileID: 402074493}
   m_Layer: 5
-  m_Name: Armor Button (3)
+  m_Name: Basic Toy Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   requiredLevel: 0
-  item: {fileID: 11400000, guid: 475d664250eaaaf4fa58b102da085f88, type: 2}
+  item: {fileID: 11400000, guid: 454aa061067418042a43787380d4e7d4, type: 2}
 --- !u!114 &402074490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +595,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c5fc395dbfa9517429141052cdbb8148, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82dda76a2ae3f6a4981e44557af79a50, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -625,8 +627,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &402559385
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +761,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482852956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -810,7 +814,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482852956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -855,8 +859,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &613319096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,7 +1218,7 @@ GameObject:
   - component: {fileID: 931108334}
   - component: {fileID: 931108338}
   m_Layer: 5
-  m_Name: Armor Button (1)
+  m_Name: Basic Litterbox Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1251,7 +1257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   requiredLevel: 0
-  item: {fileID: 11400000, guid: 475d664250eaaaf4fa58b102da085f88, type: 2}
+  item: {fileID: 11400000, guid: 8cd259fa73f8b9e4c91440424dcc68b4, type: 2}
 --- !u!114 &931108335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,7 +1331,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c5fc395dbfa9517429141052cdbb8148, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b1382438074dbb4bbd4017fe02c73a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1357,8 +1363,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &949750704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,8 +1548,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1047959130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1783,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334608909}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1826,7 +1836,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334608909}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1871,8 +1881,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1348313566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,7 +2169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613194075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -2210,7 +2222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613194075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -2255,8 +2267,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1615347272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,7 +2362,7 @@ GameObject:
   - component: {fileID: 1884789420}
   - component: {fileID: 1884789424}
   m_Layer: 5
-  m_Name: Armor Button
+  m_Name: Basic Bed Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2387,7 +2401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   requiredLevel: 0
-  item: {fileID: 11400000, guid: 475d664250eaaaf4fa58b102da085f88, type: 2}
+  item: {fileID: 11400000, guid: ded3c47abc0b3254d8b8e6011701f8cb, type: 2}
 --- !u!114 &1884789421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2461,7 +2475,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c5fc395dbfa9517429141052cdbb8148, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5de0e3ce9d483d4ca673c3870e1074f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2493,8 +2507,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1921170969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,7 +2573,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921170969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -2610,7 +2626,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921170969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -2655,8 +2671,10 @@ MonoBehaviour:
   sfxName: Knock
   changeSize: 1
   newSize: 1.05
+  keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &1925483807
 GameObject:
   m_ObjectHideFlags: 0

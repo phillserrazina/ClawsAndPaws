@@ -9,6 +9,9 @@ public class InventoryEquipDisplayUI : MonoBehaviour
     [SerializeField] private GameObject backToHubButton;
 
     public void Enable(HeldItemSO.EquipTypes itemType) {
+        gameObject.SetActive(true);
+        backToHubButton.SetActive(false);
+        
         var items = new List<HeldItemSO>();
 
         foreach (HeldItemSO item in Inventory.instance.HeldItems) {
