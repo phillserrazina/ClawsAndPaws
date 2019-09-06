@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f4251871d3674ac46acccd28b6a4f3b8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Chicle
+  fontNames:
+  - Chicle
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 50e65d45203c105479f1e6bf3ad54e58, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

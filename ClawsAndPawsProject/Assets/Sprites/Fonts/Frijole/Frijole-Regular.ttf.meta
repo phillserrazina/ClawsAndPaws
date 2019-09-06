@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 53f9139b3772e1348a229a0e7c2f7762
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Frijole
+  fontNames:
+  - Frijole
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4f4be0a4da4c9534db9a4d0e282d2bc1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
