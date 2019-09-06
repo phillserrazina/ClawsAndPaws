@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 781586f63e042ba4498071d558b37e3e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Spicy Rice
+  fontNames:
+  - Spicy Rice
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b398c21a28e15cb4eaf25702f1f11aeb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
