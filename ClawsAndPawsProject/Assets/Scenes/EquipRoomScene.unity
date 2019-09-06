@@ -280,11 +280,11 @@ RectTransform:
   m_Father: {fileID: 588745265}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 179.492}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -285, y: 219}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -270, y: -185}
   m_SizeDelta: {x: 251, y: 170}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &202661651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +393,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &202971109
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +553,7 @@ MonoBehaviour:
   keepSizeOnClick: 0
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!1 &588745261
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +713,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7d47d711b94744c44a345611a37f83f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -763,7 +765,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 180, y: 180}
+  m_SizeDelta: {x: 667, y: 361}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701551162
 MonoBehaviour:
@@ -785,7 +787,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec160030f0aa1304ea1842866af41089, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -840,8 +842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 337, y: 255}
+  m_SizeDelta: {x: 857.6, y: 399.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762218249
 MonoBehaviour:
@@ -856,7 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -920,28 +922,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1040601803}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 202661649}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 762218253}
         m_MethodName: EnableInventoryDisplay
         m_Mode: 1
@@ -973,6 +953,7 @@ MonoBehaviour:
   keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!114 &762218253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,6 +969,7 @@ MonoBehaviour:
   itemType: Wall
   currentItemImage: {fileID: 1131822984}
   inventoryDisplay: {fileID: 1040601805}
+  firstItem: {fileID: 11400000, guid: 475d664250eaaaf4fa58b102da085f88, type: 2}
 --- !u!1 &848087467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,7 +1276,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 180, y: 180}
+  m_SizeDelta: {x: 841, y: 392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131822984
 MonoBehaviour:
@@ -1316,7 +1298,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61c102aae925c3540af7b2d1b7703ab2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1368,7 +1350,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 180, y: 180}
+  m_SizeDelta: {x: 519, y: 189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225606508
 MonoBehaviour:
@@ -1390,7 +1372,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76e89740c16432f4082db0d4de4ef140, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1445,8 +1427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 155, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -548, y: -333.05}
+  m_SizeDelta: {x: 672.2, y: 366.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262743554
 MonoBehaviour:
@@ -1461,7 +1443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1525,28 +1507,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1040601803}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 202661649}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1262743558}
         m_MethodName: EnableInventoryDisplay
         m_Mode: 1
@@ -1578,6 +1538,7 @@ MonoBehaviour:
   keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!114 &1262743558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,6 +1554,7 @@ MonoBehaviour:
   itemType: Bed
   currentItemImage: {fileID: 701551162}
   inventoryDisplay: {fileID: 1040601805}
+  firstItem: {fileID: 11400000, guid: ded3c47abc0b3254d8b8e6011701f8cb, type: 2}
 --- !u!1 &1382042567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1689,7 @@ GameObject:
   - component: {fileID: 1688352447}
   - component: {fileID: 1688352448}
   m_Layer: 5
-  m_Name: Food Button
+  m_Name: Toy Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1750,8 +1712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 811, y: -242}
+  m_SizeDelta: {x: 300, y: 584}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688352444
 MonoBehaviour:
@@ -1766,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1830,28 +1792,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1040601803}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 202661649}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1688352448}
         m_MethodName: EnableInventoryDisplay
         m_Mode: 1
@@ -1883,6 +1823,7 @@ MonoBehaviour:
   keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!114 &1688352448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1895,9 +1836,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113f3374e9b7c2742bab541a5462c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: Food
+  itemType: Toy
   currentItemImage: {fileID: 1870722992}
   inventoryDisplay: {fileID: 1040601805}
+  firstItem: {fileID: 11400000, guid: 454aa061067418042a43787380d4e7d4, type: 2}
 --- !u!1 &1783263985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,8 +1973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -155, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 120, y: -221}
+  m_SizeDelta: {x: 520.7, y: 205.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823524314
 MonoBehaviour:
@@ -2047,7 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2111,28 +2053,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1040601803}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 202661649}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1823524318}
         m_MethodName: EnableInventoryDisplay
         m_Mode: 1
@@ -2164,6 +2084,7 @@ MonoBehaviour:
   keepSizeOnClick: 1
   changeSprite: 0
   newSprite: {fileID: 0}
+  keepSpriteOnClick: 0
 --- !u!114 &1823524318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,6 +2100,7 @@ MonoBehaviour:
   itemType: LitterBox
   currentItemImage: {fileID: 1225606508}
   inventoryDisplay: {fileID: 1040601805}
+  firstItem: {fileID: 11400000, guid: 8cd259fa73f8b9e4c91440424dcc68b4, type: 2}
 --- !u!1 &1870722990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2136,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 180, y: 180}
+  m_SizeDelta: {x: 313, y: 582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870722992
 MonoBehaviour:
@@ -2236,7 +2158,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 12e8f606454859b4dbe02c883d04c0ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 862bd604fe664b8448c7f97402b6a8ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

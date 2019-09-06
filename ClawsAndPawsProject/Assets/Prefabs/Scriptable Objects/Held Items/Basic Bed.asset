@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Big Claw 1
+  m_Name: Basic Bed
   m_EditorClassIdentifier: 
-  name: Big Claw Cona
-  icon: {fileID: 21300000, guid: 88801a8344374654e981390a219c4d81, type: 3}
-  description: Like a claw. But big.
+  name: Basic Bed
+  icon: {fileID: 21300000, guid: 37b9d2359fea58349aa72243c22c90d4, type: 3}
+  description: It's comfy enough, I guess. Increases attack.
   equipType: 1
   effects:
-  - effect: 1
-    strength: 100
+  - effect: 4
+    strength: 5

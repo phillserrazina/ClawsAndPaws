@@ -9,7 +9,7 @@ public class HeldItemSO : ItemSO {
 		Wall,
 		Bed,
 		LitterBox,
-		Food
+		Toy
 	}
 
 	public EquipTypes equipType;
