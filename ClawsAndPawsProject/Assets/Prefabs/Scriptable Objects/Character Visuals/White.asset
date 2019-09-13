@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 710429c74adf14f468fb77fb4c86f3ce, type: 3}
-  m_Name: Orange
+  m_Name: White
   m_EditorClassIdentifier: 
-  normalSkinColor: {r: 0.8117648, g: 0.4784314, b: 0.08235294, a: 1}
-  darkSkinColor: {r: 0.6862745, g: 0.40000004, b: 0.09019608, a: 1}
-  noseSkinColor: {r: 0.59607846, g: 0.3137255, b: 0.03137255, a: 1}
+  normalSkinColor: {r: 1, g: 1, b: 1, a: 1}
+  darkSkinColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+  noseSkinColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
