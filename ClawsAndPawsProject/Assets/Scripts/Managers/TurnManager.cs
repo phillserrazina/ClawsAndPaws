@@ -47,7 +47,7 @@ public class TurnManager : MonoBehaviour {
 
 	private bool CheckIfAnimationIsPlaying() {
 		foreach (Actor a in FindObjectsOfType<Actor>()) {
-			if (!a.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+			if (!a.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
 				return true;
 			}
 		}
