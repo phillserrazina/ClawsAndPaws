@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Dr Mean
+  m_Name: Catpoleon
   m_EditorClassIdentifier: 
-  actorName: Dr Mean
+  actorName: Catpoleon
   experiencePoints: 500
   level: 3
   strengthPoints: 5
@@ -22,5 +22,6 @@ MonoBehaviour:
   intimidationPoints: 2
   currentTournament: 0
   visualIndex: 0
-  itemRewards: []
-  customSprite: {fileID: 21300000, guid: 040b1a282d5bb7f48bf0c2eb93ee7a08, type: 3}
+  itemRewards:
+  - {fileID: 0}
+  customSprite: {fileID: 21300000, guid: a4074e3a0e95e8e4896b95b2311c9128, type: 3}
