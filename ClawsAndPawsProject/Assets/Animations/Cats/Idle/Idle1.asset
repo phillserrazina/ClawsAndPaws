@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: Idle1
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Waist
+    localPosition: {x: -1.0587316, y: -0.9433937, z: 5.990937}
+    localRotation: {x: -0, y: -0, z: -0.0715255, w: -0.99743885}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso
+    localPosition: {x: 0.8858819, y: 1.1641532e-10, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.47439548, w: 0.88031185}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso/Head
+    localPosition: {x: 0.23999994, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.23832151, w: 0.9711863}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso/Head/Ear_Left1
+    localPosition: {x: 1.3695109, y: -0.5687513, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.18811224, w: -0.9821476}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso/Head/Ear_Left1/Ear_Left2
+    localPosition: {x: 0.1580313, y: -0.000000077299774, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.08407586, w: 0.9964594}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso/Head/Ear_Right1
+    localPosition: {x: 1.3408918, y: 0.7924886, z: -8.60907}
+    localRotation: {x: 0, y: 0, z: -0.08249178, w: -0.9965918}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso/Head/Ear_Right1/Ear_Righ2
+    localPosition: {x: 0.15526392, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.033406347, w: 0.9994419}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso/Head/Whiskers_Left
+    localPosition: {x: 0.5136732, y: -0.88685286, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.7892502, w: 0.6140718}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Torso/Head/Whiskers_Right
+    localPosition: {x: 0.50229275, y: 1.0206136, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.80528724, w: 0.59288496}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Tail1
+    localPosition: {x: -0.08823851, y: 0.029764006, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.8130065, w: 0.58225465}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Tail1/Tail2
+    localPosition: {x: 0.22999996, y: -0.00000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.102054745, w: 0.9947789}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Tail1/Tail2/Tail3
+    localPosition: {x: 0.71999997, y: -0.00000020861626, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.18229556, w: 0.98324376}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Tail1/Tail2/Tail3/Tail4
+    localPosition: {x: 0.81, y: 0.00000011920929, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.30133823, w: 0.9535174}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg1
+    localPosition: {x: -4.3053594, y: -6.3156214, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.7527257, w: 0.65833426}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg1/Leg1.2
+    localPosition: {x: 0.15, y: 0.000000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg2
+    localPosition: {x: -4.6663165, y: -6.4023623, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.77189845, w: 0.63574594}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg2/Leg2.2
+    localPosition: {x: 0.15999997, y: -0.000000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.011245058, w: 0.99993676}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg3
+    localPosition: {x: -5.169316, y: -6.4267673, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.6286093, w: 0.7777213}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg3/Leg3.2
+    localPosition: {x: 0.15, y: -0.000000067055225, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg4
+    localPosition: {x: -5.4648, y: -6.4842744, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.7949644, w: 0.6066562}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Waist/Legs/Leg4/Leg4.2
+    localPosition: {x: 0.12999997, y: 0.000000074505806, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
