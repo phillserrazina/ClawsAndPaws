@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710429c74adf14f468fb77fb4c86f3ce, type: 3}
+  m_Name: Orange
+  m_EditorClassIdentifier: 
+  head: {fileID: 21300000, guid: 6de84854144f57a47a603a816ad96553, type: 3}
+  nose: {fileID: 21300000, guid: 640f7189338abdb46af2a5f35c424513, type: 3}
+  mouth: {fileID: 21300000, guid: 52423b86e861b624094c7b4614887bc7, type: 3}
+  torso: {fileID: 21300000, guid: bf92ed85d76f681489d937f6bd8e87a9, type: 3}
+  tail: {fileID: 21300000, guid: 5cf8bab422ee80347ba7f820dcc8c06b, type: 3}
+  eye: {fileID: 21300000, guid: af7e953f947b2ec4783d950d3c7729cc, type: 3}
+  whiskers: {fileID: 21300000, guid: d28cc28fdf34f0444aa7deb13ac4497e, type: 3}
+  rightEar: {fileID: 21300000, guid: d116264863dc3ec4e9956972dae53be6, type: 3}
+  leftEar: {fileID: 21300000, guid: 2f46f94794c43dd49a73344203581777, type: 3}
+  frontLeftPaw: {fileID: 21300000, guid: f65bde7e2e7fb5440866ddd46adb48d1, type: 3}
+  frontRightPaw: {fileID: 21300000, guid: abaa5c373be78434c98ffb21482c775c, type: 3}
+  backLeftPaw: {fileID: 21300000, guid: dabc09d1041cf6c49b2406c6f7f695d1, type: 3}
+  backRightPaw: {fileID: 21300000, guid: 28851786f5ae03e45a47172307ff3ceb, type: 3}

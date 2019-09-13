@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Garfield
+  m_Name: Dr Mean
   m_EditorClassIdentifier: 
-  actorName: Garfield
-  experiencePoints: 500
+  actorName: Dr Mean
+  experiencePoints: 200
   level: 3
   strengthPoints: 5
   agilityPoints: 2
@@ -21,4 +21,6 @@ MonoBehaviour:
   staminaPoints: 1
   intimidationPoints: 2
   currentTournament: 0
+  visualIndex: 0
   itemRewards: []
+  customSprite: {fileID: 21300000, guid: f20915d194cc34b4394e6f5454f9305d, type: 3}
