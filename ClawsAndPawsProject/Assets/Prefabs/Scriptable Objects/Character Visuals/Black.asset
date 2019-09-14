@@ -9,16 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Garfield
+  m_Script: {fileID: 11500000, guid: 710429c74adf14f468fb77fb4c86f3ce, type: 3}
+  m_Name: Black
   m_EditorClassIdentifier: 
-  actorName: Garfield
-  experiencePoints: 500
-  level: 3
-  strengthPoints: 5
-  agilityPoints: 2
-  healthPoints: 3
-  staminaPoints: 1
-  intimidationPoints: 2
-  currentTournament: 0
-  itemRewards: []
+  normalSkinColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  darkSkinColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
+  noseSkinColor: {r: 0, g: 0, b: 0, a: 1}

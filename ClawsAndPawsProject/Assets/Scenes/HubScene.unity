@@ -224,7 +224,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ef5149c762c9989448ea7f4269cb0c1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25aed7851abe8c044b2fa728903a90ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -258,7 +258,7 @@ MonoBehaviour:
   newSize: 1.05
   keepSizeOnClick: 0
   changeSprite: 1
-  newSprite: {fileID: 21300000, guid: 86cdff1522be2ec48b7d7208bb2086c7, type: 3}
+  newSprite: {fileID: 21300000, guid: ff08f8e4d8b16da4bbf9460046763d23, type: 3}
   keepSpriteOnClick: 0
 --- !u!1 &29531152
 GameObject:
@@ -316,7 +316,7 @@ MonoBehaviour:
   newSize: 1.05
   keepSizeOnClick: 0
   changeSprite: 1
-  newSprite: {fileID: 21300000, guid: 489ce426319d562488ed2a9060016e57, type: 3}
+  newSprite: {fileID: 21300000, guid: eb366b10b5d46594ba8d4153bafdf585, type: 3}
   keepSpriteOnClick: 0
 --- !u!114 &29531155
 MonoBehaviour:
@@ -391,7 +391,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c0a53c00ce69b3e4bada33d1088cd8b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 613a0be61c961a34295b4b2a0561188e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -465,7 +465,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 968ade60d632c27448a5148b01438816, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f3c1b77e02b50b4ca98036da00bea14, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -687,7 +687,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0206c2b6a8cd82144a0bd5bd4b0b76f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d8790813e363384ab22d318ca679575, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -721,7 +721,7 @@ MonoBehaviour:
   newSize: 1.05
   keepSizeOnClick: 0
   changeSprite: 1
-  newSprite: {fileID: 21300000, guid: aee0460e6646b934d8b21165b638ca01, type: 3}
+  newSprite: {fileID: 21300000, guid: af6670be8280b5d4288f4be9db021f94, type: 3}
   keepSpriteOnClick: 0
 --- !u!1 &138868634 stripped
 GameObject:
@@ -2437,7 +2437,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 793bb680fc1f45245afc5c3bd4eb36eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cffd8b153349cb24ab13d1dc6d674e0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3081,7 +3081,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d8d90c56bd04857448fb4dde013b6517, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51b9256e94261d94ea2067482458cbf7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3115,7 +3115,7 @@ MonoBehaviour:
   newSize: 1.05
   keepSizeOnClick: 0
   changeSprite: 1
-  newSprite: {fileID: 21300000, guid: 8ec955cacaa3e7b45bc92427dfe72ec8, type: 3}
+  newSprite: {fileID: 21300000, guid: 64829d2aa457e9e4c804e5332a55feb1, type: 3}
   keepSpriteOnClick: 0
 --- !u!1 &1901680550
 GameObject:

@@ -1,9 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Anima2D;
 
 public class Appearance : MonoBehaviour
 {
+    [SerializeField] private SpriteMeshInstance headRenderer;
+    [SerializeField] private SpriteRenderer[] headStripsRenderers;
+    [SerializeField] private SpriteRenderer noseRenderer;
+    [SerializeField] private SpriteMeshInstance torsoRenderer;
+    [SerializeField] private SpriteMeshInstance darkTorsoRenderer;
+    [SerializeField] private SpriteMeshInstance tailRenderer;
+    [SerializeField] private SpriteMeshInstance rightEarRenderer;
+    [SerializeField] private SpriteMeshInstance rightEarShadow;
+    [SerializeField] private SpriteMeshInstance leftEarRenderer;
+    [SerializeField] private SpriteMeshInstance leftEarShadow;
+    [SerializeField] private SpriteMeshInstance frontLeftPawRenderer;
+    [SerializeField] private SpriteMeshInstance fronRightPawRenderer;
+    [SerializeField] private SpriteMeshInstance backLeftPawRenderer;
+    [SerializeField] private SpriteMeshInstance backRightPawRenderer;
+
+    [SerializeField] private CharVisualSO[] allNewVisuals;
     [SerializeField] private Sprite[] allVisuals;
 
     private int visualIndex;
@@ -19,6 +36,28 @@ public class Appearance : MonoBehaviour
 
         visualIndex = isPlayer ? ccManager.currentCharacter.visualIndex : ccManager.currentOpponent.visualIndex;
 
-        sRenderer.sprite = allVisuals[visualIndex];
+        //sRenderer.sprite = allVisuals[visualIndex];
+
+        var visual = allNewVisuals[visualIndex];
+        AssignVisuals(visual);
+    }
+
+    private void AssignVisuals(CharVisualSO v) {
+        headRenderer.color = v.normalSkinColor;
+
+        foreach(var s in headStripsRenderers) s.color = v.darkSkinColor;
+
+        noseRenderer.color = v.noseSkinColor;
+        torsoRenderer.color = v.normalSkinColor;
+        darkTorsoRenderer.color = v.darkSkinColor;
+        tailRenderer.color = v.normalSkinColor;
+
+        leftEarRenderer.color = v.normalSkinColor;
+        rightEarRenderer.color = v.normalSkinColor;
+    
+        frontLeftPawRenderer.color = v.darkSkinColor;
+        fronRightPawRenderer.color = v.normalSkinColor;
+        backLeftPawRenderer.color = v.darkSkinColor;
+        backRightPawRenderer.color = v.normalSkinColor;
     }
 }

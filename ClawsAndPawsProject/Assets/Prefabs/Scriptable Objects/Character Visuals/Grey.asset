@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710429c74adf14f468fb77fb4c86f3ce, type: 3}
+  m_Name: Grey
+  m_EditorClassIdentifier: 
+  normalSkinColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+  darkSkinColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  noseSkinColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
