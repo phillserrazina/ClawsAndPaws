@@ -78,7 +78,7 @@ public class Combat : MonoBehaviour {
 					action = "Rest";
 					break;
 				}
-				ExecuteAttack();
+
 				action = currentAttack.name;
 				break;
 			
@@ -101,19 +101,6 @@ public class Combat : MonoBehaviour {
 		}
 
 		GetComponentInChildren<Animator>().Play(action);
-	}
-
-	private void ExecuteAttack() {
-		actor.stats.DepleteStamina(currentAttack.staminaCost);
-		float damage = currentAttack.damagePoints + actor.stats.attackPoints;
-		actor.opponent.stats.TakeDamage(damage);
-
-		if (currentAttack.conditions != null) {
-			foreach (ConditionSO condition in currentAttack.conditions) {
-				if (condition.targetSelf) actor.stats.AddCondition(condition);
-				else actor.opponent.stats.AddCondition(condition);
-			}
-		}
 	}
 
 	private void SpecialAttackChoice() {

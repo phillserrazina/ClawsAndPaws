@@ -138,14 +138,20 @@ public class TurnManager : MonoBehaviour {
 
 	private void ExecuteFightQueue() {
 		if (CheckIfAnimationIsPlaying()) return;
-		
-		if (fightQueue.Count == 0 || player.stats.currentHealthPoints <= 0 || cpu.stats.currentHealthPoints <= 0) {
+
+		if (CheckIfSomeoneIsDead()) {
 			currentState = States.Aftermath;
 			return;
 		}
 
 		fightQueue.Dequeue().combat.ExecuteAction();
 		uiManager.UpdateUI();
+	}
+
+	private bool CheckIfSomeoneIsDead() {
+		return (fightQueue.Count == 0 || 
+				player.stats.currentHealthPoints <= 0 || 
+				cpu.stats.currentHealthPoints <= 0);
 	}
 
 	private void CalculateAftermath() {

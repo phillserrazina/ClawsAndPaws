@@ -20,8 +20,7 @@ public class Appearance : MonoBehaviour
     [SerializeField] private SpriteMeshInstance backLeftPawRenderer;
     [SerializeField] private SpriteMeshInstance backRightPawRenderer;
 
-    [SerializeField] private CharVisualSO[] allNewVisuals;
-    [SerializeField] private Sprite[] allVisuals;
+    [SerializeField] private CharVisualSO[] allVisuals;
 
     private int visualIndex;
 
@@ -36,9 +35,7 @@ public class Appearance : MonoBehaviour
 
         visualIndex = isPlayer ? ccManager.currentCharacter.visualIndex : ccManager.currentOpponent.visualIndex;
 
-        //sRenderer.sprite = allVisuals[visualIndex];
-
-        var visual = allNewVisuals[visualIndex];
+        var visual = allVisuals[visualIndex];
         AssignVisuals(visual);
     }
 
@@ -54,6 +51,8 @@ public class Appearance : MonoBehaviour
 
         leftEarRenderer.color = v.normalSkinColor;
         rightEarRenderer.color = v.normalSkinColor;
+        leftEarShadow.color = v.darkSkinColor;
+        rightEarShadow.color = v.darkSkinColor;
     
         frontLeftPawRenderer.color = v.darkSkinColor;
         fronRightPawRenderer.color = v.normalSkinColor;

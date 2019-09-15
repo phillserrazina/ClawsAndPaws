@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Anima2D;
 
 public class CharCreationUI : MonoBehaviour {
 
@@ -17,8 +18,24 @@ public class CharCreationUI : MonoBehaviour {
 	[SerializeField] private Text agilityText;
 	[SerializeField] private Text intimidationText;
 
-	[SerializeField] private Sprite[] allVisuals;
+	[SerializeField] private CharVisualSO[] allVisuals;
 	[SerializeField] private Sprite[] allPointsVisuals;
+
+	[Header("Character Components")]
+	[SerializeField] private SpriteMeshInstance headRenderer;
+    [SerializeField] private SpriteRenderer[] headStripsRenderers;
+    [SerializeField] private SpriteRenderer noseRenderer;
+    [SerializeField] private SpriteMeshInstance torsoRenderer;
+    [SerializeField] private SpriteMeshInstance darkTorsoRenderer;
+    [SerializeField] private SpriteMeshInstance tailRenderer;
+    [SerializeField] private SpriteMeshInstance rightEarRenderer;
+    [SerializeField] private SpriteMeshInstance rightEarShadow;
+    [SerializeField] private SpriteMeshInstance leftEarRenderer;
+    [SerializeField] private SpriteMeshInstance leftEarShadow;
+    [SerializeField] private SpriteMeshInstance frontLeftPawRenderer;
+    [SerializeField] private SpriteMeshInstance fronRightPawRenderer;
+    [SerializeField] private SpriteMeshInstance backLeftPawRenderer;
+    [SerializeField] private SpriteMeshInstance backRightPawRenderer;
 
 	private int strengthValue = 1;
 	private int healthValue = 1;
@@ -95,7 +112,7 @@ public class CharCreationUI : MonoBehaviour {
 				if (visualIndexValue >= allVisuals.Length) visualIndexValue = 0;
 				if (visualIndexValue < 0) visualIndexValue = allVisuals.Length-1;
 
-				characterVisual.sprite = allVisuals[visualIndexValue];
+				UpdateColors(allVisuals[visualIndexValue]);
 				characterPointsVisual.sprite = allPointsVisuals[visualIndexValue];
 				break;
 
@@ -127,5 +144,26 @@ public class CharCreationUI : MonoBehaviour {
 
 		FindObjectOfType<CurrentCharacterManager>().SetCharacter(newCharacter);
 		SaveManager.currentSavePath = SaveManager.CreateNewSaveFile(newCharacter);
+	}
+
+	private void UpdateColors(CharVisualSO v) {
+		headRenderer.color = v.normalSkinColor;
+
+        foreach(var s in headStripsRenderers) s.color = v.darkSkinColor;
+
+        noseRenderer.color = v.noseSkinColor;
+        torsoRenderer.color = v.normalSkinColor;
+        darkTorsoRenderer.color = v.darkSkinColor;
+        tailRenderer.color = v.normalSkinColor;
+
+        leftEarRenderer.color = v.normalSkinColor;
+        rightEarRenderer.color = v.normalSkinColor;
+		leftEarShadow.color = v.darkSkinColor;
+        rightEarShadow.color = v.darkSkinColor;
+    
+        frontLeftPawRenderer.color = v.darkSkinColor;
+        fronRightPawRenderer.color = v.normalSkinColor;
+        backLeftPawRenderer.color = v.darkSkinColor;
+        backRightPawRenderer.color = v.normalSkinColor;
 	}
 }
