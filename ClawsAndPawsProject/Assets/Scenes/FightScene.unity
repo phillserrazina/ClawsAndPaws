@@ -5508,6 +5508,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7594484388553027614, guid: 04163742853d560489c85749d33d49d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Pink Can
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04163742853d560489c85749d33d49d1, type: 3}
 --- !u!222 &8908535349793628808

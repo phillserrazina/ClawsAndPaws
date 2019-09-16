@@ -67,6 +67,7 @@ public class Combat : MonoBehaviour {
 		float hit = Random.Range(0, 100);
 
 		if (hit < chanceToFlinch) {
+			GetComponentInChildren<Animator>().Play("Intimidation");
 			return;
 		}
 
