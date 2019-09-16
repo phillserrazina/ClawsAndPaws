@@ -272,7 +272,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 624689947}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624689948}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 099082a3d875b66488747648746b26e4, type: 3}
@@ -434,31 +434,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce07601017f0d742a5fad30631ce8d0, type: 3}
---- !u!1 &191009786 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1647872779245650, guid: 4ce07601017f0d742a5fad30631ce8d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 191009785}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &191009787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191009786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxName: Knock
-  changeSize: 1
-  newSize: 1.05
-  keepSizeOnClick: 0
-  changeSprite: 0
-  newSprite: {fileID: 0}
-  keepSpriteOnClick: 0
 --- !u!1 &302917442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,31 +1189,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce07601017f0d742a5fad30631ce8d0, type: 3}
---- !u!1 &624689948 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1647872779245650, guid: 4ce07601017f0d742a5fad30631ce8d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 624689947}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &624689949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624689948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb5dd0a4e406ac4a986dd2a7816f2aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxName: Knock
-  changeSize: 1
-  newSize: 1.05
-  keepSizeOnClick: 0
-  changeSprite: 0
-  newSprite: {fileID: 0}
-  keepSpriteOnClick: 0
 --- !u!224 &764040355 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224976387750756130, guid: 4ce07601017f0d742a5fad30631ce8d0,
@@ -1251,7 +1201,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 191009785}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191009786}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 099082a3d875b66488747648746b26e4, type: 3}

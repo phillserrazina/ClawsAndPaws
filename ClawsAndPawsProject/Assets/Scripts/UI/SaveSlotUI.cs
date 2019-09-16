@@ -29,7 +29,8 @@ public class SaveSlotUI : MonoBehaviour {
 		assignedCharacter.name = assignedCharacter.actorName + " Object";
 		characterName.text = assignedCharacter.actorName;
 		characterLevel.text = "Level " + assignedCharacter.level;
-		characterTournament.text = "Tournament " + assignedCharacter.currentTournament;
+		string tText = assignedCharacter.currentTournament > 9 ? "Complete" : "Tournament " + (assignedCharacter.currentTournament+1);
+		characterTournament.text = tText;
 		characterVisuals.sprite = allVisuals[assignedCharacter.visualIndex];
 
 		newCharacterSlotObject.SetActive(false);
