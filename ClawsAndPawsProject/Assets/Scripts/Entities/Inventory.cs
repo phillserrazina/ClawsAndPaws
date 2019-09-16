@@ -131,13 +131,14 @@ public class Inventory {
 		keyItems.Remove(item);
 	}
 
-	public void UseItem(ItemSO item) {
+	public void UseItem(ItemSO item, bool isPlayer) {
 		Remove(item);
 
 		if (player == null)
 			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 
-		player.stats.AddEffect(item as ConsumableSO);
+		if (isPlayer) player.stats.AddEffect(item as ConsumableSO);
+		else player.opponent.stats.AddEffect(item as ConsumableSO);
 	}
 
 	private void Clear() {

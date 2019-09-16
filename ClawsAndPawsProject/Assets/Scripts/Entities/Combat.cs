@@ -7,6 +7,8 @@ public class Combat : MonoBehaviour {
 
 	// VARIABLES
 
+	[SerializeField] private SpriteRenderer itemAnimationRenderer;
+
 	public enum Actions {
 		Attack,
 		Items,
@@ -67,6 +69,7 @@ public class Combat : MonoBehaviour {
 		float hit = Random.Range(0, 100);
 
 		if (hit < chanceToFlinch) {
+			GetComponentInChildren<Animator>().Play("Intimidation");
 			return;
 		}
 
@@ -83,8 +86,9 @@ public class Combat : MonoBehaviour {
 				break;
 			
 			case Actions.Items:
-				if (gameObject.tag != "Player") break;
-				Inventory.instance.UseItem(currentItem);
+				itemAnimationRenderer.sprite = currentItem.icon;
+				bool isPlayer = (gameObject.tag == "Player");
+				Inventory.instance.UseItem(currentItem, isPlayer);
 				break;
 
 			case Actions.Defend:

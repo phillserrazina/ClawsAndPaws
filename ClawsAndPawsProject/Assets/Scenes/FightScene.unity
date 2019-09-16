@@ -1105,7 +1105,7 @@ PrefabInstance:
     - target: {fileID: 5626503244533046222, guid: 04163742853d560489c85749d33d49d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.23
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5626503244533046222, guid: 04163742853d560489c85749d33d49d1,
         type: 3}
@@ -5357,7 +5357,7 @@ PrefabInstance:
     - target: {fileID: 5626503244533046222, guid: 04163742853d560489c85749d33d49d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.31
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5626503244533046222, guid: 04163742853d560489c85749d33d49d1,
         type: 3}
@@ -5507,6 +5507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7594484388553027614, guid: 04163742853d560489c85749d33d49d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Pink Can
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04163742853d560489c85749d33d49d1, type: 3}

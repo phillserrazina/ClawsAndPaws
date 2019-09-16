@@ -3511,6 +3511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e998f3643423e40896aa5d9f1b0e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemAnimationRenderer: {fileID: 4812018605649351211}
   attackList: {fileID: 11400000, guid: 9110a693f13bb1548a1f50f3b96de340, type: 2}
   isDefending: 0
 --- !u!114 &5626503244533046227
