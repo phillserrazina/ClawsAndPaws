@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: White
   m_EditorClassIdentifier: 
   normalSkinColor: {r: 1, g: 1, b: 1, a: 1}
-  darkSkinColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
-  noseSkinColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+  darkSkinColor: {r: 0.8000001, g: 0.8000001, b: 0.8000001, a: 1}
+  noseSkinColor: {r: 0.60784316, g: 0.60784316, b: 0.60784316, a: 1}
