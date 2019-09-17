@@ -10,15 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Basic Litterbox
+  m_Name: Sandy Beach Poster
   m_EditorClassIdentifier: 
-  name: Basic Litterbox
-  icon: {fileID: 21300000, guid: 81e1f6b40d3c907478fb2aaf8239e1d1, type: 3}
-  description: Disgusting and ugly, but it gets the job done. Increases Stamina and
-    Health.
-  equipType: 2
-  effects:
-  - effect: 0
-    strength: 10
-  - effect: 1
-    strength: 10
+  name: 
+  icon: {fileID: 0}
+  description: 
+  equipType: 0
+  effects: []

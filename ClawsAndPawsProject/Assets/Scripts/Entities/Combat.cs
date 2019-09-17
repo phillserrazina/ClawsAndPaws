@@ -65,7 +65,7 @@ public class Combat : MonoBehaviour {
 		
 		string action = currentChoice.ToString();
 
-		float chanceToFlinch = actor.opponent.characterData.intimidationPoints * 3;
+		float chanceToFlinch = actor.opponent.stats.intimidationPoints * 3;
 		float hit = Random.Range(0, 100);
 
 		if (hit < chanceToFlinch) {
@@ -105,17 +105,6 @@ public class Combat : MonoBehaviour {
 		}
 
 		GetComponentInChildren<Animator>().Play(action);
-	}
-
-	private void SpecialAttackChoice() {
-		float staminaValue = 30f;
-		if (actor.stats.currentStaminaPoints < staminaValue) {
-			RestAction();
-			return;
-		}
-
-		actor.stats.DepleteStamina(staminaValue);
-		actor.opponent.stats.TakeDamage(actor.stats.attackPoints*3);
 	}
 
 	private void RestAction() {

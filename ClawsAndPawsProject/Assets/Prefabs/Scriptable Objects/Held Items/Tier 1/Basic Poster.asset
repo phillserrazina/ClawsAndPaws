@@ -10,12 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Basic Bed
+  m_Name: Basic Poster
   m_EditorClassIdentifier: 
-  name: Basic Bed
-  icon: {fileID: 21300000, guid: 37b9d2359fea58349aa72243c22c90d4, type: 3}
-  description: It's comfy enough, I guess. Increases attack.
-  equipType: 1
+  name: Basic Poster
+  icon: {fileID: 21300000, guid: 81601e82552e70c40ac54853ef89a680, type: 3}
+  description: 'Pretty!
+
+    +1 Speed;
+
+    -1 Intimidation.'
+  equipType: 0
   effects:
-  - effect: 4
-    strength: 5
+  - effect: 2
+    strength: 1
+  - effect: 5
+    strength: -1
