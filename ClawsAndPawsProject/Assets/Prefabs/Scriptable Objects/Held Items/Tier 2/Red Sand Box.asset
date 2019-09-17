@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Red Sand Box
   m_EditorClassIdentifier: 
   name: Red Sand Box
-  icon: {fileID: 0}
-  description: 
-  equipType: 0
-  effects: []
+  icon: {fileID: 21300000, guid: 7736553ec4ca30c49965004fb4486bb5, type: 3}
+  description: 'Well, at least it has sand.
+
+    +5 Health.'
+  equipType: 2
+  effects:
+  - effect: 0
+    strength: 5

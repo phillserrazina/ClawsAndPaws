@@ -16,12 +16,12 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 37b9d2359fea58349aa72243c22c90d4, type: 3}
   description: 'Comfy enough, could do better.
 
-    +3 Attack;
+    +2 Attack;
 
-    -1 Speed;'
+    -1 Speed.'
   equipType: 1
   effects:
   - effect: 4
-    strength: 3
+    strength: 2
   - effect: 2
     strength: -1

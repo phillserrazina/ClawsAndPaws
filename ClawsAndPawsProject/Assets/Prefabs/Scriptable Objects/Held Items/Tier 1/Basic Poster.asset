@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
   m_Name: Basic Poster
   m_EditorClassIdentifier: 
-  name: Basic Poster
+  name: Rainbow Poster
   icon: {fileID: 21300000, guid: 81601e82552e70c40ac54853ef89a680, type: 3}
   description: 'Pretty!
 
