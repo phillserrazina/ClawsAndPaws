@@ -8,7 +8,7 @@ public class OpponentSO : CharacterSO {
 	public int goldReward { get; private set; }
 	public int xpReward { get; private set; }
 	public List<ItemSO> itemRewards = new List<ItemSO>();
-	public Sprite customSprite;
+	public GameObject customCat;
 
 	public void Create() {
 		goldReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
@@ -26,7 +26,7 @@ public class OpponentSO : CharacterSO {
 
 		visualIndex = Random.Range(0, 4);
 
-		// === EXPERIENCE POINTS AND LEVEL
+		// === EXPERIENCE POINTS AND LEVEL ===
 
 		CharacterSO cCharacter = FindObjectOfType<CurrentCharacterManager>().currentCharacter;
 		TournamentSO cTournament = FindObjectOfType<TournamentTracker>().currentTournament;

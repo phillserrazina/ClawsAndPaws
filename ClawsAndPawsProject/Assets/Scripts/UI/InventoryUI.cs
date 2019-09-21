@@ -38,7 +38,7 @@ public class InventoryUI : MonoBehaviour {
 		int answer = 0;
 
 		foreach (ConsumableSO i in list) {
-			if (i.name == item.name) answer++;
+			if (i.itemName == item.itemName) answer++;
 		}
 
 		return answer;
@@ -53,7 +53,7 @@ public class InventoryUI : MonoBehaviour {
 			ItemUI[] allInventoryItems = FindObjectsOfType<ItemUI>();
 
 			foreach (ItemUI dItem in allInventoryItems) {
-				if (dItem.itemData.name == items[i].name) {
+				if (dItem.itemData.itemName == items[i].itemName) {
 					dItem.itemQuantity.gameObject.SetActive(true);
 					dItem.itemQuantity.text = "x" + duplicateItems.ToString();
 					return;

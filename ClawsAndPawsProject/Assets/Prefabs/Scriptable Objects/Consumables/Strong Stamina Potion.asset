@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Strong Stamina Potion
   m_EditorClassIdentifier: 
-  name: Strong Stamina Potion
+  itemName: Strong Stamina Potion
   icon: {fileID: 21300000, guid: 80b734418c346644282ddad7e9c726c2, type: 3}
   description: 'Restores 75sp.
 

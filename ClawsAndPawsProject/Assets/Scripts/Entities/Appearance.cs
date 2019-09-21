@@ -28,8 +28,8 @@ public class Appearance : MonoBehaviour
         var sRenderer = GetComponentInChildren<SpriteRenderer>();
         var ccManager = FindObjectOfType<CurrentCharacterManager>();
         bool isPlayer = (tag == "Player");
-        if (!isPlayer && ccManager.currentOpponent.customSprite != null) {
-            sRenderer.sprite = ccManager.currentOpponent.customSprite;
+        if (!isPlayer && ccManager.currentOpponent.customCat != null) {
+            InstantiateNewCat();
             return;
         }
 
@@ -58,5 +58,18 @@ public class Appearance : MonoBehaviour
         fronRightPawRenderer.color = v.normalSkinColor;
         backLeftPawRenderer.color = v.darkSkinColor;
         backRightPawRenderer.color = v.normalSkinColor;
+    }
+
+    private void InstantiateNewCat() {
+        var ccManager = FindObjectOfType<CurrentCharacterManager>();
+        
+        GameObject cat = Instantiate(ccManager.currentOpponent.customCat, gameObject.transform.position, gameObject.transform.rotation);
+        Actor a = cat.GetComponent<Actor>();
+        a.Initialize(false);
+        a.opponent.opponent = a;
+
+        a.stats.conditionTab = GetComponent<Stats>().conditionTab;
+        
+        Destroy(gameObject);
     }
 }

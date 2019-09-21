@@ -20,7 +20,7 @@ public class WeaponStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointer
     private void Update() {
         if (GetComponent<Button>().interactable == false) return;
 
-        if (Inventory.instance.Contains(item.name) || 
+        if (Inventory.instance.Contains(item.itemName) || 
             Inventory.instance.gold < price ||
             character.level < requiredLevel) {
                 GetComponent<Button>().interactable = false;
@@ -35,7 +35,7 @@ public class WeaponStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerEnter(PointerEventData data) {
 		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
-		dui.UpdateStoreDescriptionText(item.name, item.description, price);
+		dui.UpdateStoreDescriptionText(item.itemName, item.description, price);
 		dui.descriptionObject.SetActive(true);
 	}
 

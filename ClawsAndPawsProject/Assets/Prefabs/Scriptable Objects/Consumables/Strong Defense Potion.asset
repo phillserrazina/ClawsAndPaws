@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Strong Defense Potion
   m_EditorClassIdentifier: 
-  name: Strong Defense Potion
+  itemName: Strong Defense Potion
   icon: {fileID: 21300000, guid: c5fc395dbfa9517429141052cdbb8148, type: 3}
   description: 'Greatly increases Defense for 5 turns.
 
@@ -22,6 +22,6 @@ MonoBehaviour:
   - effect:
       effect: 2
       strength: 5
-    icon: {fileID: 21300000, guid: 06dbaaddfed787b478e7dbba28fb7e9f, type: 3}
+    icon: {fileID: 21300000, guid: dc5c6cf79e241f149a293e9a5fbbdcd7, type: 3}
     duration: 5
     infinite: 0

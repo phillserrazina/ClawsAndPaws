@@ -23,4 +23,5 @@ MonoBehaviour:
   currentTournament: 0
   visualIndex: 0
   itemRewards: []
-  customSprite: {fileID: 21300000, guid: f20915d194cc34b4394e6f5454f9305d, type: 3}
+  customCat: {fileID: 6591181854662207431, guid: ffc3c5b998406f54fbbf7eadd59c406c,
+    type: 3}

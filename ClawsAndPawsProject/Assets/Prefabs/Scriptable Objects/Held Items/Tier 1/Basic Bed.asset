@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Basic Poster
+  m_Name: Basic Bed
   m_EditorClassIdentifier: 
-  name: Basic Poster
-  icon: {fileID: 21300000, guid: 81601e82552e70c40ac54853ef89a680, type: 3}
-  description: Pretty! Reduces damage taken.
-  equipType: 0
+  itemName: Straw Bed
+  icon: {fileID: 21300000, guid: 535e009580780f74c9d926b683649e6e, type: 3}
+  description: 'Will probably break down in the middle of the night.
+
+    +1 Attack.'
+  equipType: 1
   effects:
-  - effect: 3
-    strength: 2
+  - effect: 4
+    strength: 1

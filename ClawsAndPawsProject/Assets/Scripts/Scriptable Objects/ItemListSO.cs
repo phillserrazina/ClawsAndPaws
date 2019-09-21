@@ -9,7 +9,7 @@ public class ItemListSO : ScriptableObject {
 
 	public ItemSO Search(ItemSO item) {
 		foreach (ItemSO i in items) {
-			if (i.name.Equals(item.name)) return i;
+			if (i.itemName.Equals(item.itemName)) return i;
 		}
 
 		return null;
@@ -17,7 +17,7 @@ public class ItemListSO : ScriptableObject {
 
 	public ItemSO Search(string itemName) {
 		foreach (ItemSO i in items) {
-			if (i.name.Equals(itemName)) return i;
+			if (i.itemName.Equals(itemName)) return i;
 		}
 
 		Debug.LogError("ItemListSO::Search() --- " + itemName + " does not exist! Did you forget to add it to the list?");

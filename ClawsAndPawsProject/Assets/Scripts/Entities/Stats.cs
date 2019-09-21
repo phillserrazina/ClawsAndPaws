@@ -8,7 +8,7 @@ public class Stats : MonoBehaviour {
 
 	// VARIABLES
 
-	[SerializeField] private GameObject conditionTab;
+	public GameObject conditionTab;
 
 	private float maxHealthPoints;
 	public float currentHealthPoints { get; private set; }
@@ -24,6 +24,8 @@ public class Stats : MonoBehaviour {
 	public float attackPoints { get { return GetComponent<Attributes>().strengthPoints + ap; } set { ap = value; } }
 	private float dp = 0;
 	public float defensePoints { get { return 1 + dp; } set { dp = value; dp = Mathf.Clamp(dp, 0, 9); } }
+	private float ip = 0;
+	public float intimidationPoints { get { return GetComponent<Attributes>().intimidationPoints + ip; } set { ip = value; } }
 
 	private Stack<ConditionSO> currentConditions = new Stack<ConditionSO>();
 	private Stack<ConsumableSO> currentEffects = new Stack<ConsumableSO>();

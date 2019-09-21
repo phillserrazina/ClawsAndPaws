@@ -20,7 +20,7 @@ public class Actor : MonoBehaviour {
 
 	// METHODS
 
-	public void Initialize() {
+	public void Initialize(bool initAppearance) {
 
 		characterData = gameObject.tag.Equals("Player") ? 
 							FindObjectOfType<CurrentCharacterManager>().currentCharacter :
@@ -37,7 +37,7 @@ public class Actor : MonoBehaviour {
 		attributes.Initialize();
 		stats.Initialize();
 		combat.Initialize();
-		appearance.Initialize();
+		if (initAppearance) appearance.Initialize();
 
 		if (transform.position.x > opponent.transform.position.x) {
 			transform.rotation = Quaternion.LookRotation(Vector3.back);

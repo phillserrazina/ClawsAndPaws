@@ -22,6 +22,6 @@ MonoBehaviour:
   intimidationPoints: 2
   currentTournament: 0
   visualIndex: 0
-  itemRewards:
-  - {fileID: 0}
-  customSprite: {fileID: 21300000, guid: a4074e3a0e95e8e4896b95b2311c9128, type: 3}
+  itemRewards: []
+  customCat: {fileID: 538223489705058877, guid: 542976506451357408e5975c7e12084f,
+    type: 3}

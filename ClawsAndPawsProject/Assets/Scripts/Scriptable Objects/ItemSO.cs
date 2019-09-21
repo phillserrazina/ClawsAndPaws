@@ -12,14 +12,15 @@ public class ItemSO : ScriptableObject {
 			Change_Stamina,
 			Change_Speed,
 			Change_Defense,
-			Change_Attack
+			Change_Attack,
+			Change_Intimidation
 		}
 
 		public Effects effect;
 		public float strength;
 	}
 
-	public new string name;
+	public string itemName;
 	public Sprite icon;
 	[TextArea(1, 3)]
 	public string description;
@@ -52,6 +53,11 @@ public class ItemSO : ScriptableObject {
 			case Effect.Effects.Change_Speed:
 				target.stats.speedPoints += effect.strength;
 				if (target.stats.speedPoints < 0) target.stats.speedPoints = 0;
+				break;
+			
+			case Effect.Effects.Change_Intimidation:
+				target.stats.intimidationPoints += effect.strength;
+				if (target.stats.intimidationPoints < 0) target.stats.intimidationPoints = 0;
 				break;
 
 			default:

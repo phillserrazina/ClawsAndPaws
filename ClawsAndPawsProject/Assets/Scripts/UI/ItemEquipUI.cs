@@ -10,30 +10,47 @@ public class ItemEquipUI : MonoBehaviour
 
     [SerializeField] private InventoryEquipDisplayUI inventoryDisplay;
     [SerializeField] private HeldItemSO firstItem;
+    [SerializeField] private Animator animator;
 
     private void Awake() {
         switch (GetItemType())
         {
             case HeldItemSO.EquipTypes.Wall:
-                if (Inventory.instance.WallEquipedObject == null) return;
+                if (Inventory.instance.WallEquipedObject == null) {
+                    animator.enabled = true;
+                    GetComponent<Animator>().Play("EquipItemFirstGlow");
+                    return;
+                } 
 
                 currentItemImage.sprite = Inventory.instance.WallEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.Bed:
-                if (Inventory.instance.BedEquipedObject == null) return;
+                if (Inventory.instance.BedEquipedObject == null) {
+                    animator.enabled = true;
+                    GetComponent<Animator>().Play("EquipItemFirstGlow");
+                    return;
+                } 
 
                 currentItemImage.sprite = Inventory.instance.BedEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.LitterBox:
-                if (Inventory.instance.LitterboxEquipedObject == null) return;
+                if (Inventory.instance.LitterboxEquipedObject == null) {
+                    animator.enabled = true;
+                    GetComponent<Animator>().Play("EquipItemFirstGlow");
+                    return;
+                } 
 
                 currentItemImage.sprite = Inventory.instance.LitterboxEquipedObject.icon;
                 break;
             
             case HeldItemSO.EquipTypes.Toy:
-                if (Inventory.instance.ToyEquipedObject == null) return;
+                if (Inventory.instance.ToyEquipedObject == null) {
+                    animator.enabled = true;
+                    GetComponent<Animator>().Play("EquipItemFirstGlow");
+                    return;
+                } 
 
                 currentItemImage.sprite = Inventory.instance.ToyEquipedObject.icon;
                 break;
@@ -42,6 +59,12 @@ public class ItemEquipUI : MonoBehaviour
                 Debug.LogError("ItemEquipUI::Awake() --- Invalid HeldItemSO.EquipTypes type! Check your spelling in the itemType var.");
                 return;
         }
+    }
+
+    private void Update() {
+        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+			GetComponent<Animator>().enabled = false;
+		}
     }
 
     public HeldItemSO.EquipTypes GetItemType() {

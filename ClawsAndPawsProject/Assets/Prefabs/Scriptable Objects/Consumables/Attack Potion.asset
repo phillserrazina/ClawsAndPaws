@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Attack Potion
   m_EditorClassIdentifier: 
-  name: Attack Potion
+  itemName: Attack Potion
   icon: {fileID: 21300000, guid: 3a78fbec52ed4b1489b87ea4ac158c0d, type: 3}
   description: Increases Attack for 2 turns.
   effects:
   - effect:
       effect: 3
       strength: 10
-    icon: {fileID: 21300000, guid: 3e5197e76cea8534f96953b57e23c5bd, type: 3}
+    icon: {fileID: 21300000, guid: 1846dc105165c5741a12f9ba9a70994f, type: 3}
     duration: 2
     infinite: 0

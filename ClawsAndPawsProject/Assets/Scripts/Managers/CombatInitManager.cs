@@ -13,8 +13,8 @@ public class CombatInitManager : MonoBehaviour {
 
 		Actor player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
 
-		player.Initialize();
-		player.opponent.Initialize();
+		player.Initialize(true);
+		player.opponent.Initialize(true);
 
 		Inventory.instance.Initialize();
 		FindObjectOfType<PlayerLevelManager>().Initialize();
