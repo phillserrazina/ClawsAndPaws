@@ -8,7 +8,7 @@ public class Stats : MonoBehaviour {
 
 	// VARIABLES
 
-	[SerializeField] private GameObject conditionTab;
+	public GameObject conditionTab;
 
 	private float maxHealthPoints;
 	public float currentHealthPoints { get; private set; }

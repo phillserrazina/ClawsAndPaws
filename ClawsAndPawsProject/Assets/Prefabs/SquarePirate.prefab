@@ -2488,7 +2488,7 @@ GameObject:
   - component: {fileID: 8909514478785394454}
   m_Layer: 0
   m_Name: SquarePirate
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

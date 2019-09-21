@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 5957194679402646146}
   m_Layer: 0
   m_Name: SquareGlasses
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
