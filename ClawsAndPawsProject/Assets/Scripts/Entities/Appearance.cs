@@ -28,8 +28,10 @@ public class Appearance : MonoBehaviour
         var sRenderer = GetComponentInChildren<SpriteRenderer>();
         var ccManager = FindObjectOfType<CurrentCharacterManager>();
         bool isPlayer = (tag == "Player");
-        if (!isPlayer && ccManager.currentOpponent.customSprite != null) {
-            sRenderer.sprite = ccManager.currentOpponent.customSprite;
+        if (!isPlayer && ccManager.currentOpponent.customCat != null) {
+            GameObject cat = Instantiate(ccManager.currentOpponent.customCat, gameObject.transform.position, Quaternion.identity);
+            ccManager.SetOpponent(cat.GetComponent<OpponentSO>());
+            Destroy(gameObject);
             return;
         }
 

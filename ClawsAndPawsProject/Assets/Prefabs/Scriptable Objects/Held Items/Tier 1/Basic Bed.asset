@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
   m_Name: Basic Bed
   m_EditorClassIdentifier: 
-  name: Straw Pillow Bed
+  itemName: Straw Bed
   icon: {fileID: 21300000, guid: 535e009580780f74c9d926b683649e6e, type: 3}
   description: 'Will probably break down in the middle of the night.
 

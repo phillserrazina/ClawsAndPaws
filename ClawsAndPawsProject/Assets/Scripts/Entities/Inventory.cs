@@ -74,22 +74,22 @@ public class Inventory {
 		List<string> data = new List<string>();
 
 		data.Add(gold.ToString()); 
-		data.Add((wallEquipedObject == null) ? "null" : wallEquipedObject.name);
-		data.Add((bedEquipedObject == null) ? "null" : bedEquipedObject.name);
-		data.Add((litterboxEquipedObject == null) ? "null" : litterboxEquipedObject.name);
-		data.Add((toyEquipedObject == null) ? "null" : toyEquipedObject.name);
+		data.Add((wallEquipedObject == null) ? "null" : wallEquipedObject.itemName);
+		data.Add((bedEquipedObject == null) ? "null" : bedEquipedObject.itemName);
+		data.Add((litterboxEquipedObject == null) ? "null" : litterboxEquipedObject.itemName);
+		data.Add((toyEquipedObject == null) ? "null" : toyEquipedObject.itemName);
 
 		foreach (ItemSO i in keyItems) {
 			if (i == null) continue;
-			data.Add(i.name);
+			data.Add(i.itemName);
 		}
 		foreach (ItemSO i in heldItems) {
 			if (i == null) continue;
-			data.Add(i.name);
+			data.Add(i.itemName);
 		}
 		foreach (ItemSO i in consumableItems) {
 			if (i == null) continue;
-			data.Add(i.name);
+			data.Add(i.itemName);
 		}
 
 		return data;
@@ -165,17 +165,17 @@ public class Inventory {
 	public bool Contains(string item) {
 		foreach (HeldItemSO i in heldItems) {
 			if (i == null) continue;
-			if (i.name == item) return true;
+			if (i.itemName == item) return true;
 		}
 		
 		foreach (ConsumableSO i in consumableItems) {
 			if (i == null) continue;
-			if (i.name == item) return true;
+			if (i.itemName == item) return true;
 		}
 
 		foreach (ItemSO i in keyItems) {
 			if (i == null) continue;
-			if (i.name == item) return true;
+			if (i.itemName == item) return true;
 		}
 		
 		return false;

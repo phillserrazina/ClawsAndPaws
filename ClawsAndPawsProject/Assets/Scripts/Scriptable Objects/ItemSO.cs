@@ -20,7 +20,7 @@ public class ItemSO : ScriptableObject {
 		public float strength;
 	}
 
-	public new string name;
+	public string itemName;
 	public Sprite icon;
 	[TextArea(1, 3)]
 	public string description;

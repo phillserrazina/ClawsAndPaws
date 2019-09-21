@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Defense Potion
   m_EditorClassIdentifier: 
-  name: Defense Potion
+  itemName: Defense Potion
   icon: {fileID: 21300000, guid: 40538c9b8f55ee8459cb56b218edc38c, type: 3}
   description: Increases Defense for 2 turns.
   effects:
   - effect:
       effect: 2
       strength: 2
-    icon: {fileID: 21300000, guid: 06dbaaddfed787b478e7dbba28fb7e9f, type: 3}
+    icon: {fileID: 21300000, guid: dc5c6cf79e241f149a293e9a5fbbdcd7, type: 3}
     duration: 2
     infinite: 0

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Strong Attack Potion
   m_EditorClassIdentifier: 
-  name: Strong Attack Potion
+  itemName: Strong Attack Potion
   icon: {fileID: 21300000, guid: 88d674cfe18b5b6448666646b8fa3e50, type: 3}
   description: "Greatly increases Attack for 5 turns. \n\n(Level 5)"
   effects:
   - effect:
       effect: 3
       strength: 30
-    icon: {fileID: 21300000, guid: 3e5197e76cea8534f96953b57e23c5bd, type: 3}
+    icon: {fileID: 21300000, guid: 1846dc105165c5741a12f9ba9a70994f, type: 3}
     duration: 5
     infinite: 0

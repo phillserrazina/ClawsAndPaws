@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
   m_Name: Basic Toy
   m_EditorClassIdentifier: 
-  name: Wool Ball
+  itemName: Yarn Ball
   icon: {fileID: 21300000, guid: bcb8071d122cd5d46b32f36cf53cffba, type: 3}
   description: 'Probably won''t last long.
 

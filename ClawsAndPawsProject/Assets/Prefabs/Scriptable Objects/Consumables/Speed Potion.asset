@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Speed Potion
   m_EditorClassIdentifier: 
-  name: Speed Potion
+  itemName: Speed Potion
   icon: {fileID: 21300000, guid: 1f361b74eab5afb49bcb9b652ff95211, type: 3}
   description: Increases Speed for 2 turns.
   effects:
   - effect:
       effect: 1
       strength: 10
-    icon: {fileID: 21300000, guid: b200e9c479fbd284f812cedcb182769d, type: 3}
+    icon: {fileID: 21300000, guid: bcdaec8af5e57e642a20df45de4d9310, type: 3}
     duration: 2
     infinite: 0

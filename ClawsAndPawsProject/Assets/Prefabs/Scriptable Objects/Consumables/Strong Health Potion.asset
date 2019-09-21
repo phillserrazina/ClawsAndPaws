@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c125291476464f6438d68e4133ebb055, type: 3}
   m_Name: Strong Health Potion
   m_EditorClassIdentifier: 
-  name: Strong Health Potion
+  itemName: Strong Health Potion
   icon: {fileID: 21300000, guid: 75402f64413a24e41aa3371e6f75d932, type: 3}
   description: 'Restores 75hp.
 

@@ -23,7 +23,7 @@ public class EquipItemPrefabUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
 	public void OnPointerEnter(PointerEventData data) {
 		DescriptionsUI dui = FindObjectOfType<DescriptionsUI>();
 		if (dui == null) return;
-		dui.UpdateDescriptionText(itemData.name, itemData.description);
+		dui.UpdateDescriptionText(itemData.itemName, itemData.description);
 		dui.descriptionObject.SetActive(true);
 	}
 
