@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: c2cf52619f843ee4381605685dec3b78
+guid: a4e775b2ba6d9d5449a57a1adc3177d6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 12_0"
-    21300002: "Prancheta 1 c\xF3pia 12_1"
-    21300004: "Prancheta 1 c\xF3pia 12_2"
-    21300006: "Prancheta 1 c\xF3pia 12_3"
-    21300008: "Prancheta 1 c\xF3pia 12_4"
-    21300010: "Prancheta 1 c\xF3pia 12_5"
+    21300000: Fidel Castro@3x_0
+    21300002: Fidel Castro@3x_1
+    21300004: Fidel Castro@3x_2
+    21300006: Fidel Castro@3x_3
+    21300008: Fidel Castro@3x_4
+    21300010: Fidel Castro@3x_5
+    21300012: Fidel Castro@3x_6
+    21300014: Fidel Castro@3x_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -90,12 +92,112 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_0"
+      name: Fidel Castro@3x_0
       rect:
         serializedVersion: 2
-        x: 190
-        y: 230
-        width: 41
+        x: 0
+        y: 289
+        width: 278
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad40fdf10c0eb44e9e7bfc82a8ee81d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fidel Castro@3x_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 235
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcd03edfc87f5e47b92036eec4b0c96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fidel Castro@3x_2
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 212
+        width: 151
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86f55ce79418d543b6767c75646bd6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fidel Castro@3x_3
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 124
+        width: 123
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c418c5e8affe94bab074821527b4ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fidel Castro@3x_4
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 82
+        width: 44
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465734589defae24589169009a7d8a4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fidel Castro@3x_5
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 79
+        width: 163
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -104,107 +206,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5300d34649c4bf549adb8c5d6c414c37
+      spriteID: 72abe878a1cdf5943919405aaf3bb036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_1"
+      name: Fidel Castro@3x_6
       rect:
         serializedVersion: 2
-        x: 104
-        y: 87
+        x: 75
+        y: 0
+        width: 101
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e709fc4c704a06d4fa4b9cad02c16faa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fidel Castro@3x_7
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 215
         width: 19
-        height: 24
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b87345e676756d546a6cf13dc2c40ba4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_2"
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 110
-        width: 14
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d3ca3601340c6f4296d9f53e6c532ea
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_3"
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 69
-        width: 124
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 087656e0f07d1fd4892658e551f27b27
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_4"
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 83
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e73b5ac13e57b749afdea294f7dc182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_5"
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 87
-        width: 23
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c3fe4a45a3ba8f40be72aee9629a9f1
+      spriteID: 733356dd07de26148985c5e9ae955868
       vertices: []
       indices: 
       edges: []
@@ -212,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a1068b3c0e99d0d4d85b96c27da4b341
+    spriteID: bc43c251a381c73448acfd7bebec0c8d
     vertices: []
     indices: 
     edges: []

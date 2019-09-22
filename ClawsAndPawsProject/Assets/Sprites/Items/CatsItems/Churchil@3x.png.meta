@@ -1,10 +1,15 @@
 fileFormatVersion: 2
-guid: 33272b017221456498c286e2e4b0457c
+guid: 965e47c02563db04aa7eed2c5580edda
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 17_0"
-    21300002: "Prancheta 1 c\xF3pia 17_1"
-    21300004: "Prancheta 1 c\xF3pia 17_2"
+    21300000: Churchil@3x_0
+    21300002: Churchil@3x_1
+    21300004: Churchil@3x_2
+    21300006: Churchil@3x_3
+    21300008: Churchil@3x_4
+    21300010: Churchil@3x_5
+    21300012: Churchil@3x_6
+    21300014: Churchil@3x_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,13 +92,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_0"
+      name: Churchil@3x_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 291
+        width: 239
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79ba9d49d0fcf647b60993159e160fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Churchil@3x_1
       rect:
         serializedVersion: 2
         x: 44
-        y: 158
-        width: 55
-        height: 48
+        y: 235
+        width: 59
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,19 +126,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087066d697d62264c85029f720f52704
+      spriteID: c0e9dd9a17d323c46b9acc67c62a1776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_1"
+      name: Churchil@3x_2
       rect:
         serializedVersion: 2
-        x: 161
-        y: 188
-        width: 55
-        height: 48
+        x: 43
+        y: 231
+        width: 147
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,19 +146,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b5669d04b36ef45a50aff1cdb04091
+      spriteID: 3da9a9d392f2c3a49b8d68c7007f7421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_2"
+      name: Churchil@3x_3
       rect:
         serializedVersion: 2
-        x: 134
-        y: 47
-        width: 55
-        height: 48
+        x: 75
+        y: 162
+        width: 100
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +166,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0742e80e324e1c54d8d1aa11ec565012
+      spriteID: 7274f805f806cf54ebea15afd40179a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Churchil@3x_4
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 110
+        width: 63
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15890ca42c2f56449beb57f669c4e54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Churchil@3x_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 107
+        width: 120
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eca58a0bcec25540bfde4bc9a383aea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Churchil@3x_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 48
+        width: 106
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42527b951702ec41b1e88d652b21966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Churchil@3x_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 99
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6ddaf0c90a2b94da7a772254b4f0f1
       vertices: []
       indices: 
       edges: []
@@ -149,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: eab4840a21aedb54facbd73f18d4d952
+    spriteID: 3e580ee53fc988841aa08b4d41cf882e
     vertices: []
     indices: 
     edges: []

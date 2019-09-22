@@ -1,10 +1,14 @@
 fileFormatVersion: 2
-guid: 33272b017221456498c286e2e4b0457c
+guid: e3a9ae69865c62e4da4ca7a3fdfcab99
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 17_0"
-    21300002: "Prancheta 1 c\xF3pia 17_1"
-    21300004: "Prancheta 1 c\xF3pia 17_2"
+    21300000: "Napole\xE3o@3x_0"
+    21300002: "Napole\xE3o@3x_1"
+    21300004: "Napole\xE3o@3x_2"
+    21300006: "Napole\xE3o@3x_3"
+    21300008: "Napole\xE3o@3x_4"
+    21300010: "Napole\xE3o@3x_5"
+    21300012: "Napole\xE3o@3x_6"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,61 +91,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_0"
+      name: "Napole\xE3o@3x_0"
       rect:
         serializedVersion: 2
-        x: 44
-        y: 158
-        width: 55
-        height: 48
+        x: 2
+        y: 124
+        width: 264
+        height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087066d697d62264c85029f720f52704
+      spriteID: 151d0ceb69ce39a4ebbaa422d511f820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_1"
+      name: "Napole\xE3o@3x_1"
       rect:
         serializedVersion: 2
-        x: 161
-        y: 188
-        width: 55
-        height: 48
+        x: 308
+        y: 123
+        width: 58
+        height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b5669d04b36ef45a50aff1cdb04091
+      spriteID: c341ee1c820d44949b5097d01180bedf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_2"
+      name: "Napole\xE3o@3x_2"
       rect:
         serializedVersion: 2
-        x: 134
-        y: 47
-        width: 55
-        height: 48
+        x: 527
+        y: 145
+        width: 62
+        height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0742e80e324e1c54d8d1aa11ec565012
+      spriteID: d926de2bc9b29ad458d6b0df3e7be6a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Napole\xE3o@3x_3"
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 57
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bf46767ac26b04f9fac194abee6022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Napole\xE3o@3x_4"
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 66
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6be2a5ce8bac3c43949eaf77fb53640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Napole\xE3o@3x_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10814fb3748a864c9e01e5bba7f6922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Napole\xE3o@3x_6"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1
+        width: 127
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e93d4f2426959042bbb9053020d8c91
       vertices: []
       indices: 
       edges: []
@@ -149,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: eab4840a21aedb54facbd73f18d4d952
+    spriteID: cebf97982e02d2144bfe68c1aa8d6aa5
     vertices: []
     indices: 
     edges: []

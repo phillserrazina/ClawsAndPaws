@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: c2cf52619f843ee4381605685dec3b78
+guid: 9729f2a2b4ade3948a47db674c0a3976
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 12_0"
-    21300002: "Prancheta 1 c\xF3pia 12_1"
-    21300004: "Prancheta 1 c\xF3pia 12_2"
-    21300006: "Prancheta 1 c\xF3pia 12_3"
-    21300008: "Prancheta 1 c\xF3pia 12_4"
-    21300010: "Prancheta 1 c\xF3pia 12_5"
+    21300000: Hitler@3x_0
+    21300002: Hitler@3x_1
+    21300004: Hitler@3x_2
+    21300006: Hitler@3x_3
+    21300008: Hitler@3x_4
+    21300010: Hitler@3x_5
+    21300012: Hitler@3x_6
+    21300014: Hitler@3x_7
+    21300016: Hitler@3x_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -90,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_0"
+      name: Hitler@3x_0
       rect:
         serializedVersion: 2
-        x: 190
-        y: 230
-        width: 41
-        height: 24
+        x: 0
+        y: 220
+        width: 229
+        height: 139
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,19 +107,139 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5300d34649c4bf549adb8c5d6c414c37
+      spriteID: 934590d97b962814e99e9e54610b8353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_1"
+      name: Hitler@3x_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 234
+        width: 99
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36a685743a65834e8265e572b482e75
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hitler@3x_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 178
+        width: 119
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa25e251c684eef428b94c5196ccfd2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hitler@3x_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 179
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8216f8d11c1921c48a8c74d7435f6b8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hitler@3x_4
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 145
+        width: 122
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57925e9056b4cc4b8e9be8062daf010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hitler@3x_5
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 148
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac206bd4f743cc41ad4ce14d1ab3450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hitler@3x_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 98
+        width: 106
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65020344af2c41046b7d1fd5532050a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hitler@3x_7
       rect:
         serializedVersion: 2
         x: 104
-        y: 87
-        width: 19
-        height: 24
+        y: 86
+        width: 30
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +247,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b87345e676756d546a6cf13dc2c40ba4
+      spriteID: 8904cca537ad5ad44b88077f9372e36e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_2"
+      name: Hitler@3x_8
       rect:
         serializedVersion: 2
-        x: 140
-        y: 110
-        width: 14
-        height: 5
+        x: 174
+        y: 0
+        width: 41
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,67 +267,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d3ca3601340c6f4296d9f53e6c532ea
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_3"
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 69
-        width: 124
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 087656e0f07d1fd4892658e551f27b27
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_4"
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 83
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e73b5ac13e57b749afdea294f7dc182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 12_5"
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 87
-        width: 23
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c3fe4a45a3ba8f40be72aee9629a9f1
+      spriteID: c0fa90c2fbe670b48b8cf326d6bf824b
       vertices: []
       indices: 
       edges: []
@@ -212,7 +275,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a1068b3c0e99d0d4d85b96c27da4b341
+    spriteID: ec5972db61f7ad245b08ec745c24d1a7
     vertices: []
     indices: 
     edges: []
