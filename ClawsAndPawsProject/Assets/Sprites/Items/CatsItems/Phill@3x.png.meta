@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 3496b5690b08b484ba2d14dd62467a56
+guid: 05725100480d0a24fb997bfb007c879b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 10_0"
-    21300002: "Prancheta 1 c\xF3pia 10_1"
+    21300000: Phill@3x_0
+    21300002: Phill@3x_1
+    21300004: Phill@3x_2
+    21300006: Phill@3x_3
+    21300008: Phill@3x_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -86,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 10_0"
+      name: Phill@3x_0
       rect:
         serializedVersion: 2
-        x: 143
-        y: 173
-        width: 55
-        height: 48
+        x: 0
+        y: 277
+        width: 265
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +103,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f09ba6a8c4365a42b63a9901abd5e6a
+      spriteID: 8de90362412ebc446b6c8e811d2d63a9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 10_1"
+      name: Phill@3x_1
       rect:
         serializedVersion: 2
-        x: 114
-        y: 53
-        width: 79
-        height: 26
+        x: 102
+        y: 207
+        width: 45
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +123,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8663ee81ab766c4b9a6d7222592b010
+      spriteID: 830f2753b1ea5094a8e25dbd6f92d2e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phill@3x_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 197
+        width: 137
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3bcacedd1b2ae4bbf30ed53c301d95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phill@3x_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 66
+        width: 219
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54e08f47121f3e42acc51060b760c00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phill@3x_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028292711cc84ae418d4fc7b18c67409
       vertices: []
       indices: 
       edges: []
@@ -128,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 82759a57562ed1d46aa086d6ee7907c7
+    spriteID: 0cb8aa377da42ac4e8be5d6e3cc41231
     vertices: []
     indices: 
     edges: []

@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 3496b5690b08b484ba2d14dd62467a56
+guid: d8b6d98820c263c4d9d9824014731741
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 10_0"
-    21300002: "Prancheta 1 c\xF3pia 10_1"
+    21300000: Bin Laden@3x_0
+    21300002: Bin Laden@3x_1
+    21300004: Bin Laden@3x_2
+    21300006: Bin Laden@3x_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -86,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 10_0"
+      name: Bin Laden@3x_0
       rect:
         serializedVersion: 2
-        x: 143
-        y: 173
-        width: 55
-        height: 48
+        x: 0
+        y: 247
+        width: 258
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +102,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f09ba6a8c4365a42b63a9901abd5e6a
+      spriteID: 675bf5401bf662242ab0d521183bf3c3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 10_1"
+      name: Bin Laden@3x_1
       rect:
         serializedVersion: 2
-        x: 114
-        y: 53
-        width: 79
-        height: 26
+        x: 66
+        y: 183
+        width: 54
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +122,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8663ee81ab766c4b9a6d7222592b010
+      spriteID: e11f66cba2b7bb444bf412e4593afd8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bin Laden@3x_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 180
+        width: 158
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6abef0fcc21eb946b28b4852fd211b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bin Laden@3x_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 224
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25c45d61a1493e45bdb751ff8528a88
       vertices: []
       indices: 
       edges: []
@@ -128,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 82759a57562ed1d46aa086d6ee7907c7
+    spriteID: 748dd5512dc311f48858907d7bfb37f6
     vertices: []
     indices: 
     edges: []

@@ -1,10 +1,14 @@
 fileFormatVersion: 2
-guid: 33272b017221456498c286e2e4b0457c
+guid: 484b56c5aab50d841ab156612387bd82
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 17_0"
-    21300002: "Prancheta 1 c\xF3pia 17_1"
-    21300004: "Prancheta 1 c\xF3pia 17_2"
+    21300000: Trump@3x_0
+    21300002: Trump@3x_1
+    21300004: Trump@3x_2
+    21300006: Trump@3x_3
+    21300008: Trump@3x_4
+    21300010: Trump@3x_5
+    21300012: Trump@3x_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,61 +91,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_0"
+      name: Trump@3x_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 158
-        width: 55
-        height: 48
+        x: 0
+        y: 177
+        width: 275
+        height: 194
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087066d697d62264c85029f720f52704
+      spriteID: 95e76bb016adb504a86b2401f3604937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_1"
+      name: Trump@3x_1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 188
-        width: 55
-        height: 48
+        x: 308
+        y: 311
+        width: 127
+        height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b5669d04b36ef45a50aff1cdb04091
+      spriteID: f24f8ffe25cf50843bb612534ff6979c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_2"
+      name: Trump@3x_2
       rect:
         serializedVersion: 2
-        x: 134
-        y: 47
-        width: 55
-        height: 48
+        x: 391
+        y: 317
+        width: 44
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0742e80e324e1c54d8d1aa11ec565012
+      spriteID: 0d595ab0cf7700c4abad990e7bd8bbce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trump@3x_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 79
+        width: 101
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b39cdef96b9024697250a10bebe8d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trump@3x_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1
+        width: 99
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43756926703c89d4b8f2318973c1cdd4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trump@3x_5
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 26
+        width: 125
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01cc60efc8318f40a2c60d58445f72f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trump@3x_6
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 27
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27d98abf623c3d4ca1bf33bd90c8434
       vertices: []
       indices: 
       edges: []
@@ -149,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: eab4840a21aedb54facbd73f18d4d952
+    spriteID: 5053074b31038ed4eb095e4735c052e0
     vertices: []
     indices: 
     edges: []

@@ -1,10 +1,14 @@
 fileFormatVersion: 2
-guid: 33272b017221456498c286e2e4b0457c
+guid: ac145ad5c2ac570478bd0da244bf4d87
 TextureImporter:
   fileIDToRecycleName:
-    21300000: "Prancheta 1 c\xF3pia 17_0"
-    21300002: "Prancheta 1 c\xF3pia 17_1"
-    21300004: "Prancheta 1 c\xF3pia 17_2"
+    21300000: bernaaaaaas@3x_0
+    21300002: bernaaaaaas@3x_1
+    21300004: bernaaaaaas@3x_2
+    21300006: bernaaaaaas@3x_3
+    21300008: bernaaaaaas@3x_4
+    21300010: bernaaaaaas@3x_5
+    21300012: bernaaaaaas@3x_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,13 +91,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_0"
+      name: bernaaaaaas@3x_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 158
-        width: 55
-        height: 48
+        x: 50
+        y: 225
+        width: 245
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,19 +105,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 087066d697d62264c85029f720f52704
+      spriteID: 9551024560c1f06468fe92e19389eebe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_1"
+      name: bernaaaaaas@3x_1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 188
-        width: 55
-        height: 48
+        x: 327
+        y: 113
+        width: 209
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,19 +125,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b5669d04b36ef45a50aff1cdb04091
+      spriteID: e823c81e9ce87c448af5a7da26d85378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Prancheta 1 c\xF3pia 17_2"
+      name: bernaaaaaas@3x_2
       rect:
         serializedVersion: 2
-        x: 134
-        y: 47
-        width: 55
-        height: 48
+        x: 473
+        y: 151
+        width: 63
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +145,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0742e80e324e1c54d8d1aa11ec565012
+      spriteID: c2c65c3c02e3fcd4a81d68537ea9c754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bernaaaaaas@3x_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 131
+        width: 59
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3fc105c63a9004baea1aa1c875e6f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bernaaaaaas@3x_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 127
+        width: 166
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b227760282330644cb9005223aaa6ac4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bernaaaaaas@3x_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 203
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f2996a4501ddf4f92992b72c2fd929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bernaaaaaas@3x_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 51
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ede5c6efd19dcb4b8c4e45f2cef3e6c
       vertices: []
       indices: 
       edges: []
@@ -149,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: eab4840a21aedb54facbd73f18d4d952
+    spriteID: 4896daa0edcfcad4780f5143758319ca
     vertices: []
     indices: 
     edges: []
