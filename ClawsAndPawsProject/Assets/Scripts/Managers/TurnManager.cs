@@ -48,6 +48,10 @@ public class TurnManager : MonoBehaviour {
 	private bool CheckIfAnimationIsPlaying() {
 		foreach (Actor a in FindObjectsOfType<Actor>()) {
 			if (!a.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+				if (a.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("DefendIdle")) {
+					return false;
+				}
+
 				return true;
 			}
 		}
@@ -64,8 +68,10 @@ public class TurnManager : MonoBehaviour {
 			// ==== START ====
 			case States.Start:
 				currentState = States.Choice;
+
 				player.stats.ApplyConditions();
 				cpu.stats.ApplyConditions();
+
 				uiManager.UpdateUI();
 				break;
 			
@@ -80,6 +86,9 @@ public class TurnManager : MonoBehaviour {
 			
 			// ==== EXECUTION ====
 			case States.Execution:
+				player.combat.isDefending = false;
+				cpu.combat.isDefending = false;
+
 				ExecuteFightQueue();
 				break;
 			

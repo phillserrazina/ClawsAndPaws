@@ -1284,6 +1284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allTournaments:
   - {fileID: 11400000, guid: b7328f99da8509242a230fbeb3e9cc0c, type: 2}
+  - {fileID: 11400000, guid: 2a163126c70b9c240a3740b79c5403ad, type: 2}
 --- !u!4 &408453741
 Transform:
   m_ObjectHideFlags: 0

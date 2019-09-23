@@ -5394,7 +5394,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1181728727}
+      objectReference: {fileID: 1908435700}
+    - target: {fileID: 8415364539051013450, guid: ce9501f87937c6b4f859153d63339cbc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextFight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415364539051013450, guid: ce9501f87937c6b4f859153d63339cbc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8415364538562649436, guid: ce9501f87937c6b4f859153d63339cbc,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

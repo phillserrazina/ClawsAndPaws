@@ -6,10 +6,16 @@ public class AnimationHelper : MonoBehaviour
 {
     private Actor actor;
     private Combat combat;
+    private Animator animator;
 
     private void Start() {
         actor = GetComponentInParent<Actor>();
         combat = GetComponentInParent<Combat>();
+        animator = GetComponent<Animator>();
+    }
+
+    private void Update() {
+        animator.SetBool("Defending", combat.isDefending);
     }
 
     private void OpponentTakeDamage() {

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Catpoleon
+  m_Name: Pirate Cat
   m_EditorClassIdentifier: 
-  actorName: Catpoleon
+  actorName: Blind Cat Willy
   experiencePoints: 300
   level: 3
   strengthPoints: 5
-  agilityPoints: 2
+  agilityPoints: 3
   healthPoints: 3
-  staminaPoints: 1
+  staminaPoints: 3
   intimidationPoints: 2
   currentTournament: 0
   visualIndex: 0
   itemRewards: []
-  customCat: {fileID: 3375478351416866835, guid: e535aa25c4a20d04e8f52b4211f0e81d,
+  customCat: {fileID: 2666339453049214861, guid: 3bbd7c94163cef1479db76b7d1919b5e,
     type: 3}

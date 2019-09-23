@@ -25,7 +25,6 @@ public class Appearance : MonoBehaviour
     private int visualIndex;
 
     public void Initialize() {
-        var sRenderer = GetComponentInChildren<SpriteRenderer>();
         var ccManager = FindObjectOfType<CurrentCharacterManager>();
         bool isPlayer = (tag == "Player");
         if (!isPlayer && ccManager.currentOpponent.customCat != null) {

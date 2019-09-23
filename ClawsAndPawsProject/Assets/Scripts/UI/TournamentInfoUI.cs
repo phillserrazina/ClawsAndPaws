@@ -39,8 +39,15 @@ public class TournamentInfoUI : MonoBehaviour
     private string GetContestantsText() {
         string answer = "";
 
-        foreach (OpponentSO t in tournamentTracker.currentTournament.opponentOrder) {
-            answer += string.Format("- {0} \n", t.actorName);
+        OpponentSO[] opponentList = tournamentTracker.currentTournament.opponentOrder;
+
+        for (int i = 0; i < opponentList.Length; i++) {
+            if (i == opponentList.Length-1) {
+                answer += string.Format("Boss - {1} \n", (i+1), opponentList[i].actorName);
+                continue;
+            }
+
+            answer += string.Format("{0} - {1} \n", (i+1), opponentList[i].actorName);
         }
 
         return answer;
