@@ -19,7 +19,7 @@ MonoBehaviour:
     -Deals 50pts of damage.
 
     -Costs 50pts of stamina.'
-  requiredLevel: 3
+  requiredLevel: 2
   damagePoints: 30
   staminaCost: 50
   manaCost: 0

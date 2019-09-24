@@ -108,8 +108,8 @@ public class Combat : MonoBehaviour {
 	}
 
 	private void RestAction() {
-		actor.stats.RestoreHealth(5);
-		actor.stats.RestoreStamina(10f);
+		actor.stats.RestoreHealth(25f);
+		actor.stats.RestoreStamina(30f);
 	}
 
 	private void ApplyHeldItemsEffects() {

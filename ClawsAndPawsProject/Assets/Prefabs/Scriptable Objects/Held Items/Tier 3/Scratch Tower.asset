@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Red Sand Box
+  m_Name: Scratch Tower
   m_EditorClassIdentifier: 
-  itemName: Red Sandbox
-  icon: {fileID: 21300000, guid: 7736553ec4ca30c49965004fb4486bb5, type: 3}
-  description: 'Well, at least it has sand.
+  itemName: Scratch Tower
+  icon: {fileID: 21300000, guid: 3d324ce078171a74e8d203e551073d2e, type: 3}
+  description: 'Scratch! Scratch!
 
-    +5 Health.'
-  equipType: 2
+    +1 Speed;
+
+    +20 Stamina.'
+  equipType: 3
   effects:
-  - effect: 0
-    strength: 5
+  - effect: 2
+    strength: 1
+  - effect: 1
+    strength: 20

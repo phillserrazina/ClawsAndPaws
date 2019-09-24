@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pirate Cat 2
   m_EditorClassIdentifier: 
   actorName: Blind Cat Billy
-  experiencePoints: 300
+  experiencePoints: 400
   level: 3
   strengthPoints: 5
   agilityPoints: 3

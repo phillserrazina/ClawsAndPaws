@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Red Sand Box
+  m_Name: Mountains Poster
   m_EditorClassIdentifier: 
-  itemName: Red Sandbox
-  icon: {fileID: 21300000, guid: 7736553ec4ca30c49965004fb4486bb5, type: 3}
-  description: 'Well, at least it has sand.
+  itemName: Mountains Poster
+  icon: {fileID: 21300000, guid: eab92116e64a1224cb68c2035f860df3, type: 3}
+  description: 'Looks lonely, just like me.
 
-    +5 Health.'
-  equipType: 2
+    +1 Intimidation.
+
+    -10 Health.'
+  equipType: 0
   effects:
   - effect: 0
-    strength: 5
+    strength: -10
+  - effect: 5
+    strength: 1

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7977beb62d5c08f47bc6c564d5d5413c, type: 3}
-  m_Name: Fart
+  m_Name: Fur Ball
   m_EditorClassIdentifier: 
-  attackIcon: {fileID: 21300000, guid: 942ccd95384882042886a38b3ad4dd73, type: 3}
-  name: Fart
-  description: 'You fart majestically into your opponents face.
+  attackIcon: {fileID: 21300000, guid: 173417f4e2cd68349b474cfb072b3544, type: 3}
+  name: Fur Ball
+  description: 'Gotta get those far balls out, might as well take advantage of it!
 
-    -Deals 10pts of damage + 10pts/turn for 3 turns.
+    -Deals 25pts of damage + slows for 3 turns.
 
-    -Costs 20pts of stamina.'
+    -Costs 30pts of stamina.'
   requiredLevel: 4
-  damagePoints: 10
-  staminaCost: 20
+  damagePoints: 25
+  staminaCost: 30
   manaCost: 0
   conditions:
-  - {fileID: 11400000, guid: 8bd762ea107d73a4aba91a9b75ccb972, type: 2}
+  - {fileID: 11400000, guid: 9af1739ead859d94785a9d31955410b2, type: 2}

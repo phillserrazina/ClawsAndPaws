@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Catpoleon
   m_EditorClassIdentifier: 
   actorName: Catpoleon
-  experiencePoints: 300
+  experiencePoints: 400
   level: 3
   strengthPoints: 5
   agilityPoints: 2

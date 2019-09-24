@@ -10,14 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Red Sand Box
+  m_Name: Cat Castle
   m_EditorClassIdentifier: 
-  itemName: Red Sandbox
-  icon: {fileID: 21300000, guid: 7736553ec4ca30c49965004fb4486bb5, type: 3}
-  description: 'Well, at least it has sand.
+  itemName: Cat Castle
+  icon: {fileID: 21300000, guid: 8ef1ec7487a311940af287f54eea898d, type: 3}
+  description: 'Now this is living!
 
-    +5 Health.'
-  equipType: 2
+    +2 Speed;
+
+    +20 Stamina.
+
+    +10 Attack.'
+  equipType: 3
   effects:
-  - effect: 0
-    strength: 5
+  - effect: 2
+    strength: 1
+  - effect: 1
+    strength: 20
+  - effect: 4
+    strength: 10

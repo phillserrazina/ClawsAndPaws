@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
-  m_Name: Red Sand Box
+  m_Name: Protected Sand Box
   m_EditorClassIdentifier: 
-  itemName: Red Sandbox
-  icon: {fileID: 21300000, guid: 7736553ec4ca30c49965004fb4486bb5, type: 3}
-  description: 'Well, at least it has sand.
+  itemName: Protected Sandbox
+  icon: {fileID: 21300000, guid: a4aa0b2e8a39a46458fb9ba1bbb6af75, type: 3}
+  description: 'At last, I can pee properly.
 
-    +5 Health.'
+    +5 Health.
+
+    -5 Stamina.'
   equipType: 2
   effects:
   - effect: 0
-    strength: 5
+    strength: 15
+  - effect: 1
+    strength: -5
