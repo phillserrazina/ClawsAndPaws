@@ -22,6 +22,7 @@ MonoBehaviour:
   intimidationPoints: 5
   currentTournament: 0
   visualIndex: 0
-  itemRewards: []
+  itemRewards:
+  - {fileID: 11400000, guid: 42f3c89e048bc2749995d09ba1050eef, type: 2}
   customCat: {fileID: 9005472670455660457, guid: 32d31070dac96e741b8298fe1c30d301,
     type: 3}

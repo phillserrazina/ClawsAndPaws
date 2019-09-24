@@ -52,6 +52,7 @@ public class Combat : MonoBehaviour {
 	public bool isDefending;
 
 	private Actor actor;
+	private int itemsUsage = 0;
 
 	// METHODS
 
@@ -89,6 +90,7 @@ public class Combat : MonoBehaviour {
 				itemAnimationRenderer.sprite = currentItem.icon;
 				bool isPlayer = (gameObject.tag == "Player");
 				Inventory.instance.UseItem(currentItem, isPlayer);
+				itemsUsage++;
 				break;
 
 			case Actions.Defend:
@@ -108,7 +110,7 @@ public class Combat : MonoBehaviour {
 	}
 
 	private void RestAction() {
-		actor.stats.RestoreHealth(25f);
+		actor.stats.RestoreHealth(10f);
 		actor.stats.RestoreStamina(30f);
 	}
 
@@ -137,13 +139,13 @@ public class Combat : MonoBehaviour {
 					return Random.value < 0.5 ? Actions.Attack : Actions.Defend;
 				}
 
-				return Random.value < 0.7 ? Actions.Attack : Actions.Items;
+				return (Random.value < 0.7 || itemsUsage > 1) ? Actions.Attack : Actions.Items;
 			}
 			else {
 				return Random.value < 0.8 ? Actions.Attack : Actions.Rest;
 			}
 		}
 		
-		return Random.value < 0.5 ? Actions.Attack : Actions.Items;
+		return (Random.value < 0.5 || itemsUsage > 1) ? Actions.Attack : Actions.Items;
 	}
 }

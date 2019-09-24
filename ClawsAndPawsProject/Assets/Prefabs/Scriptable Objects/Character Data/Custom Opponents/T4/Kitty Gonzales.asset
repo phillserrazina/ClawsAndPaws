@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Catpoleon
+  m_Name: Kitty Gonzales
   m_EditorClassIdentifier: 
-  actorName: Catpoleon
-  experiencePoints: 400
-  level: 3
-  strengthPoints: 5
-  agilityPoints: 2
+  actorName: Kitty Gonzales
+  experiencePoints: 800
+  level: 9
+  strengthPoints: 1
+  agilityPoints: 10
   healthPoints: 3
-  staminaPoints: 1
+  staminaPoints: 6
   intimidationPoints: 2
   currentTournament: 0
   visualIndex: 0
-  itemRewards:
-  - {fileID: 11400000, guid: 24c37acf4618c684da0aa64198891563, type: 2}
-  customCat: {fileID: 3375478351416866835, guid: e535aa25c4a20d04e8f52b4211f0e81d,
+  itemRewards: []
+  customCat: {fileID: 3380727669323253450, guid: c7f3c3d4055439140bad6f790fa4281e,
     type: 3}

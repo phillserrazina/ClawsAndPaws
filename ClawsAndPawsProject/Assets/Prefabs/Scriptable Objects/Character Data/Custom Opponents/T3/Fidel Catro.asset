@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Catpoleon
+  m_Name: Fidel Catro
   m_EditorClassIdentifier: 
-  actorName: Catpoleon
-  experiencePoints: 400
-  level: 3
-  strengthPoints: 5
+  actorName: Fidel Catro
+  experiencePoints: 1000
+  level: 7
+  strengthPoints: 7
   agilityPoints: 2
-  healthPoints: 3
-  staminaPoints: 1
+  healthPoints: 7
+  staminaPoints: 6
   intimidationPoints: 2
   currentTournament: 0
   visualIndex: 0
   itemRewards:
-  - {fileID: 11400000, guid: 24c37acf4618c684da0aa64198891563, type: 2}
-  customCat: {fileID: 3375478351416866835, guid: e535aa25c4a20d04e8f52b4211f0e81d,
+  - {fileID: 11400000, guid: abfa3ad3f06e17041bb6d2f6b6aa487c, type: 2}
+  customCat: {fileID: 4553672371999636213, guid: 2f459f526a6fab44b921673adff86b85,
     type: 3}

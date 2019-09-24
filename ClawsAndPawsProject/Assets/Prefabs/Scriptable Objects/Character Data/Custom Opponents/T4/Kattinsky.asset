@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Catpoleon
+  m_Name: Kattinsky
   m_EditorClassIdentifier: 
-  actorName: Catpoleon
-  experiencePoints: 400
-  level: 3
-  strengthPoints: 5
-  agilityPoints: 2
-  healthPoints: 3
-  staminaPoints: 1
-  intimidationPoints: 2
+  actorName: Kattinsky
+  experiencePoints: 1000
+  level: 6
+  strengthPoints: 1
+  agilityPoints: 4
+  healthPoints: 6
+  staminaPoints: 8
+  intimidationPoints: 8
   currentTournament: 0
   visualIndex: 0
-  itemRewards:
-  - {fileID: 11400000, guid: 24c37acf4618c684da0aa64198891563, type: 2}
-  customCat: {fileID: 3375478351416866835, guid: e535aa25c4a20d04e8f52b4211f0e81d,
+  itemRewards: []
+  customCat: {fileID: 5957194679402646169, guid: 6d1afc0a5ece8b942a90670c6670559f,
     type: 3}

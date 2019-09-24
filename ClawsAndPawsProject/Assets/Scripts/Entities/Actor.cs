@@ -11,8 +11,6 @@ public class Actor : MonoBehaviour {
 
 	public Actor opponent;
 
-	public int level { get; private set; }
-
 	public Attributes attributes { get; private set; }
 	public Stats stats { get; private set; }
 	public Combat combat { get; private set; }
