@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slow
   m_EditorClassIdentifier: 
   condition: 4
-  icon: {fileID: 21300000, guid: 326d46d094e23df45b6f01a2a7df4c07, type: 3}
+  icon: {fileID: 21300000, guid: 91b4b1623eae8b3459681515fbd5df12, type: 3}
   targetSelf: 0
   duration: 2
   strength: 5

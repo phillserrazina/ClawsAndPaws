@@ -29,6 +29,8 @@ public class AnimationHelper : MonoBehaviour
         string animToPlay;
         animToPlay = actor.opponent.stats.currentHealthPoints <= 0 ? "Dead" : "Take Damage";
 		actor.opponent.GetComponentInChildren<Animator>().Play(animToPlay);
+
+        StartCoroutine(ScreenShake(0.05f, 0.1f));
 	}
 
     private void ExecuteAttack() {
@@ -47,4 +49,25 @@ public class AnimationHelper : MonoBehaviour
     private void Dead() {
         FindObjectOfType<TurnManager>().NextState();
     }
+
+    private IEnumerator ScreenShake(float duration, float magnitude)
+	{
+        GameObject go = Camera.main.gameObject;
+		Vector3 originalPosition = go.transform.localPosition;
+		float elapsed = 0.0f;
+
+		while (elapsed < duration)
+		{
+			float x = Random.Range (-1f, 1f) * magnitude;
+			float y = Random.Range (-1f, 1f) * magnitude;
+
+			elapsed += Time.deltaTime;
+
+			go.transform.localPosition = new Vector3 (x, y, originalPosition.z);
+
+			yield return null;
+		}
+
+		go.transform.localPosition = originalPosition;
+	}
 }
