@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Stamina Potion
   icon: {fileID: 21300000, guid: c298b9a2a6f082843857d35f5722d01f, type: 3}
-  description: Restores 25sp.
+  description: Restores 50sp.
   effects:
   - effect:
       effect: 1
-      strength: 25
+      strength: 50
     icon: {fileID: 0}
     duration: 0
     infinite: 1

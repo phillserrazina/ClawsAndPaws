@@ -21,7 +21,9 @@ public class RewardsUI : MonoBehaviour
     private void OnEnable() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Actor>();
         GameObject pauseButton = GameObject.Find("Pause Button");
+        GameObject speedButton = GameObject.Find("Speed Button");
         if (pauseButton != null) pauseButton.SetActive(false);
+        if (speedButton != null) speedButton.SetActive(false);
 
         int finalValue = GetNextLevelXP();
         xpText.text = string.Format("XP: {0}/{1}", battleEndXP, finalValue);

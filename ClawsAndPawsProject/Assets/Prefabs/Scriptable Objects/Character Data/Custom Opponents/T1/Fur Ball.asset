@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fur Ball
   m_EditorClassIdentifier: 
   actorName: Fur Ball
-  experiencePoints: 200
+  experiencePoints: 300
   level: 3
   strengthPoints: 2
   agilityPoints: 4
@@ -23,5 +23,5 @@ MonoBehaviour:
   currentTournament: 0
   visualIndex: 0
   itemRewards: []
-  customCat: {fileID: 8909514478785394445, guid: 05ccf3612c6fa364fac9488b0eef8133,
+  customCat: {fileID: 2260814825724314011, guid: dd4e0ee0637443843a6ec7b09934ac67,
     type: 3}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1957f11c06b3b5a45aa89b92076f025c, type: 3}
+  m_Name: Mountains Poster
+  m_EditorClassIdentifier: 
+  itemName: Mountains Poster
+  icon: {fileID: 21300000, guid: eab92116e64a1224cb68c2035f860df3, type: 3}
+  description: 'Looks lonely, just like me.
+
+    +1 Intimidation.
+
+    -10 Health.'
+  equipType: 0
+  effects:
+  - effect: 0
+    strength: -10
+  - effect: 5
+    strength: 1

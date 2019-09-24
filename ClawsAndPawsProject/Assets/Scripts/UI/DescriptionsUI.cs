@@ -18,6 +18,6 @@ public class DescriptionsUI : MonoBehaviour
     public void UpdateStoreDescriptionText(string n, string t, int price) {
         nameText.text = n;
         descriptionText.text = t;
-        goldText.text = price.ToString();
+        if (goldText != null) goldText.text = price.ToString();
     }
 }

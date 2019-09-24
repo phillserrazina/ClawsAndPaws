@@ -29,6 +29,7 @@ public class ItemStoreButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void SellItem() {
         Inventory.instance.gold -= price;
         Inventory.instance.Add(item);
+        FindObjectOfType<StoreUI>().Spend(price);
         SaveManager.Save(character);
     }
 

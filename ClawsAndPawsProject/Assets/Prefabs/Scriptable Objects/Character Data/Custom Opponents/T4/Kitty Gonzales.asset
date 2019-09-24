@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
+  m_Name: Kitty Gonzales
+  m_EditorClassIdentifier: 
+  actorName: Kitty Gonzales
+  experiencePoints: 800
+  level: 9
+  strengthPoints: 1
+  agilityPoints: 10
+  healthPoints: 3
+  staminaPoints: 6
+  intimidationPoints: 2
+  currentTournament: 0
+  visualIndex: 0
+  itemRewards: []
+  customCat: {fileID: 3380727669323253450, guid: c7f3c3d4055439140bad6f790fa4281e,
+    type: 3}

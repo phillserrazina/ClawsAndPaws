@@ -14,8 +14,8 @@ public class OpponentSO : CharacterSO {
 		goldReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
 		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));
 
-		xpReward = (int)(experiencePoints * Random.Range(0.2f, 0.4f));
-		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.3f, 1f));
+		xpReward = (int)(experiencePoints * Random.Range(0.5f, 0.7f));
+		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.5f, 1f));
 	}
 
 	public void CreateRandom() {
@@ -31,8 +31,10 @@ public class OpponentSO : CharacterSO {
 		CharacterSO cCharacter = FindObjectOfType<CurrentCharacterManager>().currentCharacter;
 		TournamentSO cTournament = FindObjectOfType<TournamentTracker>().currentTournament;
 
-		int tLevel = cTournament == null ? cCharacter.level : cTournament.requiredLevel;
-		experiencePoints = Random.Range(tLevel-(100*tLevel), tLevel+(100*tLevel));
+		int tLevel = (cTournament == null) ? cCharacter.level : cTournament.requiredLevel;
+		float formula = (tLevel) / 0.1f;
+        int xp = Mathf.FloorToInt(Mathf.Pow(formula, 2));
+		experiencePoints = Random.Range(xp-(50*tLevel), xp);
 		experiencePoints = Mathf.Clamp(experiencePoints, 0, 20000);
 		
 		level = Mathf.FloorToInt(0.1f * Mathf.Sqrt(experiencePoints)) + 1;
@@ -55,8 +57,8 @@ public class OpponentSO : CharacterSO {
 		goldReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
 		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));
 
-		xpReward = (int)(experiencePoints * Random.Range(0.2f, 0.4f));
-		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.3f, 1f));
+		xpReward = (int)(experiencePoints * Random.Range(0.3f, 0.5f));
+		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.5f, 1f));
 
 		ItemListSO rewardList = Resources.Load("Reward Items") as ItemListSO;
 
@@ -64,8 +66,8 @@ public class OpponentSO : CharacterSO {
 		float chance = Random.Range(0, 100);
 
 		if (chance <= 5) noOfItemsToGive = 4;
-		else if (chance <= 15) noOfItemsToGive = 3;
-		else if (chance <= 40) noOfItemsToGive = 2;
+		else if (chance <= 10) noOfItemsToGive = 3;
+		else if (chance <= 30) noOfItemsToGive = 2;
 		else if (chance <= 90) noOfItemsToGive = 1;
 		else noOfItemsToGive = 0;
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Catpoleon
   m_EditorClassIdentifier: 
   actorName: Catpoleon
-  experiencePoints: 500
+  experiencePoints: 400
   level: 3
   strengthPoints: 5
   agilityPoints: 2
@@ -22,6 +22,7 @@ MonoBehaviour:
   intimidationPoints: 2
   currentTournament: 0
   visualIndex: 0
-  itemRewards: []
-  customCat: {fileID: 538223489705058877, guid: 542976506451357408e5975c7e12084f,
+  itemRewards:
+  - {fileID: 11400000, guid: 24c37acf4618c684da0aa64198891563, type: 2}
+  customCat: {fileID: 3375478351416866835, guid: e535aa25c4a20d04e8f52b4211f0e81d,
     type: 3}
