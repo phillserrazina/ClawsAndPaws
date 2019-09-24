@@ -47,5 +47,7 @@ public class EquipItemPrefabUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
 				i.currentItemImage.sprite = itemData.icon;
 			}
 		}
+
+		SaveManager.Save(FindObjectOfType<CurrentCharacterManager>().currentCharacter);
     }
 }
