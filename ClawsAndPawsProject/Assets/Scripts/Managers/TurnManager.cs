@@ -122,6 +122,7 @@ public class TurnManager : MonoBehaviour {
 				}
 
 				runStateMachine = false;
+				Time.timeScale = 1f;
 				SaveManager.Save(player.characterData);
 				break;
 

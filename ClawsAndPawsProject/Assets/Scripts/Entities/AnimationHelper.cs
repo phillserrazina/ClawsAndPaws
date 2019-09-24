@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AnimationHelper : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class AnimationHelper : MonoBehaviour
     }
 
     private void Update() {
+        if (SceneManager.GetActiveScene().name != "Fight Scene"  && SceneManager.GetActiveScene().name != "Tournament Scene")
+            return;
+        
         animator.SetBool("Defending", combat.isDefending);
     }
 

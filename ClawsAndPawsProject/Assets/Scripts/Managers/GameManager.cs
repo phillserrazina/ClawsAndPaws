@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
 
 	// VARIABLES
 
+	private bool isSpedUp = false;
+
 	// EXECUTION METHODS
 
 	private void Start() {
@@ -27,5 +29,10 @@ public class GameManager : MonoBehaviour {
 	public void MakeNewFight() {
 		FindObjectOfType<CurrentCharacterManager>().SetRandomOpponent();
 		ReloadCurrentScene();
+	}
+
+	public void SpeedUp() {
+		isSpedUp = !isSpedUp;
+		Time.timeScale = isSpedUp ? 5f : 1f;
 	}
 }
