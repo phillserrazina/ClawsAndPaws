@@ -70,4 +70,8 @@ public class AnimationHelper : MonoBehaviour
 
 		go.transform.localPosition = originalPosition;
 	}
+
+    private void PlaySound(string soundName) {
+        FindObjectOfType<AudioManager>().Play(soundName);
+    }
 }
