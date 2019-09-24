@@ -36,6 +36,8 @@ public class OpponentSO : CharacterSO {
         int xp = Mathf.FloorToInt(Mathf.Pow(formula, 2));
 		experiencePoints = Random.Range(xp-(50*tLevel), xp);
 		experiencePoints = Mathf.Clamp(experiencePoints, 0, 20000);
+
+		if (cCharacter.level == 1) experiencePoints = 0;
 		
 		level = Mathf.FloorToInt(0.1f * Mathf.Sqrt(experiencePoints)) + 1;
 

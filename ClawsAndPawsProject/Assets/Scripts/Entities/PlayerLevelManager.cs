@@ -37,7 +37,7 @@ public class PlayerLevelManager : MonoBehaviour {
 		
 		if (curLvl != currentPlayerLevel) {
 			if (awaitingLevelUp == false) {
-				availableAttributePoints = 5;
+				availableAttributePoints = 3;
 				awaitingLevelUp = true;
 			}
 			return true;
