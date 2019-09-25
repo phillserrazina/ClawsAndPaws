@@ -1287,6 +1287,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a163126c70b9c240a3740b79c5403ad, type: 2}
   - {fileID: 11400000, guid: e0f9d521808770846945edc4b94a8352, type: 2}
   - {fileID: 11400000, guid: 67d7a71a819f5bd4d807e78ccee09750, type: 2}
+  - {fileID: 11400000, guid: 415ea980afd08d74daf0486a9ccc9da3, type: 2}
+  - {fileID: 11400000, guid: d661b1bb0e96e864faabfaf96f08803c, type: 2}
+  - {fileID: 11400000, guid: 8b9be76aa463c6043b52c19ddd6bd1fd, type: 2}
+  - {fileID: 11400000, guid: 8d3bb092d7890ae42a154294ffde4e74, type: 2}
+  - {fileID: 11400000, guid: 86d513788bf44a244a52bf635087a70d, type: 2}
 --- !u!4 &408453741
 Transform:
   m_ObjectHideFlags: 0
@@ -3577,7 +3582,7 @@ PrefabInstance:
     - target: {fileID: 8908535351421839022, guid: fbf6778f1795fe0429d3a6aec3f938ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8908535351421839022, guid: fbf6778f1795fe0429d3a6aec3f938ae,
         type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Saber Tooth Cat
   m_EditorClassIdentifier: 
   actorName: Saber Tooth Cat
-  experiencePoints: 700
+  experiencePoints: 500
   level: 6
   strengthPoints: 6
   agilityPoints: 3

@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Kitty Gonzales
+  m_Name: Trump
   m_EditorClassIdentifier: 
-  actorName: Kitty Gonzales
-  experiencePoints: 500
-  level: 9
-  strengthPoints: 1
-  agilityPoints: 10
-  healthPoints: 3
-  staminaPoints: 6
-  intimidationPoints: 2
+  actorName: Catonald Skunk
+  experiencePoints: 1500
+  level: 17
+  strengthPoints: 10
+  agilityPoints: 1
+  healthPoints: 10
+  staminaPoints: 1
+  intimidationPoints: 10
   currentTournament: 0
   visualIndex: 0
-  itemRewards: []
-  customCat: {fileID: 3380727669323253450, guid: c7f3c3d4055439140bad6f790fa4281e,
+  itemRewards:
+  - {fileID: 11400000, guid: fd3cd503a9e01b14f8e9f589be08133d, type: 2}
+  customCat: {fileID: 4549316601374581335, guid: ce0e6670b1ce81b4db9db9a57be0ea17,
     type: 3}

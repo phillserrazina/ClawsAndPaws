@@ -72,6 +72,9 @@ public class TurnManager : MonoBehaviour {
 				player.stats.ApplyConditions();
 				cpu.stats.ApplyConditions();
 
+				if (player.stats.currentHealthPoints <= 0 || cpu.stats.currentHealthPoints <= 0)
+					currentState = States.Aftermath;
+
 				uiManager.UpdateUI();
 				break;
 			

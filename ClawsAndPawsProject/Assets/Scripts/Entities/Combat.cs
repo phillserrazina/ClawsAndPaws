@@ -58,7 +58,7 @@ public class Combat : MonoBehaviour {
 
 	public void Initialize() {
 		actor = GetComponent<Actor>();
-		if (actor.characterData.level == 1) itemsUsage = 0;
+		if (actor.characterData.level == 1) itemsUsage = 10;
 		ApplyHeldItemsEffects();
 	}
 

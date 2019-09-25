@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fidel Catro
   m_EditorClassIdentifier: 
   actorName: Fidel Catro
-  experiencePoints: 1000
+  experiencePoints: 800
   level: 7
   strengthPoints: 7
   agilityPoints: 2

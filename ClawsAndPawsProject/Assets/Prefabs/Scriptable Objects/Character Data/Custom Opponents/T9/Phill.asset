@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Kitty Gonzales
+  m_Name: Phill
   m_EditorClassIdentifier: 
-  actorName: Kitty Gonzales
-  experiencePoints: 500
-  level: 9
-  strengthPoints: 1
-  agilityPoints: 10
-  healthPoints: 3
-  staminaPoints: 6
-  intimidationPoints: 2
+  actorName: Phill Catrazina
+  experiencePoints: 0
+  level: 20
+  strengthPoints: 15
+  agilityPoints: 15
+  healthPoints: 15
+  staminaPoints: 15
+  intimidationPoints: 15
   currentTournament: 0
   visualIndex: 0
   itemRewards: []
-  customCat: {fileID: 3380727669323253450, guid: c7f3c3d4055439140bad6f790fa4281e,
+  customCat: {fileID: 629781076167377778, guid: 0db747c32a517b8498ecb58e9bd2a0c6,
     type: 3}

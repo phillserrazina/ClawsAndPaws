@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Kitty Gonzales
+  m_Name: Intellicat
   m_EditorClassIdentifier: 
-  actorName: Kitty Gonzales
-  experiencePoints: 500
-  level: 9
-  strengthPoints: 1
-  agilityPoints: 10
-  healthPoints: 3
-  staminaPoints: 6
-  intimidationPoints: 2
+  actorName: Intellicat
+  experiencePoints: 1000
+  level: 14
+  strengthPoints: 6
+  agilityPoints: 3
+  healthPoints: 10
+  staminaPoints: 3
+  intimidationPoints: 6
   currentTournament: 0
   visualIndex: 0
   itemRewards: []
-  customCat: {fileID: 3380727669323253450, guid: c7f3c3d4055439140bad6f790fa4281e,
+  customCat: {fileID: 4196593693302604727, guid: 01a9d1232bff0794995de25b60c184b6,
     type: 3}

@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
-  m_Name: Kitty Gonzales
+  m_Name: Kim
   m_EditorClassIdentifier: 
-  actorName: Kitty Gonzales
-  experiencePoints: 500
-  level: 9
-  strengthPoints: 1
-  agilityPoints: 10
-  healthPoints: 3
-  staminaPoints: 6
-  intimidationPoints: 2
+  actorName: Kim Mewong Un
+  experiencePoints: 1500
+  level: 13
+  strengthPoints: 4
+  agilityPoints: 5
+  healthPoints: 7
+  staminaPoints: 8
+  intimidationPoints: 6
   currentTournament: 0
   visualIndex: 0
-  itemRewards: []
-  customCat: {fileID: 3380727669323253450, guid: c7f3c3d4055439140bad6f790fa4281e,
+  itemRewards:
+  - {fileID: 11400000, guid: 8737c057ea58ecd4d9fbc6a9c3f5cfa5, type: 2}
+  customCat: {fileID: 3264456164334135047, guid: 385efa6ca024a3546bf227bfd6824b14,
     type: 3}

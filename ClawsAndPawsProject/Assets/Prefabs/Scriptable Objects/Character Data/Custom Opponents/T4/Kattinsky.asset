@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kattinsky
   m_EditorClassIdentifier: 
   actorName: Kattinsky
-  experiencePoints: 1000
+  experiencePoints: 500
   level: 6
   strengthPoints: 1
   agilityPoints: 4

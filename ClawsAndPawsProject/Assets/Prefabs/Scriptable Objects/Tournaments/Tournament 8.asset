@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 220dec5fa0d6a2e45b423142d71bd387, type: 3}
-  m_Name: Tournament 4
+  m_Name: Tournament 8
   m_EditorClassIdentifier: 
-  requiredLevel: 8
+  requiredLevel: 16
   opponentOrder:
-  - {fileID: 11400000, guid: afbaaf05868f41145bbb4500c392ee21, type: 2}
-  - {fileID: 11400000, guid: 20170897a35710c4599d9662d0c109fa, type: 2}
-  - {fileID: 11400000, guid: 4f7ea722e33e2ed4eb8683d44d66ac0f, type: 2}
+  - {fileID: 11400000, guid: 054965e15873c8946813adf1ba943287, type: 2}
+  - {fileID: 11400000, guid: 5ca7a1d924d75fe4d8081a8a7b79c7ae, type: 2}
+  - {fileID: 11400000, guid: 9571e09e02437d24b8dfa9d64741ccd0, type: 2}

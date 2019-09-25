@@ -11,10 +11,10 @@ public class OpponentSO : CharacterSO {
 	public GameObject customCat;
 
 	public void Create() {
-		goldReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
+		goldReward = (int)(experiencePoints * Random.Range(0.05f, 0.1f));
 		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));
 
-		xpReward = (int)(experiencePoints * Random.Range(0.5f, 0.7f));
+		xpReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
 		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.5f, 1f));
 	}
 
@@ -56,10 +56,10 @@ public class OpponentSO : CharacterSO {
 		}
 
 		// === REWARDS ===
-		goldReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
+		goldReward = (int)(experiencePoints * Random.Range(0.05f, 0.1f));
 		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));
 
-		xpReward = (int)(experiencePoints * Random.Range(0.3f, 0.5f));
+		xpReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
 		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.5f, 1f));
 
 		ItemListSO rewardList = Resources.Load("Reward Items") as ItemListSO;

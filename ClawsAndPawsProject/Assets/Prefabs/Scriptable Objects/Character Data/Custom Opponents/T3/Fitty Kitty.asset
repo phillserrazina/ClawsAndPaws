@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fitty Kitty
   m_EditorClassIdentifier: 
   actorName: Fitty Kitty
-  experiencePoints: 600
+  experiencePoints: 500
   level: 5
   strengthPoints: 2
   agilityPoints: 5

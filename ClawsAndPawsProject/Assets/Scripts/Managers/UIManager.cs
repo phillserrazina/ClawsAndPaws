@@ -111,7 +111,7 @@ public class UIManager : MonoBehaviour {
 
 	public void TriggerLoserWinWidget(int goldLost) {
 		loserText.text = string.Format("{0} Wins!", turnManager.winner.actorName);
-		loserGoldText.text = string.Format("{0} lost {1} gold...", player, goldLost);
+		loserGoldText.text = string.Format("{0} lost {1} gold...", player.characterData.actorName, goldLost);
 		loserWidget.SetActive(true);
 	}
 
