@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
+  m_Name: Hitler
+  m_EditorClassIdentifier: 
+  actorName: Catolf Hitler
+  experiencePoints: 1500
+  level: 15
+  strengthPoints: 10
+  agilityPoints: 2
+  healthPoints: 5
+  staminaPoints: 5
+  intimidationPoints: 10
+  currentTournament: 0
+  visualIndex: 0
+  itemRewards:
+  - {fileID: 11400000, guid: 395313ebcdcc1404c8ab558966bcadd6, type: 2}
+  customCat: {fileID: 5875062273720544593, guid: 86ab28f3c7db0954593f42ebc4fa8a5d,
+    type: 3}

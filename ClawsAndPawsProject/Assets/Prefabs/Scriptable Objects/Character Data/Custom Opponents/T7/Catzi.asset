@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
+  m_Name: Catzi
+  m_EditorClassIdentifier: 
+  actorName: Catzi
+  experiencePoints: 1000
+  level: 12
+  strengthPoints: 1
+  agilityPoints: 1
+  healthPoints: 1
+  staminaPoints: 1
+  intimidationPoints: 1
+  currentTournament: 0
+  visualIndex: 0
+  itemRewards: []
+  customCat: {fileID: 9023024669143579177, guid: c5d92b86bae940d47903cc22a746986b,
+    type: 3}

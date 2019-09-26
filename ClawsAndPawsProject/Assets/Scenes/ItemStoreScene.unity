@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 100
+  price: 500
   requiredLevel: 5
   item: {fileID: 11400000, guid: d84ca0b20a3efe24f81932babdc0e02e, type: 2}
 --- !u!114 &79042374
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 75
+  price: 150
   requiredLevel: 1
   item: {fileID: 11400000, guid: a033e3e85dda76c4199d9eeed6219fde, type: 2}
 --- !u!114 &421041224
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 50
+  price: 100
   requiredLevel: 1
   item: {fileID: 11400000, guid: b1971819132c47c4aa323e4d424ba2b8, type: 2}
 --- !u!114 &482852959
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 150
+  price: 400
   requiredLevel: 1
   item: {fileID: 11400000, guid: 437b2c91fb0f3d145b30955fb62356b4, type: 2}
 --- !u!114 &648337914
@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 100
+  price: 500
   requiredLevel: 5
   item: {fileID: 11400000, guid: e4a6011b5c029294c92da20835302ace, type: 2}
 --- !u!114 &788406417
@@ -1496,7 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 160
+  price: 650
   requiredLevel: 5
   item: {fileID: 11400000, guid: d1c919b9a317d564e929180e4e121c79, type: 2}
 --- !u!114 &1047006182
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 200
+  price: 1000
   requiredLevel: 5
   item: {fileID: 11400000, guid: 2da06a1ca20a39344bf577f5b1b7acc7, type: 2}
 --- !u!114 &1098968328
@@ -1993,7 +1993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 100
+  price: 300
   requiredLevel: 1
   item: {fileID: 11400000, guid: 1162e173d123ff8498d308b195f4eedc, type: 2}
 --- !u!114 &1333077794
@@ -2327,7 +2327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 50
+  price: 100
   requiredLevel: 1
   item: {fileID: 11400000, guid: e05c900ab47571149a2326c172abf40c, type: 2}
 --- !u!114 &1633199102
@@ -2472,7 +2472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9465965a25f74224b85d444163c46628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 250
+  price: 1500
   requiredLevel: 5
   item: {fileID: 11400000, guid: f61dbf20d6e4059469ef899857608cc8, type: 2}
 --- !u!114 &1970276368

@@ -31,6 +31,7 @@ public class AnimationHelper : MonoBehaviour
 		actor.opponent.GetComponentInChildren<Animator>().Play(animToPlay);
 
         StartCoroutine(ScreenShake(0.05f, 0.1f));
+        FindObjectOfType<AudioManager>().Play("Shake");
 	}
 
     private void ExecuteAttack() {

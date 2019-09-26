@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220dec5fa0d6a2e45b423142d71bd387, type: 3}
   m_Name: Tournament 4
   m_EditorClassIdentifier: 
-  requiredLevel: 4
+  requiredLevel: 8
   opponentOrder:
   - {fileID: 11400000, guid: afbaaf05868f41145bbb4500c392ee21, type: 2}
   - {fileID: 11400000, guid: 20170897a35710c4599d9662d0c109fa, type: 2}

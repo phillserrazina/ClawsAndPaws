@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bin Laden
   m_EditorClassIdentifier: 
   actorName: Meow Akbar
-  experiencePoints: 1300
+  experiencePoints: 1000
   level: 10
   strengthPoints: 8
   agilityPoints: 3
@@ -23,6 +23,6 @@ MonoBehaviour:
   currentTournament: 0
   visualIndex: 0
   itemRewards:
-  - {fileID: 11400000, guid: abfa3ad3f06e17041bb6d2f6b6aa487c, type: 2}
+  - {fileID: 11400000, guid: 76c3ce195620e224cb992b5c96a6666d, type: 2}
   customCat: {fileID: 7857409371918013015, guid: fab8b4342c02e734bb7b0521d66cd2c4,
     type: 3}

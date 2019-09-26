@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
+  m_Name: Trump
+  m_EditorClassIdentifier: 
+  actorName: Catonald Skunk
+  experiencePoints: 1500
+  level: 17
+  strengthPoints: 10
+  agilityPoints: 1
+  healthPoints: 10
+  staminaPoints: 1
+  intimidationPoints: 10
+  currentTournament: 0
+  visualIndex: 0
+  itemRewards:
+  - {fileID: 11400000, guid: fd3cd503a9e01b14f8e9f589be08133d, type: 2}
+  customCat: {fileID: 4549316601374581335, guid: ce0e6670b1ce81b4db9db9a57be0ea17,
+    type: 3}

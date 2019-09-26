@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kitty Gonzales
   m_EditorClassIdentifier: 
   actorName: Kitty Gonzales
-  experiencePoints: 800
+  experiencePoints: 500
   level: 9
   strengthPoints: 1
   agilityPoints: 10

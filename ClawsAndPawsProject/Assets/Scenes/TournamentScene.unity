@@ -2052,6 +2052,7 @@ GameObject:
   - component: {fileID: 751472777}
   - component: {fileID: 751472776}
   - component: {fileID: 751472775}
+  - component: {fileID: 751472779}
   m_Layer: 5
   m_Name: Speed Button
   m_TagString: Untagged
@@ -2170,7 +2171,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cffd8b153349cb24ab13d1dc6d674e0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3265daf6d537e39448517548111b3428, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2187,6 +2188,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751472773}
   m_CullTransparentMesh: 0
+--- !u!114 &751472779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751472773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea15080d1a53d5f4aa358e75b75703ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offSprite: {fileID: 21300000, guid: 3265daf6d537e39448517548111b3428, type: 3}
+  onSprite: {fileID: 21300000, guid: 5a5e59a1c252e534d9ffb541035aa244, type: 3}
 --- !u!1 &766255182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3975,13 +3990,13 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1071775889560266, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}
-      propertyPath: m_Name
-      value: Left Name
-      objectReference: {fileID: 0}
     - target: {fileID: 1263166895238736, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}
       propertyPath: m_Name
       value: Left Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071775889560266, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}
+      propertyPath: m_Name
+      value: Left Name
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}
@@ -5000,13 +5015,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Stamina Background
       objectReference: {fileID: 0}
-    - target: {fileID: 1071775889560266, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}
-      propertyPath: m_Name
-      value: Right Name
-      objectReference: {fileID: 0}
     - target: {fileID: 1263166895238736, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}
       propertyPath: m_Name
       value: Right Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071775889560266, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}
+      propertyPath: m_Name
+      value: Right Name
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51bb06134f13e2447a7bbe7de136eb64, type: 3}

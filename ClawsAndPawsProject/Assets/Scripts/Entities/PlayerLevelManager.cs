@@ -10,6 +10,7 @@ public class PlayerLevelManager : MonoBehaviour {
 	private static int currentPlayerLevel;
 	public static int availableAttributePoints;
 	private static bool awaitingLevelUp = false;
+	private const int onLvlUpPoints = 2;
 
 	private static Actor player;
 
@@ -37,7 +38,7 @@ public class PlayerLevelManager : MonoBehaviour {
 		
 		if (curLvl != currentPlayerLevel) {
 			if (awaitingLevelUp == false) {
-				availableAttributePoints = 5;
+				availableAttributePoints = onLvlUpPoints;
 				awaitingLevelUp = true;
 			}
 			return true;
