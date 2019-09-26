@@ -3402,6 +3402,7 @@ GameObject:
   - component: {fileID: 1798217293}
   - component: {fileID: 1798217292}
   - component: {fileID: 1798217291}
+  - component: {fileID: 1798217295}
   m_Layer: 5
   m_Name: Speed Button
   m_TagString: Untagged
@@ -3445,7 +3446,7 @@ MonoBehaviour:
   newSize: 1.05
   keepSizeOnClick: 1
   changeSprite: 0
-  newSprite: {fileID: 0}
+  newSprite: {fileID: 21300000, guid: 5eeee20d1daecfd46a2162681ece3568, type: 3}
   keepSpriteOnClick: 0
 --- !u!114 &1798217292
 MonoBehaviour:
@@ -3520,7 +3521,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cffd8b153349cb24ab13d1dc6d674e0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be62ba57ef3c51948b8346852f5161f2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3537,6 +3538,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798217289}
   m_CullTransparentMesh: 0
+--- !u!114 &1798217295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798217289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea15080d1a53d5f4aa358e75b75703ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offSprite: {fileID: 21300000, guid: be62ba57ef3c51948b8346852f5161f2, type: 3}
+  onSprite: {fileID: 21300000, guid: 5eeee20d1daecfd46a2162681ece3568, type: 3}
 --- !u!1 &1802521968
 GameObject:
   m_ObjectHideFlags: 0

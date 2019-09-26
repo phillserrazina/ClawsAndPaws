@@ -16,11 +16,11 @@ MonoBehaviour:
   name: Claw
   description: 'You lunge at your opponent, piercing them with your claws.
 
-    -Deals 20pts of damage.
+    -Deals 10pts of damage.
 
-    -Costs 5pts of stamina.'
+    -Costs 15pts of stamina.'
   requiredLevel: 0
-  damagePoints: 20
-  staminaCost: 5
+  damagePoints: 10
+  staminaCost: 15
   manaCost: 0
   conditions: []

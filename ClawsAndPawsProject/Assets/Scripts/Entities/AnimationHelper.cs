@@ -36,7 +36,7 @@ public class AnimationHelper : MonoBehaviour
 
     private void ExecuteAttack() {
 		actor.stats.DepleteStamina(combat.currentAttack.staminaCost);
-		float damage = combat.currentAttack.damagePoints + (actor.stats.attackPoints * 2);
+		float damage = combat.currentAttack.damagePoints + actor.stats.attackPoints;
 		actor.opponent.stats.TakeDamage(damage);
 
 		if (combat.currentAttack.conditions != null) {

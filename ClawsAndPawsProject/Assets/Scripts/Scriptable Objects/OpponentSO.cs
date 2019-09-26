@@ -11,10 +11,10 @@ public class OpponentSO : CharacterSO {
 	public GameObject customCat;
 
 	public void Create() {
-		goldReward = (int)(experiencePoints * Random.Range(0.05f, 0.1f));
+		goldReward = (int)(experiencePoints * Random.Range(0.001f, 0.005f));
 		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));
 
-		xpReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
+		xpReward = (int)(experiencePoints * Random.Range(0.3f, 0.5f));
 		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.5f, 1f));
 	}
 
@@ -59,7 +59,7 @@ public class OpponentSO : CharacterSO {
 		goldReward = (int)(experiencePoints * Random.Range(0.05f, 0.1f));
 		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));
 
-		xpReward = (int)(experiencePoints * Random.Range(0.1f, 0.3f));
+		xpReward = (int)(experiencePoints * Random.Range(0.01f, 0.05f));
 		if (xpReward < 100) xpReward = (int)(100 * Random.Range(0.5f, 1f));
 
 		ItemListSO rewardList = Resources.Load("Reward Items") as ItemListSO;
@@ -67,10 +67,10 @@ public class OpponentSO : CharacterSO {
 		int noOfItemsToGive;
 		float chance = Random.Range(0, 100);
 
-		if (chance <= 5) noOfItemsToGive = 4;
-		else if (chance <= 10) noOfItemsToGive = 3;
-		else if (chance <= 30) noOfItemsToGive = 2;
-		else if (chance <= 90) noOfItemsToGive = 1;
+		if (chance <= 3) noOfItemsToGive = 4;
+		else if (chance <= 8) noOfItemsToGive = 3;
+		else if (chance <= 20) noOfItemsToGive = 2;
+		else if (chance <= 60) noOfItemsToGive = 1;
 		else noOfItemsToGive = 0;
 
 		for (int i = 0; i < noOfItemsToGive; i++) {
