@@ -25,7 +25,7 @@ public class Combat : MonoBehaviour {
 	public void SetAttack(AttackSO attackData) { currentAttack = attackData; }
 	public void SetRandomAttack() { 
 		AttackSO chosen = attackList.attacks[Random.Range(0, attackList.attacks.Length)];
-		if (actor.characterData.level >= chosen.requiredLevel)
+		if ((actor.characterData.level >= chosen.requiredLevel) && chosen.currentCooldown <= 0)
 			SetAttack(chosen);
 		else
 			SetRandomAttack();
@@ -83,6 +83,7 @@ public class Combat : MonoBehaviour {
 					break;
 				}
 
+				if(gameObject.tag == "Player") currentAttack.currentCooldown = currentAttack.cooldown+1;
 				action = currentAttack.name;
 				break;
 			

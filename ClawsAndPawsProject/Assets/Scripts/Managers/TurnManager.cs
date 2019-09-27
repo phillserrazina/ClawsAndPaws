@@ -70,15 +70,15 @@ public class TurnManager : MonoBehaviour {
 			// ==== START ====
 			case States.Start:
 				UpdateAttackCooldowns();
-				
+
 				player.stats.ApplyConditions();
 				cpu.stats.ApplyConditions();
 
-				if (player.stats.currentHealthPoints <= 0 || cpu.stats.currentHealthPoints <= 0)
-					currentState = States.Aftermath;
-
 				uiManager.UpdateUI();
-				currentState = States.Choice;
+
+				currentState = (player.stats.currentHealthPoints <= 0 || cpu.stats.currentHealthPoints <= 0) ? 
+								States.Aftermath : 
+								States.Choice;
 				break;
 			
 			// ==== PLAYER CHOICE ====
