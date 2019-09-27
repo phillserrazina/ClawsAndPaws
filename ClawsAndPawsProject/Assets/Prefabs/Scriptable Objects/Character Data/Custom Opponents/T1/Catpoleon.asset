@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f309c3adba40d8b45b157edeae960f0e, type: 3}
   m_Name: Catpoleon
   m_EditorClassIdentifier: 
-  actorName: Catpoleon
+  actorName: Napurrleon
   experiencePoints: 400
   level: 3
   strengthPoints: 5

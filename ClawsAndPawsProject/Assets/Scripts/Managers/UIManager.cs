@@ -86,6 +86,7 @@ public class UIManager : MonoBehaviour {
 	public void SetPlayerAttack(AttackSO attackData) {
 		SetPlayerAction("Attack");
 		player.combat.SetAttack(attackData);
+		attackData.currentCooldown = attackData.cooldown+1;
 	}
 
 	public void TriggerPlayerWinWidget(int goldWon, int xpWon, bool lvlUp=false) {

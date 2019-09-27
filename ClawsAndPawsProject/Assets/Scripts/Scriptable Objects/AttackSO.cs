@@ -12,5 +12,7 @@ public class AttackSO : ScriptableObject {
 	public float damagePoints;
 	public float staminaCost;
 	public float manaCost;
+	public int cooldown;
+	[HideInInspector] public int currentCooldown = 0;
 	public ConditionSO[] conditions;
 }

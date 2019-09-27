@@ -8,6 +8,7 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
 	[SerializeField] private Image itemIcon;
 	[SerializeField] private Text attackName;
+	[SerializeField] private GameObject cooldownMarker;
 	public AttackSO attackData;
 
 	private Stats pStats;	// Player stats
@@ -22,6 +23,12 @@ public class AttackItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
 		itemIcon.sprite = attackData.attackIcon;
 		attackName.text = attackData.name;
+		cooldownMarker.GetComponentInChildren<Text>().text = attackData.currentCooldown.ToString();
+
+		if (attackData.currentCooldown > 0) {
+			cooldownMarker.SetActive(true);
+			b.interactable = false;
+		}
 
 		if (b != null) {
 			b.onClick.AddListener(() => { TurnOffDescriptions(); } );

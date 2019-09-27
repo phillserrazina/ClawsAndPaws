@@ -197,11 +197,13 @@ public class Stats : MonoBehaviour {
 	public void RestoreHealth(float value) {
 		if (currentHealthPoints >= maxHealthPoints) return;
 		currentHealthPoints += value;
+		currentHealthPoints = Mathf.Clamp(currentHealthPoints, 0, maxHealthPoints);
 	}
 
 	public void RestoreStamina(float value) {
 		if (currentStaminaPoints >= maxStaminaPoints) return;
 		currentStaminaPoints += value;
+		currentStaminaPoints = Mathf.Clamp(currentStaminaPoints, 0, maxStaminaPoints);
 	}
 
 	#endregion

@@ -42,6 +42,12 @@ public class Inventory {
 		
 		List<string> loadedInventory = SaveManager.LoadCurrentSaveData().inventoryData;
 
+		gold = 0;
+		wallEquipedObject = null;
+		bedEquipedObject = null;
+		litterboxEquipedObject = null;
+		toyEquipedObject = null;
+
 		if (loadedInventory.Count <= 0) return;
 
 		gold = int.Parse(loadedInventory[0]);

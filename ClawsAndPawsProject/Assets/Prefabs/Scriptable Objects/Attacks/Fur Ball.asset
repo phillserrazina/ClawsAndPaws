@@ -19,9 +19,11 @@ MonoBehaviour:
     -Deals 25pts of damage + slows for 3 turns.
 
     -Costs 30pts of stamina.'
-  requiredLevel: 7
+  requiredLevel: 10
   damagePoints: 25
   staminaCost: 30
   manaCost: 0
+  cooldown: 1
+  currentCooldown: 0
   conditions:
   - {fileID: 11400000, guid: 9af1739ead859d94785a9d31955410b2, type: 2}
