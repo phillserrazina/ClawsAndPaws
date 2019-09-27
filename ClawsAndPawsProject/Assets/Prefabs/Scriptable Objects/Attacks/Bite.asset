@@ -16,11 +16,13 @@ MonoBehaviour:
   name: Bite
   description: 'You sprint towards you enemy and bite their leg.
 
-    -Deals 40pts of damage.
+    -Deals 50pts of damage.
 
-    -Costs 70pts of stamina.'
-  requiredLevel: 2
-  damagePoints: 40
-  staminaCost: 70
+    -Costs 40pts of stamina.'
+  requiredLevel: 3
+  damagePoints: 70
+  staminaCost: 40
   manaCost: 0
+  cooldown: 3
+  currentCooldown: 0
   conditions: []

@@ -48,13 +48,15 @@ public class OpponentSO : CharacterSO {
 		staminaPoints = 1;
 		intimidationPoints = 1;
 
-		int availablePoints = 4 * level;
+		if (level > 2) {
+			int availablePoints = 4 * level;
 
-		while (availablePoints > 0) {
-			PointDistributionHelper();
-			availablePoints--;
+			while (availablePoints > 0) {
+				PointDistributionHelper();
+				availablePoints--;
+			}
 		}
-
+		
 		// === REWARDS ===
 		goldReward = (int)(experiencePoints * Random.Range(0.05f, 0.1f));
 		if (goldReward < 50) goldReward = (int)(50 * Random.Range(0.5f, 1f));

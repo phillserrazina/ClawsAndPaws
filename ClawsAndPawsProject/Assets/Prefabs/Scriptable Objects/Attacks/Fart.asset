@@ -19,9 +19,11 @@ MonoBehaviour:
     -Deals 10pts of damage + 10pts/turn for 3 turns.
 
     -Costs 20pts of stamina.'
-  requiredLevel: 4
+  requiredLevel: 6
   damagePoints: 10
   staminaCost: 20
   manaCost: 0
+  cooldown: 2
+  currentCooldown: 0
   conditions:
   - {fileID: 11400000, guid: 8bd762ea107d73a4aba91a9b75ccb972, type: 2}

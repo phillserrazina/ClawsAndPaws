@@ -28,6 +28,8 @@ public class TurnManager : MonoBehaviour {
 	[SerializeField] private RewardsUI rewardsUI;
 	private UIManager uiManager;
 
+	[SerializeField] private AttackSO[] attackObjects;
+
 	// EXECUTION METHODS
 
 	private void Update() {
@@ -67,15 +69,16 @@ public class TurnManager : MonoBehaviour {
 		{
 			// ==== START ====
 			case States.Start:
-				currentState = States.Choice;
+				UpdateAttackCooldowns();
 
 				player.stats.ApplyConditions();
 				cpu.stats.ApplyConditions();
 
-				if (player.stats.currentHealthPoints <= 0 || cpu.stats.currentHealthPoints <= 0)
-					currentState = States.Aftermath;
-
 				uiManager.UpdateUI();
+
+				currentState = (player.stats.currentHealthPoints <= 0 || cpu.stats.currentHealthPoints <= 0) ? 
+								States.Aftermath : 
+								States.Choice;
 				break;
 			
 			// ==== PLAYER CHOICE ====
@@ -126,6 +129,7 @@ public class TurnManager : MonoBehaviour {
 
 				runStateMachine = false;
 				Time.timeScale = 1f;
+				ResetAttackCooldowns();
 				SaveManager.Save(player.characterData);
 				break;
 
@@ -195,5 +199,21 @@ public class TurnManager : MonoBehaviour {
 		GameObject pButton = GameObject.Find("Pause Button");
 		if (pMenu != null) pMenu.SetActive(false);
 		if (pButton != null) pButton.SetActive(false);
+	}
+
+	private void UpdateAttackCooldowns() {
+		foreach (AttackSO a in attackObjects) {
+			if (a.currentCooldown > 0) {
+				a.currentCooldown--;
+			}
+		}
+	}
+
+	private void ResetAttackCooldowns() {
+		foreach (AttackSO a in attackObjects) {
+			if (a.currentCooldown > 0) {
+				a.currentCooldown = 0;
+			}
+		}
 	}
 }
