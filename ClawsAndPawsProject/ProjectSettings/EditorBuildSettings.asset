@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TournamentScene.unity
     guid: 6d4ab0c639543f944b72842cfe2bf7db
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: c75d769adac89bd43a7e274584868cd3
   m_configObjects: {}
