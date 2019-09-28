@@ -15,11 +15,11 @@ MonoBehaviour:
   actorName: Catnong
   experiencePoints: 1000
   level: 12
-  strengthPoints: 4
-  agilityPoints: 5
-  healthPoints: 6
-  staminaPoints: 3
-  intimidationPoints: 7
+  strengthPoints: 6
+  agilityPoints: 9
+  healthPoints: 8
+  staminaPoints: 6
+  intimidationPoints: 9
   currentTournament: 0
   visualIndex: 0
   itemRewards: []

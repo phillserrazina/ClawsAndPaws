@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: a4aa0b2e8a39a46458fb9ba1bbb6af75, type: 3}
   description: 'At last, I can pee properly.
 
-    +5 Health.
+    +15 Health.
 
     -5 Stamina.'
   equipType: 2

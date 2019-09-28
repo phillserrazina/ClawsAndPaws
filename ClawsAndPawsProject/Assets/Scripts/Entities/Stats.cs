@@ -48,8 +48,8 @@ public class Stats : MonoBehaviour {
 		if (currentHealthPoints <= 0) return;
 
 		if (actor.combat.isDefending && !trueDamage) {
-			damage /= 2;
 			actor.combat.isDefending = false;
+			return;
 		}
 
 		damage /= Mathf.Log10(defensePoints*10);

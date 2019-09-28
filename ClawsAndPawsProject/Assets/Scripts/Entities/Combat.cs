@@ -53,6 +53,7 @@ public class Combat : MonoBehaviour {
 
 	private Actor actor;
 	private int itemsUsage = 0;
+	[HideInInspector] public int defendCooldown;
 
 	// METHODS
 
@@ -66,7 +67,14 @@ public class Combat : MonoBehaviour {
 		
 		string action = currentChoice.ToString();
 
-		float chanceToFlinch = actor.opponent.stats.intimidationPoints * 3;
+		float chanceToFlinch;
+		float oppIntimidation = actor.opponent.stats.intimidationPoints;
+
+		if (oppIntimidation > actor.stats.intimidationPoints)
+			chanceToFlinch = oppIntimidation * 3;
+		else
+			chanceToFlinch = 5;
+		
 		float hit = Random.Range(0, 100);
 
 		if (hit < chanceToFlinch) {
@@ -95,6 +103,7 @@ public class Combat : MonoBehaviour {
 				break;
 
 			case Actions.Defend:
+				defendCooldown = 2;
 				isDefending = true;
 				break;
 			

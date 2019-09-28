@@ -16,9 +16,9 @@ MonoBehaviour:
   experiencePoints: 1500
   level: 15
   strengthPoints: 10
-  agilityPoints: 2
-  healthPoints: 5
-  staminaPoints: 5
+  agilityPoints: 10
+  healthPoints: 10
+  staminaPoints: 10
   intimidationPoints: 10
   currentTournament: 0
   visualIndex: 0

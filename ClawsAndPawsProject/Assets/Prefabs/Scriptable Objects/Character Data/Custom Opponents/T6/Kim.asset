@@ -15,11 +15,11 @@ MonoBehaviour:
   actorName: Kim Mewong Un
   experiencePoints: 1500
   level: 13
-  strengthPoints: 4
-  agilityPoints: 5
-  healthPoints: 7
+  strengthPoints: 6
+  agilityPoints: 7
+  healthPoints: 8
   staminaPoints: 8
-  intimidationPoints: 6
+  intimidationPoints: 7
   currentTournament: 0
   visualIndex: 0
   itemRewards:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackIcon: {fileID: 21300000, guid: 47e60dc9e8ac1b44493212687fc32de2, type: 3}
   name: Bite
-  description: 'You sprint towards you enemy and bite their leg.
+  description: 'You sprint towards your enemy and bite their leg.
 
     -Deals 50pts of damage.
 

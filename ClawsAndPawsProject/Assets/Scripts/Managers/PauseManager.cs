@@ -8,6 +8,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [Space(10)]
     [SerializeField] private GameObject inventoryButton;
+    [SerializeField] private GameObject speedButton;
 
     private bool isPaused = false;
 
@@ -26,5 +27,6 @@ public class PauseManager : MonoBehaviour
         pauseMenu.SetActive(isPaused);
 
         if (inventoryButton != null) inventoryButton.SetActive(!isPaused);
+        if (speedButton != null) speedButton.SetActive(!isPaused);
     }
 }
