@@ -67,12 +67,12 @@ public class OpponentSO : CharacterSO {
 		ItemListSO rewardList = Resources.Load("Reward Items") as ItemListSO;
 
 		int noOfItemsToGive;
-		float chance = Random.Range(0, 100);
+		float chance = Random.Range(0, 200);
 
 		if (chance <= 3) noOfItemsToGive = 4;
 		else if (chance <= 8) noOfItemsToGive = 3;
 		else if (chance <= 20) noOfItemsToGive = 2;
-		else if (chance <= 60) noOfItemsToGive = 1;
+		else if (chance <= 120) noOfItemsToGive = 1;
 		else noOfItemsToGive = 0;
 
 		for (int i = 0; i < noOfItemsToGive; i++) {

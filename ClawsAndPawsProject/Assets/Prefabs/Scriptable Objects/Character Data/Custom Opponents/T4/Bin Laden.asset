@@ -15,11 +15,11 @@ MonoBehaviour:
   actorName: Meow Akbar
   experiencePoints: 1000
   level: 10
-  strengthPoints: 8
-  agilityPoints: 3
-  healthPoints: 2
-  staminaPoints: 5
-  intimidationPoints: 7
+  strengthPoints: 10
+  agilityPoints: 4
+  healthPoints: 3
+  staminaPoints: 6
+  intimidationPoints: 9
   currentTournament: 0
   visualIndex: 0
   itemRewards:

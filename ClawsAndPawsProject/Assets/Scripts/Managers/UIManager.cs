@@ -110,6 +110,12 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void TriggerLoserWinWidget(int goldLost) {
+		GameObject pauseButton = GameObject.Find("Pause Button");
+		GameObject speedButton = GameObject.Find("Speed Button");
+
+		if (pauseButton != null) pauseButton.SetActive(false);
+		if (speedButton != null) speedButton.SetActive(false);
+
 		loserText.text = string.Format("{0} Wins!", turnManager.winner.actorName);
 		loserGoldText.text = string.Format("{0} lost {1} gold...", player.characterData.actorName, goldLost);
 		loserWidget.SetActive(true);

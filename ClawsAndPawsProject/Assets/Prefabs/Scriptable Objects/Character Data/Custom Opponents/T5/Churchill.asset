@@ -15,11 +15,11 @@ MonoBehaviour:
   actorName: Catinstion Churchill
   experiencePoints: 1500
   level: 12
-  strengthPoints: 5
-  agilityPoints: 7
-  healthPoints: 6
-  staminaPoints: 5
-  intimidationPoints: 5
+  strengthPoints: 8
+  agilityPoints: 9
+  healthPoints: 8
+  staminaPoints: 7
+  intimidationPoints: 7
   currentTournament: 0
   visualIndex: 0
   itemRewards:

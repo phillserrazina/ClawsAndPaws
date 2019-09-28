@@ -9,6 +9,7 @@ public class TurnManager : MonoBehaviour {
 	private enum States {
 		Start,
 		Choice,
+		Get_Queue,
 		Execution,
 		Aftermath,
 		End
@@ -70,6 +71,8 @@ public class TurnManager : MonoBehaviour {
 			// ==== START ====
 			case States.Start:
 				UpdateAttackCooldowns();
+				if (player.combat.defendCooldown != 0) player.combat.defendCooldown--;
+				if (cpu.combat.defendCooldown != 0) cpu.combat.defendCooldown--;
 
 				player.stats.ApplyConditions();
 				cpu.stats.ApplyConditions();
@@ -87,14 +90,16 @@ public class TurnManager : MonoBehaviour {
 				cpu.combat.SetRandomChoice();
 				cpu.combat.SetRandomAttack();
 				cpu.combat.SetRandomItem();
+				break;
+			
+			// ==== GET FIGHT QUEUE ====
+			case States.Get_Queue:
 				fightQueue = GetFightQueue();
+				currentState = States.Execution;
 				break;
 			
 			// ==== EXECUTION ====
 			case States.Execution:
-				player.combat.isDefending = false;
-				cpu.combat.isDefending = false;
-
 				ExecuteFightQueue();
 				break;
 			
@@ -123,8 +128,9 @@ public class TurnManager : MonoBehaviour {
 					uiManager.TriggerPlayerWinWidget(opponentData.goldReward, opponentData.xpReward, lvlUp);
 				}
 				else {
-					Inventory.instance.gold /= 2;
-					uiManager.TriggerLoserWinWidget(Inventory.instance.gold);
+					int goldLost = Inventory.instance.gold / Random.Range(3, 5);
+					Inventory.instance.gold -= goldLost;
+					uiManager.TriggerLoserWinWidget(goldLost);
 				}
 
 				runStateMachine = false;
@@ -142,13 +148,40 @@ public class TurnManager : MonoBehaviour {
 	private Queue<Actor> GetFightQueue() {
 		Queue<Actor> queue = new Queue<Actor>();
 
+		// ENEMY GOES FIRST
 		if (player.stats.speedPoints <= cpu.stats.speedPoints) {
-			queue.Enqueue(cpu);
-			queue.Enqueue(player);
+			// BUT PLAYER DEFENDS OR USES ITEMS
+			if ((player.combat.currentChoice == Combat.Actions.Items ||
+				player.combat.currentChoice == Combat.Actions.Defend) &&
+				(cpu.combat.currentChoice != Combat.Actions.Items &&
+				cpu.combat.currentChoice != Combat.Actions.Defend))
+			{
+				queue.Enqueue(player);
+				queue.Enqueue(cpu);
+			}
+			// AND PLAYER DOES NOT DEFEND OR USE ITEMS
+			else {
+				queue.Enqueue(cpu);
+				queue.Enqueue(player);
+			}
 		}
+
+		// PLAYER GOES GIRST
 		else {
-			queue.Enqueue(player);
-			queue.Enqueue(cpu);
+			// BUT ENEMY DEFENDS OR USES ITEMS
+			if ((cpu.combat.currentChoice == Combat.Actions.Items ||
+				cpu.combat.currentChoice == Combat.Actions.Defend) &&
+				(player.combat.currentChoice != Combat.Actions.Items &&
+				player.combat.currentChoice != Combat.Actions.Defend))
+			{
+				queue.Enqueue(cpu);
+				queue.Enqueue(player);
+			}
+			// AND ENEMY DOES NOT USE ITEMS OR DEFENDS
+			else {
+				queue.Enqueue(player);
+				queue.Enqueue(cpu);
+			}
 		}
 
 		return queue;

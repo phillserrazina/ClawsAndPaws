@@ -156,7 +156,8 @@ public class LevelUpUI : MonoBehaviour {
 		}
 
 		availablePointsText.text = PlayerLevelManager.availableAttributePoints.ToString();
-		doneButton.GetComponent<Button>().interactable = (PlayerLevelManager.availableAttributePoints <= 0);
+		var ccManager = FindObjectOfType<CurrentCharacterManager>();
+		doneButton.GetComponent<Button>().interactable = (PlayerLevelManager.availableAttributePoints <= 0 || ccManager.currentCharacter.level >= 20);
 	}
 
 	public void UpdateCharacter() {

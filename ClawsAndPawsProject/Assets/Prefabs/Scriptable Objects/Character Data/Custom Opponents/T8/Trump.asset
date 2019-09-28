@@ -15,11 +15,11 @@ MonoBehaviour:
   actorName: Catonald Skunk
   experiencePoints: 1500
   level: 17
-  strengthPoints: 10
-  agilityPoints: 1
-  healthPoints: 10
-  staminaPoints: 1
-  intimidationPoints: 10
+  strengthPoints: 12
+  agilityPoints: 12
+  healthPoints: 12
+  staminaPoints: 12
+  intimidationPoints: 12
   currentTournament: 0
   visualIndex: 0
   itemRewards:

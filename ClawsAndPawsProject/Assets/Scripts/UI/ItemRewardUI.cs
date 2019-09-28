@@ -10,12 +10,17 @@ public class ItemRewardUI : MonoBehaviour
     private Stack<ItemSO> rewardsList = new Stack<ItemSO>();
 
     private void OnEnable() {
+        if (rewardsList.Count <= 0) {
+            gameObject.SetActive(false);
+            return;
+        }
+
         StartCoroutine(InstantiateItemCoroutine());
     }
 
     public void PushToRewardStack(ItemSO[] item) {
         foreach (ItemSO i in item) {
-            rewardsList.Push(i);   
+            rewardsList.Push(i);
         }
     }
 
