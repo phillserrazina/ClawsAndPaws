@@ -4,7 +4,7 @@ Claws & Paws was a game developed in a month by **_Filipe Serrazina_** ([@phills
 
 ## Software Used
 
-**Engine:** Unity 2018.2.1f1 (C# Code);<br>
+**Engine:** Unity 2018.3.14f1 (C# Code);<br>
 **Art:** Adobe Illustrator;<br>
 **Music:** Bosca Ceoil;<br>
 **Sound:** Audacity;<br>
