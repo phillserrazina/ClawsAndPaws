@@ -74,6 +74,9 @@ public class TurnManager : MonoBehaviour {
 				if (player.combat.defendCooldown != 0) player.combat.defendCooldown--;
 				if (cpu.combat.defendCooldown != 0) cpu.combat.defendCooldown--;
 
+				player.combat.isDefending = false;
+				cpu.combat.isDefending = false;
+
 				player.stats.ApplyConditions();
 				cpu.stats.ApplyConditions();
 
