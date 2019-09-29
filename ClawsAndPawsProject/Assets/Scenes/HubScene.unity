@@ -224,7 +224,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 25aed7851abe8c044b2fa728903a90ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc929265a57e33a4fb895bd35c271cf7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -258,7 +258,7 @@ MonoBehaviour:
   newSize: 1.05
   keepSizeOnClick: 0
   changeSprite: 1
-  newSprite: {fileID: 21300000, guid: ff08f8e4d8b16da4bbf9460046763d23, type: 3}
+  newSprite: {fileID: 21300000, guid: 50d07d17b95e7494e87c1a4102d62a12, type: 3}
   keepSpriteOnClick: 0
 --- !u!1 &29531152
 GameObject:
@@ -1845,6 +1845,7 @@ MonoBehaviour:
   pauseButton: {fileID: 1596838713}
   pauseMenu: {fileID: 138868634}
   inventoryButton: {fileID: 356521735}
+  speedButton: {fileID: 0}
 --- !u!4 &848026036
 Transform:
   m_ObjectHideFlags: 0
@@ -3013,7 +3014,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -711, y: -161.9}
+  m_AnchoredPosition: {x: -699, y: -161.9}
   m_SizeDelta: {x: 451, y: 608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846822776
@@ -3089,7 +3090,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 51b9256e94261d94ea2067482458cbf7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fd65d16c1c275c42ab4a55ff1b3b490, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3123,7 +3124,7 @@ MonoBehaviour:
   newSize: 1.05
   keepSizeOnClick: 0
   changeSprite: 1
-  newSprite: {fileID: 21300000, guid: 64829d2aa457e9e4c804e5332a55feb1, type: 3}
+  newSprite: {fileID: 21300000, guid: 4d31cb09850ed534684b142f0ea7d747, type: 3}
   keepSpriteOnClick: 0
 --- !u!1 &1901680550
 GameObject:
